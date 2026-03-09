@@ -56,7 +56,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-1/2 -left-1/2 w-[100%] h-[100%] bg-gradient-to-br from-indigo-500/15 to-transparent rounded-full blur-3xl animate-pulse" />
           <div className="absolute -bottom-1/2 -right-1/2 w-[100%] h-[100%] bg-gradient-to-tl from-pink-500/15 to-transparent rounded-full blur-3xl animate-pulse delay-1000" />
@@ -80,7 +79,6 @@ export default function Home() {
             <span className="text-slate-500">60% 免费资源 + 40% 精选付费，助你快速掌握 AI 工具</span>
           </p>
 
-          {/* Search Box */}
           <div className="max-w-2xl mx-auto mb-12">
             <div className="relative">
               <input
@@ -94,7 +92,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-indigo-500/30">
               🔔 抢先体验
@@ -218,7 +215,6 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Free Plan */}
             <div className="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl">
               <div className="text-2xl font-bold mb-2">🆓 免费版</div>
               <div className="text-4xl font-bold mb-6">
@@ -248,7 +244,6 @@ export default function Home() {
               </button>
             </div>
 
-            {/* VIP Plan */}
             <div className="relative p-8 bg-gradient-to-b from-indigo-500/10 to-pink-500/10 border border-indigo-500/30 rounded-3xl backdrop-blur-xl">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-medium">
                 最受欢迎
@@ -281,7 +276,6 @@ export default function Home() {
               </button>
             </div>
 
-            {/* Premium Plan */}
             <div className="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl">
               <div className="text-2xl font-bold mb-2">👑 私域高端</div>
               <div className="text-4xl font-bold mb-6">
