@@ -1,0 +1,135 @@
+// AI 工具聚合网站数据库模型
+// 创建时间：2026-03-09
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 用户表
+model User {
+  id            BigInt      @id @default(autoincrement())
+  phone         String?     @unique
+  email         String?     @unique
+  passwordHash  String      @map("password_hash")
+  nickname      String      @default("用户")
+  avatar        String?
+  memberLevel   Int         @default(0) @map("member_level")
+  memberExpire  DateTime?   @map("member_expire")
+  createdAt     DateTime    @default(now()) @map("created_at")
+  updatedAt     DateTime    @updatedAt @map("updated_at")
+  
+  favorites     Favorite[]
+  comments      Comment[]
+  orders        Order[]
+  
+  @@map("users")
+}
+
+// 工具分类表
+model Category {
+  id          BigInt    @id @default(autoincrement())
+  name        String
+  description String?
+  slug        String    @unique
+  parentId    BigInt?
+  parent      Category? @relation("CategoryToCategory", fields: [parentId], references: [id])
+  children    Category[] @relation("CategoryToCategory")
+  tools       Tool[]
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  
+  @@map("categories")
+}
+
+// 工具表
+model Tool {
+  id          BigInt    @id @default(autoincrement())
+  name        String
+  description String
+  logo        String?
+  websiteUrl  String    @map("website_url")
+  categoryId  BigInt    @map("category_id")
+  category    Category  @relation(fields: [categoryId], references: [id])
+  tags        String    @default("[]") // JSON 数组
+  priceType   Int       @default(0) @map("price_type") // 0 免费/1 付费/2 免费增值
+  price       Decimal?  @default(0)
+  rating      Decimal   @default(0) @db.Decimal(2, 1)
+  ratingCount Int       @default(0) @map("rating_count")
+  viewCount   Int       @default(0) @map("view_count")
+  isFeatured  Boolean   @default(false) @map("is_featured")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  
+  comments    Comment[]
+  favorites   Favorite[]
+  
+  @@map("tools")
+}
+
+// 文章表
+model Article {
+  id          BigInt    @id @default(autoincrement())
+  title       String
+  content     String
+  authorId    BigInt    @map("author_id")
+  category    String
+  viewCount   Int       @default(0) @map("view_count")
+  likeCount   Int       @default(0) @map("like_count")
+  isPaid      Boolean   @default(false) @map("is_paid")
+  price       Decimal   @default(0)
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  
+  comments    Comment[]
+  favorites   Favorite[]
+  
+  @@map("articles")
+}
+
+// 收藏表
+model Favorite {
+  id         BigInt   @id @default(autoincrement())
+  userId     BigInt   @map("user_id")
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  targetType String   @map("target_type") // tool/article
+  targetId   BigInt   @map("target_id")
+  createdAt  DateTime @default(now()) @map("created_at")
+  
+  @@unique([userId, targetType, targetId])
+  @@map("favorites")
+}
+
+// 评论表
+model Comment {
+  id         BigInt    @id @default(autoincrement())
+  userId     BigInt    @map("user_id")
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  targetType String    @map("target_type") // tool/article
+  targetId   BigInt    @map("target_id")
+  rating     Int?      // 1-5 星（仅工具评论）
+  content    String
+  parentId   BigInt?   @map("parent_id")
+  createdAt  DateTime  @default(now()) @map("created_at")
+  
+  @@map("comments")
+}
+
+// 订单表
+model Order {
+  id          BigInt    @id @default(autoincrement())
+  userId      BigInt    @map("user_id")
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productType String    @map("product_type") // member/course/package
+  productId   BigInt    @map("product_id")
+  amount      Decimal
+  status      Int       @default(0) // 0 待支付/1 已支付/2 已退款
+  payTime     DateTime? @map("pay_time")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  
+  @@map("orders")
+}
