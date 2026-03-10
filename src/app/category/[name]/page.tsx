@@ -75,8 +75,8 @@ const categoryIcons: Record<string, string> = {
   "学习教育": "🎓",
 };
 
-export default function CategoryPage({ params }: { params: Promise<{ name: string }> }) {
-  const resolvedParams = params as { name: string };
+export default async function CategoryPage({ params }: { params: Promise<{ name: string }> }) {
+  const resolvedParams = await params;
   const categoryName = decodeURIComponent(resolvedParams.name);
   const tools = TOOLS_BY_CATEGORY[categoryName] || [];
 

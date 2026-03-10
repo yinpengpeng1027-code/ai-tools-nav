@@ -45,8 +45,8 @@ const TOOLS: Record<string, { name: string; description: string; longDesc: strin
   },
 };
 
-export default function ToolPage({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = params as { id: string };
+export default async function ToolPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
   const tool = TOOLS[resolvedParams.id];
 
   if (!tool) {
