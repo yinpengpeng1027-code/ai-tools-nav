@@ -31,10 +31,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
+      - name: Generate build version
+        id: version
+        run: echo "BUILD_VERSION=$(date +%Y%m%d%H%M%S)" >> $GITHUB_OUTPUT
+      
       - name: Build
-        run: npm run build
+        run: npm run build:clean
         env:
           NEXT_PUBLIC_SITE_URL: https://yinpengpeng1027-code.github.io/ai-tools-nav
+          NEXT_PUBLIC_BUILD_VERSION: ${{ steps.version.outputs.BUILD_VERSION }}
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
