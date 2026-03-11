@@ -44,7 +44,7 @@ const containerVariants = {
       staggerChildren: 0.05,
     },
   },
-};
+} as const;
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -53,10 +53,9 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.4,
-      ease: "easeOut",
     },
   },
-};
+} as const;
 
 export default function ToolsPage() {
   const [filterText, setFilterText] = useState("");

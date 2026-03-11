@@ -66,6 +66,12 @@ const CATEGORY_INFO: Record<string, { desc: string; tools: any[] }> = {
   },
 };
 
+export function generateStaticParams() {
+  return Object.keys(CATEGORY_INFO).map((name) => ({
+    name: encodeURIComponent(name),
+  }));
+}
+
 export default function CategoryPage({ params }: { params: Promise<{ name: string }> }) {
   const resolvedParams = React.use(params);
   const categoryName = decodeURIComponent(resolvedParams.name);

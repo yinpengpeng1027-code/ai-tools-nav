@@ -1,8 +1,5 @@
 // 工具详情页面 - 明亮风格
-'use client';
-
 import Link from "next/link";
-import { use } from "react";
 
 const TOOL_IDS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"];
 
@@ -85,8 +82,8 @@ const TOOLS: Record<string, { name: string; description: string; longDesc: strin
   },
 };
 
-export default function ToolPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+export default async function ToolPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const tool = TOOLS[id];
 
   if (!tool) {

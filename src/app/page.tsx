@@ -95,19 +95,17 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut" as const,
     },
   },
-};
+} as const;
 
 const floatAnimation = {
   y: [0, -10, 0],
   transition: {
     duration: 3,
     repeat: Infinity,
-    ease: "easeInOut",
   },
-};
+} as const;
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);

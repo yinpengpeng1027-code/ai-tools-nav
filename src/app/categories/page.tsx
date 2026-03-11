@@ -37,7 +37,7 @@ const itemVariants = {
       ease: "easeOut" as const,
     },
   },
-};
+} as const;
 
 export default function CategoriesPage() {
   const [filterText, setFilterText] = useState("");
