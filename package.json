@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:clean": "next build && node scripts/clear-cdn-cache.js",
     "start": "next start",
     "lint": "eslint"
   },
