@@ -1,8 +1,54 @@
 @import "tailwindcss";
 
 :root {
+  /* 明亮风格配色系统 */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+  
+  /* 主色调 - 明亮蓝紫渐变 */
+  --primary-start: #3b82f6;
+  --primary-mid: #8b5cf6;
+  --primary-end: #ec4899;
+  
+  /* 辅助色 - 橙色/粉色 */
+  --accent-orange: #f97316;
+  --accent-pink: #ec4899;
+  
+  /* 背景层次 */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  
+  /* 文字层次 */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+  
+  /* 边框 */
+  --border-light: #e2e8f0;
+  --border-medium: #cbd5e1;
+  
+  /* 阴影 - 柔和多层阴影（明亮风格） */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-glow: 0 0 40px -10px rgb(59 130 246 / 0.5);
+  --shadow-card: 0 2px 8px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.04);
+  --shadow-card-hover: 0 8px 24px rgb(0 0 0 / 0.12), 0 2px 6px rgb(0 0 0 / 0.08);
+  
+  /* 圆角 */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.5rem;
+  
+  /* 间距 */
+  --spacing-section: 5rem;
+  --spacing-card: 1.5rem;
 }
 
 @theme inline {
@@ -10,17 +56,167 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  
+  /* 自定义渐变色 */
+  --gradient-primary: linear-gradient(135deg, var(--primary-start) 0%, var(--primary-mid) 50%, var(--primary-end) 100%);
+  --gradient-primary-horizontal: linear-gradient(90deg, var(--primary-start) 0%, var(--primary-mid) 50%, var(--primary-end) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-pink) 100%);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+/* 字体大小层次 */
+.text-xs { font-size: 0.75rem; line-height: 1.5; }
+.text-sm { font-size: 0.875rem; line-height: 1.6; }
+.text-base { font-size: 1rem; line-height: 1.6; }
+.text-lg { font-size: 1.125rem; line-height: 1.6; }
+.text-xl { font-size: 1.25rem; line-height: 1.6; }
+.text-2xl { font-size: 1.5rem; line-height: 1.4; }
+.text-3xl { font-size: 1.875rem; line-height: 1.4; }
+.text-4xl { font-size: 2.25rem; line-height: 1.3; }
+.text-5xl { font-size: 3rem; line-height: 1.2; }
+.text-6xl { font-size: 3.75rem; line-height: 1.2; }
+
+/* 字重层次 */
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* 间距优化 */
+.section-spacing {
+  padding: var(--spacing-section) 0;
+}
+
+.card-spacing {
+  padding: var(--spacing-card);
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* 动画效果 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(1.1);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* 卡片样式 - 明亮风格 */
+.card-base {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--primary-start);
+}
+
+/* 渐变卡片 */
+.card-gradient {
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+/* 玻璃态卡片 - 明亮版本 */
+.card-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+/* 渐变文字 */
+.gradient-text {
+  background: var(--gradient-primary-horizontal);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 光晕效果 */
+.glow-effect {
+  box-shadow: var(--shadow-glow);
+}
+
+/* 玻璃态效果 - 明亮版本 */
+.glass-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
