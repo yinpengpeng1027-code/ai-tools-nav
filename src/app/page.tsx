@@ -23,7 +23,7 @@ const FEATURED_TOOLS = [
   { id: 401, name: "Notion AI", description: "智能笔记助手", category: "办公效率", logo: "📝", url: "https://notion.so" },
   { id: 201, name: "Runway", description: "AI 视频生成", category: "视频制作", logo: "🎬", url: "https://runwayml.com" },
   { id: 301, name: "ElevenLabs", description: "AI 语音合成", category: "音频处理", logo: "🔊", url: "https://elevenlabs.io" },
-  { id: 1001, name: "Jasper", description: "AI 营销文案", category: "文本生成", logo: "✍️", url: "https://jasper.ai" },
+  { id: 1001, name: "豆包", description: "字节跳动的 AI 智能对话助手", category: "文本生成", logo: "🎒", url: "https://doubao.com" },
 ];
 
 const STATS = [
