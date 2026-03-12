@@ -266,7 +266,7 @@ export default function Step5Page() {
                 <h4 className="font-bold text-slate-900">调度研究员收集需求</h4>
               </div>
               <pre className="bg-slate-800 text-green-400 p-3 rounded text-xs ml-11">
-sessions_spawn({ task: "调研主流博客系统功能", agent: "researcher" })
+{`sessions_spawn({ task: "调研主流博客系统功能", agent: "researcher" })`}
               </pre>
             </div>
 
@@ -276,8 +276,8 @@ sessions_spawn({ task: "调研主流博客系统功能", agent: "researcher" })
                 <h4 className="font-bold text-slate-900">并行：工程师开始开发</h4>
               </div>
               <pre className="bg-slate-800 text-green-400 p-3 rounded text-xs ml-11">
-sessions_spawn({ task: "搭建后端 API 框架", agent: "coder" })
-sessions_spawn({ task: "创建前端页面结构", agent: "coder" })
+{`sessions_spawn({ task: "搭建后端 API 框架", agent: "coder" })
+sessions_spawn({ task: "创建前端页面结构", agent: "coder" })`}
               </pre>
             </div>
 
@@ -287,7 +287,7 @@ sessions_spawn({ task: "创建前端页面结构", agent: "coder" })
                 <h4 className="font-bold text-slate-900">审查官进行代码审查</h4>
               </div>
               <pre className="bg-slate-800 text-green-400 p-3 rounded text-xs ml-11">
-sessions_spawn({ task: "审查代码质量和安全性", agent: "reviewer" })
+{`sessions_spawn({ task: "审查代码质量和安全性", agent: "reviewer" })`}
               </pre>
             </div>
 
@@ -297,7 +297,7 @@ sessions_spawn({ task: "审查代码质量和安全性", agent: "reviewer" })
                 <h4 className="font-bold text-slate-900">外交官发布成果</h4>
               </div>
               <pre className="bg-slate-800 text-green-400 p-3 rounded text-xs ml-11">
-message({ channel: "general", text: "博客系统开发完成！" })
+{`message({ channel: "general", text: "博客系统开发完成！" })`}
               </pre>
             </div>
           </div>

@@ -177,9 +177,14 @@ export default function SearchPage() {
                 showFilters={false}
               />
             </div>
+          </div>
+        </section>
+      </FadeIn>
 
-          {/* Quick Filters */}
-          <FadeIn delay={0.2}>
+      {/* Quick Filters */}
+      <FadeIn delay={0.2}>
+        <section className="py-8 bg-white border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="space-y-6">
               {/* Categories */}
               <div>
@@ -233,9 +238,9 @@ export default function SearchPage() {
                 </div>
               )}
             </div>
-          </FadeIn>
-        </div>
-      </section>
+          </div>
+        </section>
+      </FadeIn>
 
       {/* Search Results */}
       <FadeIn delay={0.3}>
@@ -344,27 +349,28 @@ export default function SearchPage() {
       </FadeIn>
 
       {/* Popular Searches */}
-      <section className="py-12 bg-white border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">热门搜索</h2>
-          <div className="flex flex-wrap gap-3">
-            {[
-              "免费", "中文", "Web", "编程", "写作", "设计", "视频", "音频", "AI绘画", "聊天机器人"
-            ].map((term) => (
-              <button
-                key={term}
-                onClick={() => {
-                  setQuery(term);
-                  searchInputRef.current?.focus();
-                }}
-                className="px-4 py-2 bg-slate-100 text-slate-700 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors"
-              >
-                {term}
-              </button>
-            ))}
+      <FadeIn delay={0.4}>
+        <section className="py-12 bg-white border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">热门搜索</h2>
+            <div className="flex flex-wrap gap-3">
+              {[
+                "免费", "中文", "Web", "编程", "写作", "设计", "视频", "音频", "AI 绘画", "聊天机器人"
+              ].map((term) => (
+                <button
+                  key={term}
+                  onClick={() => {
+                    setQuery(term);
+                  }}
+                  className="px-4 py-2 bg-slate-100 text-slate-700 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                >
+                  {term}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </FadeIn>
     </div>
   );
 }

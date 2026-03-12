@@ -386,7 +386,7 @@ export const StaggerItem = ({
 );
 
 /**
- * 数字计数动画
+ * 数字计数动画 - 简化版本
  */
 export const CountUp = ({ 
   value, 
@@ -399,23 +399,11 @@ export const CountUp = ({
   duration?: number;
   suffix?: string;
 }) => {
-  const controls = useAnimation();
-
-  useEffect(() => {
-    controls.start({
-      innerText: value,
-      transition: {
-        duration,
-        ease: "easeOut",
-        round: 1
-      }
-    });
-  }, [value, controls, duration]);
-
   return (
     <motion.span
       className={className}
-      animate={controls}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{ duration, ease: "easeOut" }}
     >
       {value}{suffix}

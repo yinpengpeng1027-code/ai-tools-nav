@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 import StepPage from "../StepPageTemplate";
 
 export default function Step2Page() {

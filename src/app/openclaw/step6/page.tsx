@@ -177,7 +177,7 @@ export default function Step6Page() {
                 <h4 className="font-bold text-slate-900">读取竞品列表</h4>
               </div>
               <pre className="bg-slate-800 text-green-400 p-3 rounded text-xs ml-11 overflow-x-auto">
-read({ path: "./memory/competitors.json" })
+{`read({ path: "./memory/competitors.json" })`}
               </pre>
             </div>
 
@@ -224,7 +224,7 @@ read({ path: "./memory/competitors.json" })
                 <h4 className="font-bold text-slate-900">推送报告通知</h4>
               </div>
               <pre className="bg-slate-800 text-green-400 p-3 rounded text-xs ml-11 overflow-x-auto">
-message({ channel: "team", text: "本周竞品分析报告已生成" })
+{`message({ channel: "team", text: "本周竞品分析报告已生成" })`}
               </pre>
             </div>
           </div>
