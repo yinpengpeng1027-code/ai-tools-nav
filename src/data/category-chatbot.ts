@@ -1,4 +1,4 @@
-﻿// 对话机器人分类 - 增强版工具数据
+// 对话机器人分类 - 增强版工具数据
 // 包含详细描述、功能特点、使用场景、优缺点、相关网站等
 // 最后更新：2026-03-12
 
@@ -17,7 +17,8 @@ export interface EnhancedTool {
   category: string;
   subCategory: string; // 子分类
   logo: string;
-  url: string;;
+  url: string;
+  isVip: boolean;
   price: string;
   tags: string[];
   features: string[]; // 6 个功能特点
@@ -40,6 +41,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "客服机器人",
     logo: "💬",
     url: "https://intercom.com",
+    isVip: true,
     price: "$39-999/月",
     tags: ["付费", "英文", "Web"],
     features: ["智能聊天机器人", "客户数据平台", "工单管理", "实时聊天", "自动化工作流", "数据分析"],
@@ -63,6 +65,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "客服机器人",
     logo: "⚡",
     url: "https://drift.com",
+    isVip: true,
     price: "免费 + $500+/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["实时聊天", "聊天机器人", "预约 scheduling", "客户识别", "CRM 集成", "视频消息"],
@@ -86,6 +89,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "客服机器人",
     logo: "🦄",
     url: "https://tidio.com",
+    isVip: true,
     price: "免费 + $29+/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["实时聊天", "聊天机器人", "邮件集成", "多通道支持", "访客追踪", "移动端应用"],
@@ -109,6 +113,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "客服机器人",
     logo: "🤖",
     url: "https://ada.cx",
+    isVip: true,
     price: "定制报价",
     tags: ["付费", "英文", "Web"],
     features: ["无代码构建", "AI 自动化", "多语言支持", "个性化回复", "数据分析", "全渠道支持"],
@@ -132,6 +137,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "客服机器人",
     logo: "🌿",
     url: "https://freshworks.com/freshchat",
+    isVip: true,
     price: "免费 + $15+/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["团队收件箱", "聊天机器人", "消息模板", "机器人检测", "移动应用", "报告分析"],
@@ -157,6 +163,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "开发平台",
     logo: "🔵",
     url: "https://dialogflow.cloud.google.com",
+    isVip: true,
     price: "免费 + 按使用量",
     tags: ["免费增值", "多语言", "Cloud"],
     features: ["自然语言理解", "多平台部署", "语音识别", "机器学习", "预构建代理", "分析仪表板"],
@@ -180,6 +187,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "开发平台",
     logo: "💚",
     url: "https://rasa.com",
+    isVip: true,
     price: "开源免费 + 企业版定制",
     tags: ["开源", "多语言", "Self-hosted"],
     features: ["开源框架", "自定义 NLU", "对话管理", "机器学习", "多语言支持", "本地部署"],
@@ -203,6 +211,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "开发平台",
     logo: "📦",
     url: "https://botpress.com",
+    isVip: true,
     price: "免费 + $500+/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["可视化流程", "代码扩展", "NLU 引擎", "多渠道部署", "分析监控", "模板市场"],
@@ -226,6 +235,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "开发平台",
     logo: "🟦",
     url: "https://dev.botframework.com",
+    isVip: false,
     price: "免费 + Azure 使用费",
     tags: ["免费", "多语言", "Cloud"],
     features: ["SDK 多语言", "Azure 集成", "LUIS NLU", "多渠道连接", "应用中心", "分析工具"],
@@ -249,6 +259,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "开发平台",
     logo: "🔷",
     url: "https://ibm.com/watson",
+    isVip: true,
     price: "按使用量付费",
     tags: ["付费", "多语言", "Cloud"],
     features: ["Watson Assistant", "自然语言理解", "语音转文本", "知识提取", "行业模型", "企业集成"],
@@ -274,6 +285,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "营销聊天",
     logo: "🤖",
     url: "https://landbot.io",
+    isVip: true,
     price: "免费 + $30+/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["无代码构建", "可视化流程", "模板库", "线索捕获", "CRM 集成", "A/B 测试"],
@@ -297,6 +309,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "营销聊天",
     logo: "💬",
     url: "https://manychat.com",
+    isVip: true,
     price: "免费 + $15+/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["Messenger 机器人", "Instagram 集成", "SMS 营销", "电商自动化", "广播消息", "增长工具"],
@@ -320,6 +333,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "营销聊天",
     logo: "⛽",
     url: "https://chatfuel.com",
+    isVip: true,
     price: "免费 + $15+/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["Messenger 机器人", "Instagram 自动化", "AI 插件", "电商集成", "广播工具", "分析仪表板"],
@@ -343,6 +357,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "营销聊天",
     logo: "🐒",
     url: "https://mobilemonkey.com",
+    isVip: true,
     price: "免费 + $19+/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["多渠道聊天", "线索捕获", "营销自动化", "预约安排", "竞赛工具", "CRM 集成"],
@@ -366,6 +381,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "营销聊天",
     logo: "🌊",
     url: "https://flowxo.com",
+    isVip: true,
     price: "免费 + $19+/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["可视化工作流", "100+ 集成", "多平台部署", "任务自动化", "数据收集", "团队协作"],
@@ -391,6 +407,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "AI 陪伴",
     logo: "💕",
     url: "https://replika.com",
+    isVip: true,
     price: "免费 + $19.99/月",
     tags: ["免费增值", "多语言", "App"],
     features: ["情感陪伴", "个性化学习", "3D 虚拟形象", "语音通话", "AR 模式", "日记功能"],
@@ -414,6 +431,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "AI 陪伴",
     logo: "🎭",
     url: "https://character.ai",
+    isVip: true,
     price: "免费 + $9.99/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["角色创建", "角色扮演", "多角色聊天", "社区分享", "语音功能", "移动应用"],
@@ -437,6 +455,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "AI 陪伴",
     logo: "❄️",
     url: "https://xiaoice.com",
+    isVip: true,
     price: "免费 + 增值服务",
     tags: ["免费增值", "中文", "多平台"],
     features: ["情感计算", "多轮对话", "内容创作", "虚拟形象", "语音交互", "多平台集成"],
@@ -460,6 +479,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "营销聊天",
     logo: "🤖",
     url: "https://botsify.com",
+    isVip: true,
     price: "免费 + $49+/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["可视化构建", "AI 训练", "多平台部署", "电商集成", "人工接管", "分析报表"],
@@ -485,6 +505,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "企业对话",
     logo: "💬",
     url: "https://liveperson.com",
+    isVip: true,
     price: "定制报价",
     tags: ["付费", "多语言", "Cloud"],
     features: ["对话云", "AI 自动化", "数据分析", "全渠道支持", "安全合规", "企业集成"],
@@ -508,6 +529,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "企业对话",
     logo: "🔷",
     url: "https://kore.ai",
+    isVip: true,
     price: "定制报价",
     tags: ["付费", "多语言", "Cloud"],
     features: ["无代码平台", "预构建助手", "NLP 引擎", "多渠道部署", "分析监控", "安全合规"],
@@ -531,6 +553,7 @@ export const CHATBOT_TOOLS: EnhancedTool[] = [
     subCategory: "企业对话",
     logo: "🟠",
     url: "https://aws.amazon.com/lex",
+    isVip: true,
     price: "按使用量付费",
     tags: ["付费", "多语言", "Cloud"],
     features: ["语音识别", "自然语言理解", "AWS 集成", "Serverless", "多平台部署", "按量付费"],

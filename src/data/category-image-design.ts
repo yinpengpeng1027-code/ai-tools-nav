@@ -1,4 +1,4 @@
-﻿// AI 工具导航站 - 图像设计分类工具数据
+// AI 工具导航站 - 图像设计分类工具数据
 // 最后更新：2026-03-12
 // 包含 25 个图像设计类 AI 工具的详细数据
 
@@ -17,7 +17,8 @@ export interface EnhancedTool {
   category: string;
   subCategory: string; // 子分类
   logo: string;
-  url: string;;
+  url: string;
+  isVip: boolean;
   price: string;
   tags: string[];
   features: string[]; // 6 个功能特点
@@ -40,6 +41,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "🎨",
     url: "https://midjourney.com",
+    isVip: true,
     price: "$10-120/月",
     tags: ["付费", "英文", "Discord"],
     features: [
@@ -86,6 +88,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "🖼️",
     url: "https://openai.com/dall-e-3",
+    isVip: true,
     price: "通过 ChatGPT Plus ($20/月)",
     tags: ["付费", "英文", "Web"],
     features: [
@@ -132,6 +135,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "🌊",
     url: "https://stability.ai",
+    isVip: false,
     price: "免费 (本地部署)",
     tags: ["免费", "开源", "本地"],
     features: [
@@ -178,6 +182,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "🦁",
     url: "https://leonardo.ai",
+    isVip: true,
     price: "免费 + $10-48/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -224,6 +229,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "🎪",
     url: "https://playgroundai.com",
+    isVip: true,
     price: "免费 + $15-29/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -270,6 +276,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "模型/资源",
     logo: "🌊",
     url: "https://seaart.ai",
+    isVip: true,
     price: "免费 + 订阅制",
     tags: ["免费增值", "多语言", "Web"],
     features: [
@@ -316,6 +323,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "模型/资源",
     logo: "🏛️",
     url: "https://civitai.com",
+    isVip: false,
     price: "免费",
     tags: ["免费", "社区", "Web"],
     features: [
@@ -364,6 +372,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "💄",
     url: "https://xiuxiu.meitu.com",
+    isVip: true,
     price: "免费 + VIP 会员",
     tags: ["免费增值", "中文", "多平台"],
     features: [
@@ -410,6 +419,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "✨",
     url: "https://magicstudio.com",
+    isVip: true,
     price: "免费 + $9-99/月",
     tags: ["免费增值", "英文", "Web/API"],
     features: [
@@ -456,6 +466,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "✂️",
     url: "https://remove.bg",
+    isVip: true,
     price: "免费 + $9-99/月",
     tags: ["免费增值", "英文", "Web/API"],
     features: [
@@ -502,6 +513,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "🔥",
     url: "https://firefly.adobe.com",
+    isVip: true,
     price: "免费 + Creative Cloud 订阅",
     tags: ["免费增值", "多语言", "Web"],
     features: [
@@ -548,6 +560,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "📐",
     url: "https://gaoding.com",
+    isVip: true,
     price: "免费 + 会员制",
     tags: ["免费增值", "中文", "Web"],
     features: [
@@ -596,6 +609,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "Logo/品牌设计",
     logo: "🔍",
     url: "https://looka.com",
+    isVip: true,
     price: "$20-96 一次性",
     tags: ["付费", "英文", "Web"],
     features: [
@@ -642,6 +656,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "Logo/品牌设计",
     logo: "🏷️",
     url: "https://brandmark.io",
+    isVip: true,
     price: "$25-65 一次性",
     tags: ["付费", "英文", "Web"],
     features: [
@@ -688,6 +703,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "Logo/品牌设计",
     logo: "🎨",
     url: "https://canva.com",
+    isVip: true,
     price: "免费 + $12.99-100/月",
     tags: ["免费增值", "多语言", "多平台"],
     features: [
@@ -736,6 +752,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像增强",
     logo: "🔍",
     url: "https://upscale.media",
+    isVip: true,
     price: "免费 + $9-39/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -782,6 +799,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像增强",
     logo: "🎨",
     url: "https://palette.fm",
+    isVip: false,
     price: "免费 + 付费下载",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -830,6 +848,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "设计工具",
     logo: "🧙",
     url: "https://uizard.io",
+    isVip: true,
     price: "免费 + $12-39/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -876,6 +895,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "设计工具",
     logo: "🌈",
     url: "https://khroma.co",
+    isVip: false,
     price: "免费",
     tags: ["免费", "英文", "Web"],
     features: [
@@ -924,6 +944,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "创意艺术",
     logo: "🌙",
     url: "https://nightcafe.studio",
+    isVip: true,
     price: "免费 + $5.99-79.99/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -970,6 +991,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "创意艺术",
     logo: "🎬",
     url: "https://gencraft.com",
+    isVip: true,
     price: "免费 + $29.99-99.99/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -1016,6 +1038,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "创意艺术",
     logo: "🌸",
     url: "https://pollinations.ai",
+    isVip: false,
     price: "免费",
     tags: ["免费", "开源", "API"],
     features: [
@@ -1062,6 +1085,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "创意艺术",
     logo: "💡",
     url: "https://lucidpic.com",
+    isVip: true,
     price: "订阅制",
     tags: ["付费", "英文", "Web"],
     features: [
@@ -1110,6 +1134,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "👤",
     url: "https://pfpmaker.com",
+    isVip: true,
     price: "免费 + $9.90-49.90",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -1156,6 +1181,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "💬",
     url: "https://ideogram.ai",
+    isVip: true,
     price: "免费 + $8-24/月",
     tags: ["免费增值", "英文", "Web"],
     features: [

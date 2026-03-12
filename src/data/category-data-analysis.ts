@@ -1,4 +1,4 @@
-﻿import type { EnhancedTool, RelatedSite } from './types';
+import type { EnhancedTool, RelatedSite } from './types';
 
 export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
   // ==================== BI 可视化 ====================
@@ -11,6 +11,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: 'BI 可视化',
     logo: '📊',
     url: 'https://www.tableau.com',
+    isVip: true,
     price: '$70/用户/月',
     tags: ['BI 可视化', 'AI 分析', '企业级', '仪表盘'],
     features: [
@@ -57,6 +58,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: 'BI 可视化',
     logo: '📈',
     url: 'https://powerbi.microsoft.com',
+    isVip: true,
     price: '$10/用户/月',
     tags: ['微软生态', 'BI 报表', '数据可视化', '企业分析'],
     features: [
@@ -103,6 +105,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: 'BI 可视化',
     logo: '🔍',
     url: 'https://looker.com',
+    isVip: true,
     price: '企业定制',
     tags: ['Google Cloud', '数据建模', '嵌入式分析', '企业 BI'],
     features: [
@@ -149,6 +152,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: 'BI 可视化',
     logo: '🇨🇳',
     url: 'https://www.fanruan.com/finebi',
+    isVip: true,
     price: '企业定制',
     tags: ['国产软件', '企业 BI', '数据可视化', '本地部署'],
     features: [
@@ -195,6 +199,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: 'BI 可视化',
     logo: '👁️',
     url: 'https://www.guandata.com',
+    isVip: true,
     price: '企业定制',
     tags: ['AI 分析', '零售行业', '智能决策', '国产软件'],
     features: [
@@ -241,6 +246,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: 'BI 可视化',
     logo: '💡',
     url: 'https://www.sisense.com',
+    isVip: true,
     price: '企业定制',
     tags: ['嵌入式分析', 'AI 驱动', '白标方案', '企业 BI'],
     features: [
@@ -287,6 +293,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: 'BI 可视化',
     logo: '☁️',
     url: 'https://www.domo.com',
+    isVip: true,
     price: '$83/用户/月',
     tags: ['云原生', '数据集成', '实时分析', '移动优先'],
     features: [
@@ -333,6 +340,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: 'BI 可视化',
     logo: '🔗',
     url: 'https://www.qlik.com',
+    isVip: true,
     price: '$30/用户/月',
     tags: ['关联分析', '探索式 BI', '自助分析', '数据发现'],
     features: [
@@ -381,6 +389,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: '自动化机器学习',
     logo: '🤖',
     url: 'https://www.datarobot.com',
+    isVip: true,
     price: '企业定制',
     tags: ['AutoML', '机器学习', '模型部署', '企业 AI'],
     features: [
@@ -427,6 +436,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: '自动化机器学习',
     logo: '⚡',
     url: 'https://www.akkio.com',
+    isVip: true,
     price: '$49/月',
     tags: ['无代码', '预测分析', '业务友好', '快速部署'],
     features: [
@@ -475,6 +485,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: 'AI 数据分析',
     logo: '💬',
     url: 'https://julius.ai',
+    isVip: true,
     price: '$20/月',
     tags: ['AI 分析', '自然语言', '对话交互', '数据洞察'],
     features: [
@@ -521,6 +532,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: 'AI 数据分析',
     logo: '🔎',
     url: 'https://www.thoughtspot.com',
+    isVip: true,
     price: '企业定制',
     tags: ['搜索分析', 'AI 洞察', '企业 BI', '自然语言'],
     features: [
@@ -567,6 +579,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: 'AI 数据分析',
     logo: '📉',
     url: 'https://chartgpt.io',
+    isVip: true,
     price: '$10/月',
     tags: ['AI 图表', '数据可视化', '文生图', '快速分析'],
     features: [
@@ -615,6 +628,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: '数据表格',
     logo: '📋',
     url: 'https://www.polymersearch.com',
+    isVip: true,
     price: '$49/月',
     tags: ['智能表格', 'AI 搜索', '数据管理', '无代码'],
     features: [
@@ -663,6 +677,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: '数据可视化工具',
     logo: '📊',
     url: 'https://www.datawrapper.de',
+    isVip: true,
     price: '$599/月',
     tags: ['数据可视化', '新闻媒体', '交互图表', '信息图'],
     features: [
@@ -709,6 +724,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: '数据可视化工具',
     logo: '🎨',
     url: 'https://infogram.com',
+    isVip: true,
     price: '$19/月',
     tags: ['信息图', '数据可视化', '模板丰富', '在线设计'],
     features: [
@@ -757,6 +773,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: '开源分析',
     logo: '🟣',
     url: 'https://www.metabase.com',
+    isVip: false,
     price: '开源免费/企业版$85/月',
     tags: ['开源', 'BI 工具', '自助分析', '易于使用'],
     features: [
@@ -803,6 +820,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: '开源分析',
     logo: '🔴',
     url: 'https://redash.io',
+    isVip: false,
     price: '开源免费/云服务$25/月',
     tags: ['开源', 'SQL 查询', '数据可视化', '灵活部署'],
     features: [
@@ -849,6 +867,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: '开源分析',
     logo: '📈',
     url: 'https://www.chartio.com',
+    isVip: true,
     price: '已停止新销售',
     tags: ['云 BI', '无代码', '可视化查询', 'Atlassian'],
     features: [
@@ -895,6 +914,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: '开源分析',
     logo: '🔭',
     url: 'https://www.periscopedata.com',
+    isVip: true,
     price: '企业定制',
     tags: ['数据分析', 'SQL', 'Python', '企业 BI'],
     features: [
@@ -941,6 +961,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: '开源分析',
     logo: '🔧',
     url: 'https://www.holistics.io',
+    isVip: true,
     price: '$99/月',
     tags: ['自助 BI', '数据建模', 'SQL', '企业分析'],
     features: [
@@ -987,6 +1008,7 @@ export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
     subCategory: '开源分析',
     logo: '📐',
     url: 'https://mode.com',
+    isVip: true,
     price: '已停止新销售',
     tags: ['SQL 分析', '协作', '数据可视化', '企业 BI'],
     features: [

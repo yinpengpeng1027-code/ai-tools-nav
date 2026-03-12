@@ -1,4 +1,4 @@
-﻿import type { EnhancedTool, RelatedSite } from './types';
+import type { EnhancedTool, RelatedSite } from './types';
 
 export const socialMediaTools: EnhancedTool[] = [
   // ========== 社媒管理 ==========
@@ -11,6 +11,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '社媒管理',
     logo: '🦉',
     url: 'https://hootsuite.com',
+    isVip: true,
     price: '$99/月',
     tags: ['社媒管理', '多平台', '数据分析', '团队协作'],
     features: [
@@ -57,6 +58,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '社媒管理',
     logo: '📋',
     url: 'https://buffer.com',
+    isVip: true,
     price: '$6/月',
     tags: ['内容发布', '社媒管理', '简洁易用', '小团队'],
     features: [
@@ -103,6 +105,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '社媒管理',
     logo: '🌱',
     url: 'https://sproutsocial.com',
+    isVip: true,
     price: '$249/月',
     tags: ['企业级', '数据分析', 'CRM 集成', '客户关怀'],
     features: [
@@ -149,6 +152,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '社媒管理',
     logo: '🎯',
     url: 'https://agorapulse.com',
+    isVip: true,
     price: '$99/月',
     tags: ['社媒管理', '团队协作', '报告分析', '中等规模'],
     features: [
@@ -196,6 +200,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '内容调度',
     logo: '⏰',
     url: 'https://later.com',
+    isVip: true,
     price: '$25/月',
     tags: ['视觉排期', 'Instagram', 'Pinterest', '内容日历'],
     features: [
@@ -242,6 +247,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '内容调度',
     logo: '📅',
     url: 'https://coschedule.com',
+    isVip: true,
     price: '$29/月',
     tags: ['营销日历', '内容排期', '团队协作', '博客集成'],
     features: [
@@ -288,6 +294,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '内容调度',
     logo: '🍃',
     url: 'https://tailwindapp.com',
+    isVip: true,
     price: '$15/月',
     tags: ['Pinterest', 'Instagram', '智能排期', '社群'],
     features: [
@@ -334,6 +341,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '内容调度',
     logo: '📱',
     url: 'https://planoly.com',
+    isVip: true,
     price: '$17/月',
     tags: ['视觉规划', 'Instagram', '电商集成', 'UGC'],
     features: [
@@ -381,6 +389,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: 'AI 内容生成',
     logo: '🐝',
     url: 'https://socialbee.io',
+    isVip: true,
     price: '$29/月',
     tags: ['AI 生成', '内容分类', '自动化', 'Evergreen'],
     features: [
@@ -427,6 +436,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: 'AI 内容生成',
     logo: '🤖',
     url: 'https://lately.ai',
+    isVip: true,
     price: '定制报价',
     tags: ['AI 生成', '内容复用', '企业级', '长内容转换'],
     features: [
@@ -473,6 +483,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: 'AI 内容生成',
     logo: '📤',
     url: 'https://sendible.com',
+    isVip: true,
     price: '$29/月',
     tags: ['代理机构', '白标报告', '多客户', 'AI 助手'],
     features: [
@@ -520,6 +531,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '数据分析',
     logo: '📊',
     url: 'https://newrank.cn',
+    isVip: true,
     price: '免费 + 企业版',
     tags: ['中文数据', '新媒体', '公众号', '抖音'],
     features: [
@@ -566,6 +578,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '数据分析',
     logo: '🔍',
     url: 'https://gsdata.cn',
+    isVip: true,
     price: '定制报价',
     tags: ['舆情监控', '大数据分析', '政企服务', 'AI 分析'],
     features: [
@@ -612,6 +625,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '数据分析',
     logo: '📈',
     url: 'https://iconosquare.com',
+    isVip: true,
     price: '$49/月',
     tags: ['Instagram', 'Facebook', '数据分析', '竞品分析'],
     features: [
@@ -658,6 +672,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '数据分析',
     logo: '🧠',
     url: 'https://emplifi.io',
+    isVip: true,
     price: '定制报价',
     tags: ['AI 分析', '企业级', '全平台', '营销智能'],
     features: [
@@ -705,6 +720,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '舆情监控',
     logo: '👁️',
     url: 'https://brandwatch.com',
+    isVip: true,
     price: '定制报价',
     tags: ['社交聆听', '舆情监控', '企业级', '情感分析'],
     features: [
@@ -751,6 +767,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '舆情监控',
     logo: '🔔',
     url: 'https://mention.com',
+    isVip: true,
     price: '$49/月',
     tags: ['实时监听', '品牌监控', ' alerts', '中小企业'],
     features: [
@@ -797,6 +814,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '舆情监控',
     logo: '🐝',
     url: 'https://buzzsumo.com',
+    isVip: true,
     price: '$199/月',
     tags: ['内容发现', '网红分析', '趋势监控', '竞品分析'],
     features: [
@@ -844,6 +862,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '增长工具',
     logo: '👻',
     url: 'https://phantombuster.com',
+    isVip: true,
     price: '$59/月',
     tags: ['自动化', '增长黑客', '线索挖掘', 'LinkedIn'],
     features: [
@@ -890,6 +909,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '增长工具',
     logo: '📦',
     url: 'https://meetedgar.com',
+    isVip: true,
     price: '$49/月',
     tags: ['内容循环', '自动化', 'Evergreen', '时间节省'],
     features: [
@@ -936,6 +956,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '增长工具',
     logo: '🔥',
     url: 'https://crowdfireapp.com',
+    isVip: true,
     price: '$7.48/月',
     tags: ['内容策展', '粉丝增长', '自动化', '性价比'],
     features: [
@@ -982,6 +1003,7 @@ export const socialMediaTools: EnhancedTool[] = [
     subCategory: '增长工具',
     logo: '👑',
     url: 'https://napoleoncat.com',
+    isVip: true,
     price: '€27/月',
     tags: ['社媒管理', '客户服务', '自动化', '欧洲'],
     features: [

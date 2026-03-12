@@ -1,4 +1,4 @@
-﻿import type { EnhancedTool, RelatedSite } from './types';
+import type { EnhancedTool, RelatedSite } from './types';
 
 export const officeProductivityTools: EnhancedTool[] = [
   {
@@ -10,6 +10,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '知识管理',
     logo: 'https://www.notion.so/images/logo-ios.png',
     url: 'https://www.notion.so/product/ai',
+    isVip: true,
     price: '$10/月',
     tags: ['AI 写作', '知识库', '团队协作', '笔记管理'],
     features: [
@@ -56,6 +57,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: 'AI 办公套件',
     logo: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/Copilot%20logo',
     url: 'https://copilot.microsoft.com',
+    isVip: true,
     price: '$20/月 (Microsoft 365)',
     tags: ['Office 集成', '企业办公', 'AI 助手', '生产力'],
     features: [
@@ -102,6 +104,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: 'AI 办公套件',
     logo: 'https://www.grammarly.com/images/logo.png',
     url: 'https://www.grammarly.com',
+    isVip: true,
     price: '$12/月',
     tags: ['写作助手', '语法检查', '英语写作', '内容优化'],
     features: [
@@ -148,6 +151,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '会议助手',
     logo: 'https://otter.ai/assets/images/otter-logo.png',
     url: 'https://otter.ai',
+    isVip: true,
     price: '$8.33/月',
     tags: ['语音转录', '会议记录', '实时字幕', '音频分析'],
     features: [
@@ -194,6 +198,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '会议助手',
     logo: 'https://fireflies.ai/images/logo.png',
     url: 'https://fireflies.ai',
+    isVip: true,
     price: '$10/月',
     tags: ['会议记录', 'AI 分析', '工作流自动化', '团队协作'],
     features: [
@@ -240,6 +245,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '演示文稿',
     logo: 'https://www.beautiful.ai/images/logo.png',
     url: 'https://www.beautiful.ai',
+    isVip: true,
     price: '$12/月',
     tags: ['PPT 设计', 'AI 美化', '演示文稿', '模板库'],
     features: [
@@ -286,6 +292,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '演示文稿',
     logo: 'https://gamma.app/images/logo.png',
     url: 'https://gamma.app',
+    isVip: true,
     price: '$10/月',
     tags: ['AI 生成', '演示文稿', '文档创作', '网页制作'],
     features: [
@@ -332,6 +339,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '演示文稿',
     logo: 'https://tome.app/images/logo.png',
     url: 'https://tome.app',
+    isVip: true,
     price: '$10/月',
     tags: ['叙事演示', 'AI 生成', '创意设计', '多媒体'],
     features: [
@@ -378,6 +386,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '知识管理',
     logo: 'https://www.mindmeister.com/images/logo.png',
     url: 'https://www.mindmeister.com',
+    isVip: true,
     price: '$4.99/月',
     tags: ['思维导图', '头脑风暴', '可视化', '协作工具'],
     features: [
@@ -424,6 +433,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '自动化工具',
     logo: 'https://cdn.zapier.com/zapier/images/logo.png',
     url: 'https://zapier.com',
+    isVip: true,
     price: '$19.99/月',
     tags: ['工作流自动化', '应用集成', '无代码', '效率工具'],
     features: [
@@ -470,6 +480,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '知识管理',
     logo: 'https://www.feishu.cn/images/logo.png',
     url: 'https://www.feishu.cn/product/ai',
+    isVip: true,
     price: '免费 + 企业版',
     tags: ['AI 助手', '团队协作', '本土化', '企业办公'],
     features: [
@@ -516,6 +527,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: 'AI 办公套件',
     logo: 'https://www.dingtalk.com/images/logo.png',
     url: 'https://www.dingtalk.com/product/ai',
+    isVip: true,
     price: '免费 + 企业版',
     tags: ['AI 办公', '企业管理', '本土化', '数字化'],
     features: [
@@ -562,6 +574,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '任务管理',
     logo: 'https://www.usemotion.com/images/logo.png',
     url: 'https://www.usemotion.com',
+    isVip: true,
     price: '$19/月',
     tags: ['时间管理', '任务规划', '日程安排', 'AI 优化'],
     features: [
@@ -608,6 +621,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '自动化工具',
     logo: 'https://reclaim.ai/images/logo.png',
     url: 'https://reclaim.ai',
+    isVip: true,
     price: '$8/月',
     tags: ['日程管理', '时间优化', '工作平衡', 'Google 集成'],
     features: [
@@ -654,6 +668,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '自动化工具',
     logo: 'https://www.getclockwise.com/images/logo.png',
     url: 'https://www.getclockwise.com',
+    isVip: true,
     price: '$6.99/月',
     tags: ['团队日程', '会议优化', '专注时间', '协作效率'],
     features: [
@@ -700,6 +715,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '知识管理',
     logo: 'https://mem.ai/images/logo.png',
     url: 'https://mem.ai',
+    isVip: true,
     price: '$15/月',
     tags: ['知识管理', 'AI 搜索', '笔记应用', '个人知识库'],
     features: [
@@ -746,6 +762,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '任务管理',
     logo: 'https://taskade.com/images/logo.png',
     url: 'https://taskade.com',
+    isVip: true,
     price: '$4.99/月',
     tags: ['任务管理', '思维导图', '团队协作', 'AI 辅助'],
     features: [
@@ -792,6 +809,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '任务管理',
     logo: 'https://clickup.com/images/logo.png',
     url: 'https://clickup.com/features/ai',
+    isVip: true,
     price: '$7/月',
     tags: ['项目管理', '任务协作', 'AI 增强', '全功能'],
     features: [
@@ -838,6 +856,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '任务管理',
     logo: 'https://monday.com/images/logo.png',
     url: 'https://monday.com/ai',
+    isVip: true,
     price: '$8/月',
     tags: ['工作管理', '可视化', '自动化', '团队协作'],
     features: [
@@ -884,6 +903,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '知识管理',
     logo: 'https://airtable.com/images/logo.png',
     url: 'https://airtable.com/ai',
+    isVip: true,
     price: '$20/月',
     tags: ['数据库', '数据管理', 'AI 分析', '自动化'],
     features: [
@@ -930,6 +950,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '邮件效率',
     logo: 'https://superhuman.com/images/logo.png',
     url: 'https://superhuman.com',
+    isVip: true,
     price: '$30/月',
     tags: ['邮件客户端', '效率工具', 'AI 辅助', '键盘快捷'],
     features: [
@@ -976,6 +997,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '邮件效率',
     logo: 'https://shortwave.com/images/logo.png',
     url: 'https://shortwave.com',
+    isVip: true,
     price: '免费 + $10/月',
     tags: ['Gmail 客户端', 'AI 分类', '邮件管理', '效率工具'],
     features: [
@@ -1022,6 +1044,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '知识管理',
     logo: 'https://www.rewind.ai/images/logo.png',
     url: 'https://www.rewind.ai',
+    isVip: true,
     price: '$10/月',
     tags: ['屏幕记录', 'AI 记忆', '个人分析', '隐私优先'],
     features: [
@@ -1068,6 +1091,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '会议助手',
     logo: 'https://granola.so/images/logo.png',
     url: 'https://granola.so',
+    isVip: true,
     price: '$12/月',
     tags: ['会议笔记', 'AI 转录', '要点提取', '团队协作'],
     features: [
@@ -1114,6 +1138,7 @@ export const officeProductivityTools: EnhancedTool[] = [
     subCategory: '会议助手',
     logo: 'https://supernormal.com/images/logo.png',
     url: 'https://supernormal.com',
+    isVip: true,
     price: '$15/月',
     tags: ['会议记录', 'AI 笔记', '视频会议', '团队协作'],
     features: [
