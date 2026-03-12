@@ -7,11 +7,16 @@ export default function AboutPage() {
       <nav className="border-b border-slate-200 bg-white/80 backdrop-blur-xl sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl">🚀</span>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                AI 工具导航站
-              </span>
+            <Link href="/" className="flex items-center gap-3">
+              <div className="w-9 h-9 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center shadow-md">
+                <span className="text-lg">⭐</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-base font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  星图 StarMap
+                </span>
+                <span className="text-xs text-slate-500 font-medium -mt-0.5">AI</span>
+              </div>
             </Link>
             <div className="flex items-center gap-6">
               <Link href="/tools" className="text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium">工具库</Link>

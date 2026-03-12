@@ -4,46 +4,53 @@ import Link from 'next/link';
 
 const LEARNING_PATH = [
   {
-    day: 'Day 1',
-    title: '安装与配置',
-    desc: '系统要求、Node.js 安装、onboard 向导、配置第一个消息通道',
+    step: '第 1 步',
+    title: '认识 OpenClaw',
+    desc: '了解什么是 OpenClaw，它能为你做什么',
+    icon: '🤖',
+    path: '/openclaw/step1',
+  },
+  {
+    step: '第 2 步',
+    title: '环境搭建',
+    desc: '安装和配置 OpenClaw 环境',
     icon: '🚀',
+    path: '/openclaw/step2',
   },
   {
-    day: 'Day 2',
-    title: '理解架构',
-    desc: 'Gateway、Node、Brain 核心组件，会话管理和路由机制',
-    icon: '🧠',
+    step: '第 3 步',
+    title: '基础配置',
+    desc: '理解配置文件和核心概念',
+    icon: '⚙️',
+    path: '/openclaw/step3',
   },
   {
-    day: 'Day 3',
-    title: '技能安装',
-    desc: '探索 ClawHub 技能市场，安装常用技能，权限管理',
+    step: '第 4 步',
+    title: '技能系统',
+    desc: '探索 ClawHub 技能市场，安装常用技能',
     icon: '⚡',
+    path: '/openclaw/step4',
   },
   {
-    day: 'Day 4',
-    title: '记忆系统',
-    desc: 'MEMORY.md、每日笔记、长期记忆管理',
-    icon: '💾',
-  },
-  {
-    day: 'Day 5',
-    title: '定时任务',
-    desc: 'Cron 配置、心跳机制、主动式提醒',
-    icon: '⏰',
-  },
-  {
-    day: 'Day 6',
+    step: '第 5 步',
     title: '多 Agent 协作',
     desc: '配置六部制、subagent 调度、任务分发',
     icon: '🤝',
+    path: '/openclaw/step5',
   },
   {
-    day: 'Day 7',
-    title: '高级自动化',
-    desc: '工作流设计、API 集成、自定义技能开发',
+    step: '第 6 步',
+    title: '实战项目',
+    desc: '动手做一个完整的项目',
+    icon: '💼',
+    path: '/openclaw/step6',
+  },
+  {
+    step: '第 7 步',
+    title: '进阶技巧',
+    desc: '高级功能和最佳实践',
     icon: '🔧',
+    path: '/openclaw/step7',
   },
 ];
 
@@ -273,7 +280,7 @@ export default function OpenClawPage() {
                     {idx + 1}
                   </div>
                   <div className="text-xs text-orange-600 font-semibold mb-2">
-                    {item.day}
+                    {item.step}
                   </div>
                   <div className="text-2xl mb-2">{item.icon}</div>
                   <div className="font-semibold text-slate-900 mb-2">
