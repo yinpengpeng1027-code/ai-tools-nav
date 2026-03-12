@@ -1,0 +1,942 @@
+﻿[
+    {
+        "name":  "ChatGPT",
+        "url":  "https://chatgpt.com"
+    },
+    {
+        "name":  "Claude",
+        "url":  "https://claude.ai"
+    },
+    {
+        "name":  "Jasper",
+        "url":  "https://jasper.ai"
+    },
+    {
+        "name":  "Writesonic",
+        "url":  "https://writesonic.com/"
+    },
+    {
+        "name":  "Copy.ai",
+        "url":  "https://copy.ai"
+    },
+    {
+        "name":  "Rytr",
+        "url":  "https://rytr.me"
+    },
+    {
+        "name":  "鏂囧績涓€瑷€",
+        "url":  "https://yiyan.baidu.com"
+    },
+    {
+        "name":  "閫氫箟鍗冮棶",
+        "url":  "https://tongyi.aliyun.com"
+    },
+    {
+        "name":  "Kimi",
+        "url":  "https://kimi.moonshot.cn"
+    },
+    {
+        "name":  "鏅鸿氨娓呰█",
+        "url":  "https://chatglm.cn"
+    },
+    {
+        "name":  "璁鏄熺伀",
+        "url":  "https://xinghuo.xfyun.cn"
+    },
+    {
+        "name":  "Notion AI",
+        "url":  "https://www.notion.so"
+    },
+    {
+        "name":  "DeepL Write",
+        "url":  "https://deepl.com/write"
+    },
+    {
+        "name":  "Quillbot",
+        "url":  "https://quillbot.com"
+    },
+    {
+        "name":  "Grammarly",
+        "url":  "https://www.grammarly.com"
+    },
+    {
+        "name":  "Sudowrite",
+        "url":  "https://sudowrite.com"
+    },
+    {
+        "name":  "NovelAI",
+        "url":  "https://novelai.net/"
+    },
+    {
+        "name":  "Anyword",
+        "url":  "https://anyword.com"
+    },
+    {
+        "name":  "Hypotenuse",
+        "url":  "https://hypotenuse.ai/"
+    },
+    {
+        "name":  "Peppertype",
+        "url":  "https://peppertype.ai"
+    },
+    {
+        "name":  "Frase",
+        "url":  "https://frase.io"
+    },
+    {
+        "name":  "ShortlyAI",
+        "url":  "https://shortlyai.com"
+    },
+    {
+        "name":  "Aithor",
+        "url":  "https://aithor.com/"
+    },
+    {
+        "name":  "GravityWrite",
+        "url":  "https://gravitywrite.com"
+    },
+    {
+        "name":  "Perplexity",
+        "url":  "https://www.perplexity.ai"
+    },
+    {
+        "name":  "Midjourney",
+        "url":  "https://midjourney.com"
+    },
+    {
+        "name":  "DALL-E 3",
+        "url":  "https://openai.com/dall-e-3"
+    },
+    {
+        "name":  "Stable Diffusion",
+        "url":  "https://stability.ai/"
+    },
+    {
+        "name":  "Leonardo AI",
+        "url":  "https://leonardo.ai/"
+    },
+    {
+        "name":  "Playground AI",
+        "url":  "https://playgroundai.com/"
+    },
+    {
+        "name":  "Canva AI",
+        "url":  "https://canva.com"
+    },
+    {
+        "name":  "Adobe Firefly",
+        "url":  "https://firefly.adobe.com"
+    },
+    {
+        "name":  "Ideogram",
+        "url":  "https://ideogram.ai/"
+    },
+    {
+        "name":  "NightCafe",
+        "url":  "https://nightcafe.studio"
+    },
+    {
+        "name":  "Looka",
+        "url":  "https://www.looka.com"
+    },
+    {
+        "name":  "Remove.bg",
+        "url":  "https://remove.bg"
+    },
+    {
+        "name":  "Upscale.media",
+        "url":  "https://upscale.media"
+    },
+    {
+        "name":  "缇庡浘 AI",
+        "url":  "https://meitu.com"
+    },
+    {
+        "name":  "绋垮畾璁捐",
+        "url":  "https://gaoding.com"
+    },
+    {
+        "name":  "Magic Studio",
+        "url":  "https://magicstudio.com"
+    },
+    {
+        "name":  "SeaArt AI",
+        "url":  "https://www.seaart.ai"
+    },
+    {
+        "name":  "Civitai",
+        "url":  "https://civitai.com/"
+    },
+    {
+        "name":  "Profile Picture AI",
+        "url":  "https://profilepicture.ai"
+    },
+    {
+        "name":  "Palette.fm",
+        "url":  "https://palette.fm"
+    },
+    {
+        "name":  "Gencraft",
+        "url":  "https://gencraft.com/"
+    },
+    {
+        "name":  "Pollinations",
+        "url":  "https://pollinations.ai"
+    },
+    {
+        "name":  "Lucidpic",
+        "url":  "https://www.lucidpic.com"
+    },
+    {
+        "name":  "Brandmark",
+        "url":  "https://brandmark.io"
+    },
+    {
+        "name":  "Khroma",
+        "url":  "https://khroma.co"
+    },
+    {
+        "name":  "Uizard",
+        "url":  "https://uizard.io"
+    },
+    {
+        "name":  "Runway",
+        "url":  "https://runwayml.com"
+    },
+    {
+        "name":  "Sora",
+        "url":  "https://openai.com/sora"
+    },
+    {
+        "name":  "Pika Labs",
+        "url":  "https://pika.art/"
+    },
+    {
+        "name":  "HeyGen",
+        "url":  "https://www.heygen.com"
+    },
+    {
+        "name":  "Synthesia",
+        "url":  "https://synthesia.io"
+    },
+    {
+        "name":  "鍓槧",
+        "url":  "https://capcut.cn"
+    },
+    {
+        "name":  "Descript",
+        "url":  "https://www.descript.com"
+    },
+    {
+        "name":  "Veed.io",
+        "url":  "https://www.veed.io"
+    },
+    {
+        "name":  "InVideo",
+        "url":  "https://invideo.io/"
+    },
+    {
+        "name":  "Lumen5",
+        "url":  "https://lumen5.com"
+    },
+    {
+        "name":  "Pictory",
+        "url":  "https://www.pictory.ai"
+    },
+    {
+        "name":  "Fliki",
+        "url":  "https://fliki.ai/"
+    },
+    {
+        "name":  "D-ID",
+        "url":  "https://d-id.com"
+    },
+    {
+        "name":  "Elai.io",
+        "url":  "https://elai.io"
+    },
+    {
+        "name":  "Colossyan",
+        "url":  "https://colossyan.com"
+    },
+    {
+        "name":  "涓囧叴鎾垎",
+        "url":  "https://virbo.wondershare.cn"
+    },
+    {
+        "name":  "Opus Clip",
+        "url":  "https://opus.pro"
+    },
+    {
+        "name":  "Munch",
+        "url":  "https://getmunch.com"
+    },
+    {
+        "name":  "Vidyo",
+        "url":  "https://vidyo.ai"
+    },
+    {
+        "name":  "Shuffll",
+        "url":  "https://shuffll.com"
+    },
+    {
+        "name":  "Kinetix",
+        "url":  "https://kinetix.tech"
+    },
+    {
+        "name":  "TubeMagic",
+        "url":  "https://tubemagic.com"
+    },
+    {
+        "name":  "Wisecut",
+        "url":  "https://wisecut.video"
+    },
+    {
+        "name":  "Rawshorts",
+        "url":  "https://rawshorts.com"
+    },
+    {
+        "name":  "Steve.ai",
+        "url":  "https://steve.ai"
+    },
+    {
+        "name":  "ElevenLabs",
+        "url":  "https://elevenlabs.io/"
+    },
+    {
+        "name":  "Suno AI",
+        "url":  "https://suno.ai"
+    },
+    {
+        "name":  "Murf AI",
+        "url":  "https://murf.ai"
+    },
+    {
+        "name":  "Play.ht",
+        "url":  "https://play.ht/"
+    },
+    {
+        "name":  "Udio",
+        "url":  "https://udio.com"
+    },
+    {
+        "name":  "AIVA",
+        "url":  "https://aiva.ai"
+    },
+    {
+        "name":  "LALAL.AI",
+        "url":  "https://lalal.ai"
+    },
+    {
+        "name":  "Adobe Podcast",
+        "url":  "https://podcast.adobe.com"
+    },
+    {
+        "name":  "Krisp",
+        "url":  "https://krisp.ai"
+    },
+    {
+        "name":  "璁閰嶉煶",
+        "url":  "https://peiyin.xunfei.cn"
+    },
+    {
+        "name":  "Resemble AI",
+        "url":  "https://resemble.ai"
+    },
+    {
+        "name":  "WellSaid Labs",
+        "url":  "https://wellsaidlabs.com"
+    },
+    {
+        "name":  "NaturalReader",
+        "url":  "https://naturalreaders.com"
+    },
+    {
+        "name":  "Speechify",
+        "url":  "https://speechify.com"
+    },
+    {
+        "name":  "Voicemod",
+        "url":  "https://voicemod.net"
+    },
+    {
+        "name":  "Uberduck",
+        "url":  "https://uberduck.ai"
+    },
+    {
+        "name":  "Soundraw",
+        "url":  "https://soundraw.io"
+    },
+    {
+        "name":  "Boomy",
+        "url":  "https://boomy.com/"
+    },
+    {
+        "name":  "Ecrett Music",
+        "url":  "https://ecrettmusic.com"
+    },
+    {
+        "name":  "Cleanvoice",
+        "url":  "https://cleanvoice.ai"
+    },
+    {
+        "name":  "Audo Studio",
+        "url":  "https://audo.ai"
+    },
+    {
+        "name":  "Voice.ai",
+        "url":  "https://voice.ai/"
+    },
+    {
+        "name":  "Notion AI",
+        "url":  "https://notion.so"
+    },
+    {
+        "name":  "Microsoft Copilot",
+        "url":  "https://copilot.microsoft.com"
+    },
+    {
+        "name":  "Grammarly",
+        "url":  "https://grammarly.com"
+    },
+    {
+        "name":  "Otter.ai",
+        "url":  "https://otter.ai"
+    },
+    {
+        "name":  "Fireflies.ai",
+        "url":  "https://fireflies.ai"
+    },
+    {
+        "name":  "Beautiful.ai",
+        "url":  "https://beautiful.ai"
+    },
+    {
+        "name":  "Gamma",
+        "url":  "https://gamma.app/"
+    },
+    {
+        "name":  "Tome",
+        "url":  "https://tome.app"
+    },
+    {
+        "name":  "MindMeister",
+        "url":  "https://mindmeister.com"
+    },
+    {
+        "name":  "Zapier",
+        "url":  "https://zapier.com"
+    },
+    {
+        "name":  "椋炰功鏅鸿兘浼欎即",
+        "url":  "https://feishu.cn"
+    },
+    {
+        "name":  "閽夐拤 AI",
+        "url":  "https://dingtalk.com"
+    },
+    {
+        "name":  "Motion",
+        "url":  "https://motion.com"
+    },
+    {
+        "name":  "Reclaim.ai",
+        "url":  "https://reclaim.ai"
+    },
+    {
+        "name":  "Clockwise",
+        "url":  "https://clockwise.com"
+    },
+    {
+        "name":  "Mem.ai",
+        "url":  "https://mem.ai"
+    },
+    {
+        "name":  "Taskade",
+        "url":  "https://taskade.com"
+    },
+    {
+        "name":  "ClickUp AI",
+        "url":  "https://clickup.com"
+    },
+    {
+        "name":  "Monday AI",
+        "url":  "https://monday.com"
+    },
+    {
+        "name":  "Airtable AI",
+        "url":  "https://airtable.com"
+    },
+    {
+        "name":  "Superhuman",
+        "url":  "https://superhuman.com"
+    },
+    {
+        "name":  "Shortwave",
+        "url":  "https://shortwave.com"
+    },
+    {
+        "name":  "Rewind AI",
+        "url":  "https://rewind.ai"
+    },
+    {
+        "name":  "Granola",
+        "url":  "https://granola.so"
+    },
+    {
+        "name":  "Supernormal",
+        "url":  "https://supernormal.com"
+    },
+    {
+        "name":  "Tableau AI",
+        "url":  "https://tableau.com"
+    },
+    {
+        "name":  "Power BI",
+        "url":  "https://powerbi.microsoft.com"
+    },
+    {
+        "name":  "Looker",
+        "url":  "https://looker.google.com"
+    },
+    {
+        "name":  "DataRobot",
+        "url":  "https://datarobot.com"
+    },
+    {
+        "name":  "Akkio",
+        "url":  "https://akkio.com"
+    },
+    {
+        "name":  "Julius AI",
+        "url":  "https://julius.ai"
+    },
+    {
+        "name":  "Thoughtspot",
+        "url":  "https://thoughtspot.com"
+    },
+    {
+        "name":  "ChartGPT",
+        "url":  "https://chartgpt.io"
+    },
+    {
+        "name":  "Polymer",
+        "url":  "https://polymersearch.com"
+    },
+    {
+        "name":  "甯嗚蒋 FineBI",
+        "url":  "https://finebi.com"
+    },
+    {
+        "name":  "瑙傝繙鏁版嵁",
+        "url":  "https://guandata.com"
+    },
+    {
+        "name":  "Sisense",
+        "url":  "https://sisense.com"
+    },
+    {
+        "name":  "Domo",
+        "url":  "https://domo.com"
+    },
+    {
+        "name":  "Qlik Sense",
+        "url":  "https://qlik.com"
+    },
+    {
+        "name":  "Mode Analytics",
+        "url":  "https://mode.com"
+    },
+    {
+        "name":  "Metabase",
+        "url":  "https://metabase.com"
+    },
+    {
+        "name":  "Redash",
+        "url":  "https://redash.io"
+    },
+    {
+        "name":  "Chartio",
+        "url":  "https://chartio.com"
+    },
+    {
+        "name":  "Periscope Data",
+        "url":  "https://periscopedata.com"
+    },
+    {
+        "name":  "Holistics",
+        "url":  "https://holistics.io"
+    },
+    {
+        "name":  "Datawrapper",
+        "url":  "https://datawrapper.de"
+    },
+    {
+        "name":  "Infogram",
+        "url":  "https://infogram.com"
+    },
+    {
+        "name":  "Intercom",
+        "url":  "https://intercom.com"
+    },
+    {
+        "name":  "Drift",
+        "url":  "https://drift.com"
+    },
+    {
+        "name":  "Dialogflow",
+        "url":  "https://cloud.google.com/dialogflow"
+    },
+    {
+        "name":  "Rasa",
+        "url":  "https://rasa.com"
+    },
+    {
+        "name":  "Landbot",
+        "url":  "https://landbot.io"
+    },
+    {
+        "name":  "ManyChat",
+        "url":  "https://manychat.com"
+    },
+    {
+        "name":  "Tidio",
+        "url":  "https://tidio.com"
+    },
+    {
+        "name":  "Botpress",
+        "url":  "https://botpress.com"
+    },
+    {
+        "name":  "Replika",
+        "url":  "https://replika.ai"
+    },
+    {
+        "name":  "Character.ai",
+        "url":  "https://character.ai/"
+    },
+    {
+        "name":  "灏忓啺",
+        "url":  "https://xiaoice.com"
+    },
+    {
+        "name":  "Freshchat",
+        "url":  "https://freshworks.com/freshchat"
+    },
+    {
+        "name":  "LivePerson",
+        "url":  "https://liveperson.com"
+    },
+    {
+        "name":  "Ada",
+        "url":  "https://ada.cx"
+    },
+    {
+        "name":  "Kore.ai",
+        "url":  "https://kore.ai"
+    },
+    {
+        "name":  "IBM Watson",
+        "url":  "https://ibm.com/watson"
+    },
+    {
+        "name":  "Amazon Lex",
+        "url":  "https://aws.amazon.com/lex"
+    },
+    {
+        "name":  "Microsoft Bot Framework",
+        "url":  "https://dev.botframework.com"
+    },
+    {
+        "name":  "Chatfuel",
+        "url":  "https://chatfuel.com"
+    },
+    {
+        "name":  "MobileMonkey",
+        "url":  "https://mobilemonkey.com"
+    },
+    {
+        "name":  "Flow XO",
+        "url":  "https://flowxo.com"
+    },
+    {
+        "name":  "Botsify",
+        "url":  "https://botsify.com"
+    },
+    {
+        "name":  "Hootsuite",
+        "url":  "https://hootsuite.com/"
+    },
+    {
+        "name":  "Buffer",
+        "url":  "https://buffer.com"
+    },
+    {
+        "name":  "Sprout Social",
+        "url":  "https://sproutsocial.com"
+    },
+    {
+        "name":  "Later",
+        "url":  "https://later.com"
+    },
+    {
+        "name":  "SocialBee",
+        "url":  "https://socialbee.io"
+    },
+    {
+        "name":  "Lately",
+        "url":  "https://lately.ai"
+    },
+    {
+        "name":  "PhantomBuster",
+        "url":  "https://phantombuster.com"
+    },
+    {
+        "name":  "Agorapulse",
+        "url":  "https://agorapulse.com"
+    },
+    {
+        "name":  "MeetEdgar",
+        "url":  "https://meetedgar.com"
+    },
+    {
+        "name":  "鏂版",
+        "url":  "https://newrank.cn"
+    },
+    {
+        "name":  "娓呭崥澶ф暟鎹?,\n    description: ",
+        "url":  "https://www.gsdata.cn"
+    },
+    {
+        "name":  "CoSchedule",
+        "url":  "https://coschedule.com"
+    },
+    {
+        "name":  "Sendible",
+        "url":  "https://sendible.com"
+    },
+    {
+        "name":  "Crowdfire",
+        "url":  "https://crowdfireapp.com"
+    },
+    {
+        "name":  "Tailwind",
+        "url":  "https://tailwindapp.com"
+    },
+    {
+        "name":  "Planoly",
+        "url":  "https://planoly.com"
+    },
+    {
+        "name":  "Iconosquare",
+        "url":  "https://iconosquare.com"
+    },
+    {
+        "name":  "Socialbakers",
+        "url":  "https://socialbakers.com"
+    },
+    {
+        "name":  "Brandwatch",
+        "url":  "https://brandwatch.com"
+    },
+    {
+        "name":  "Mention",
+        "url":  "https://mention.com"
+    },
+    {
+        "name":  "BuzzSumo",
+        "url":  "https://buzzsumo.com"
+    },
+    {
+        "name":  "NapoleonCat",
+        "url":  "https://napoleoncat.com"
+    },
+    {
+        "name":  "Cursor",
+        "url":  "https://cursor.sh"
+    },
+    {
+        "name":  "GitHub Copilot",
+        "url":  "https://github.com/features/copilot"
+    },
+    {
+        "name":  "Replit AI",
+        "url":  "https://replit.com"
+    },
+    {
+        "name":  "Codeium",
+        "url":  "https://codeium.com"
+    },
+    {
+        "name":  "Tabnine",
+        "url":  "https://tabnine.com"
+    },
+    {
+        "name":  "Amazon CodeWhisperer",
+        "url":  "https://aws.amazon.com/codewhisperer"
+    },
+    {
+        "name":  "Sourcegraph Cody",
+        "url":  "https://sourcegraph.com/cody"
+    },
+    {
+        "name":  "Windsurf",
+        "url":  "https://codeium.com/windsurf"
+    },
+    {
+        "name":  "Continue",
+        "url":  "https://continue.dev"
+    },
+    {
+        "name":  "V0",
+        "url":  "https://v0.dev"
+    },
+    {
+        "name":  "Builder.io",
+        "url":  "https://builder.io"
+    },
+    {
+        "name":  "CodeSandbox AI",
+        "url":  "https://codesandbox.io"
+    },
+    {
+        "name":  "Blackbox AI",
+        "url":  "https://www.blackbox.ai"
+    },
+    {
+        "name":  "Bolt.new",
+        "url":  "https://bolt.new"
+    },
+    {
+        "name":  "Lovable",
+        "url":  "https://lovable.dev"
+    },
+    {
+        "name":  "Durable",
+        "url":  "https://durable.co"
+    },
+    {
+        "name":  "10Web",
+        "url":  "https://10web.io"
+    },
+    {
+        "name":  "Framer AI",
+        "url":  "https://framer.com"
+    },
+    {
+        "name":  "Relume",
+        "url":  "https://relume.io"
+    },
+    {
+        "name":  "Anima",
+        "url":  "https://animaapp.com"
+    },
+    {
+        "name":  "Locofy",
+        "url":  "https://locofy.ai"
+    },
+    {
+        "name":  "Plasmic",
+        "url":  "https://plasmic.app"
+    },
+    {
+        "name":  "Webflow AI",
+        "url":  "https://webflow.com"
+    },
+    {
+        "name":  "Mintlify",
+        "url":  "https://mintlify.com"
+    },
+    {
+        "name":  "Sourcery",
+        "url":  "https://sourcery.ai"
+    },
+    {
+        "name":  "Duolingo Max",
+        "url":  "https://duolingo.com"
+    },
+    {
+        "name":  "Khanmigo",
+        "url":  "https://khanacademy.org/khanmigo"
+    },
+    {
+        "name":  "Quizlet AI",
+        "url":  "https://quizlet.com"
+    },
+    {
+        "name":  "Coursera Coach",
+        "url":  "https://coursera.org"
+    },
+    {
+        "name":  "Photomath",
+        "url":  "https://photomath.com"
+    },
+    {
+        "name":  "Socratic",
+        "url":  "https://socratic.org/"
+    },
+    {
+        "name":  "Brainly",
+        "url":  "https://brainly.com"
+    },
+    {
+        "name":  "Wolfram Alpha",
+        "url":  "https://wolframalpha.com"
+    },
+    {
+        "name":  "Grammarly Edu",
+        "url":  "https://www.grammarly.com/edu"
+    },
+    {
+        "name":  "Magic School AI",
+        "url":  "https://magicschool.ai"
+    },
+    {
+        "name":  "Diffit",
+        "url":  "https://diffit.me"
+    },
+    {
+        "name":  "Education Copilot",
+        "url":  "https://educationcopilot.com"
+    },
+    {
+        "name":  "Twee",
+        "url":  "https://twee.com"
+    },
+    {
+        "name":  "Conker",
+        "url":  "https://conker.ai"
+    },
+    {
+        "name":  "Formative",
+        "url":  "https://goformative.com"
+    },
+    {
+        "name":  "Century Tech",
+        "url":  "https://century.tech"
+    },
+    {
+        "name":  "Carnegie Learning",
+        "url":  "https://carnegielearning.com"
+    },
+    {
+        "name":  "Knowji",
+        "url":  "https://knowji.com/"
+    },
+    {
+        "name":  "ELSA Speak",
+        "url":  "https://elsaspeak.com"
+    },
+    {
+        "name":  "Speak",
+        "url":  "https://speak.com"
+    },
+    {
+        "name":  "瀛﹀爞鍦ㄧ嚎 AI",
+        "url":  "https://xuetangx.com"
+    },
+    {
+        "name":  "缃戞槗鏈夐亾 AI",
+        "url":  "https://youdao.com"
+    }
+]

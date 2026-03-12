@@ -1,0 +1,1513 @@
+[
+  {
+    "url": "https://chatgpt.com",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://claude.ai",
+    "status": 302,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.anthropic.com/app-unavailable-in-region"
+  },
+  {
+    "url": "https://jasper.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.jasper.ai/"
+  },
+  {
+    "url": "https://writesonic.com/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://copy.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.copy.ai/"
+  },
+  {
+    "url": "https://rytr.me",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://yiyan.baidu.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://tongyi.aliyun.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://kimi.moonshot.cn",
+    "status": 302,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.kimi.com/"
+  },
+  {
+    "url": "https://chatglm.cn",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://xinghuo.xfyun.cn",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://notion.so",
+    "status": "ERROR",
+    "ok": false,
+    "error": "read ECONNRESET"
+  },
+  {
+    "url": "https://deepl.com/write",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.deepl.com/write"
+  },
+  {
+    "url": "https://quillbot.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://www.grammarly.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://sudowrite.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://novelai.net/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://anyword.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.anyword.com/"
+  },
+  {
+    "url": "https://hypotenuse.ai/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://peppertype.ai",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://frase.io",
+    "status": 307,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.frase.io/"
+  },
+  {
+    "url": "https://shortlyai.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://aithor.com/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://gravitywrite.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://www.perplexity.ai",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://midjourney.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.midjourney.com/"
+  },
+  {
+    "url": "https://openai.com/dall-e-3/",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://stability.ai/",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://leonardo.ai/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://playgroundai.com/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://canva.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.canva.com/"
+  },
+  {
+    "url": "https://firefly.adobe.com",
+    "status": 302,
+    "ok": true,
+    "redirect": true,
+    "location": "/denied.html"
+  },
+  {
+    "url": "https://ideogram.ai/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://nightcafe.studio",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://creator.nightcafe.studio/"
+  },
+  {
+    "url": "https://www.looka.com",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://remove.bg",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.remove.bg/"
+  },
+  {
+    "url": "https://upscale.media",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.upscale.media:443/"
+  },
+  {
+    "url": "https://meitu.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.meitu.com/"
+  },
+  {
+    "url": "https://gaoding.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.gaoding.com/"
+  },
+  {
+    "url": "https://magicstudio.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://www.seaart.ai",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://civitai.com/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://profilepicture.ai",
+    "status": 307,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.profilepicture.ai/"
+  },
+  {
+    "url": "https://palette.fm",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://gencraft.com/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://pollinations.ai",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://lucidpic.com",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://brandmark.io",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://khroma.co",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.khroma.co/"
+  },
+  {
+    "url": "https://uizard.io/",
+    "status": 503,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://runwayml.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://openai.com/sora",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://pika.art/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://www.heygen.com",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://synthesia.io",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.synthesia.io/"
+  },
+  {
+    "url": "https://capcut.cn",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.capcut.cn/"
+  },
+  {
+    "url": "https://www.descript.com",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://www.veed.io",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://invideo.io/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://lumen5.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://pictory.ai/",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://fliki.ai/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://d-id.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.d-id.com/"
+  },
+  {
+    "url": "https://elai.io/",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://colossyan.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.colossyan.com/"
+  },
+  {
+    "url": "https://virbo.wondershare.cn",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://opus.pro",
+    "status": 302,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.opus.pro/"
+  },
+  {
+    "url": "https://getmunch.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.munchstudio.com/"
+  },
+  {
+    "url": "https://vidyo.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://quso.ai/"
+  },
+  {
+    "url": "https://shuffll.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://kinetix.tech",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://tubemagic.com",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://wisecut.video",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.wisecut.ai/"
+  },
+  {
+    "url": "https://rawshorts.com",
+    "status": 302,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.rawshorts.com/"
+  },
+  {
+    "url": "https://steve.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.steve.ai/"
+  },
+  {
+    "url": "https://elevenlabs.io/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://suno.ai",
+    "status": 307,
+    "ok": false,
+    "redirect": false,
+    "location": "https://suno.com/"
+  },
+  {
+    "url": "https://murf.ai",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://play.ht/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://udio.com",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.udio.com/"
+  },
+  {
+    "url": "https://aiva.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.aiva.ai/"
+  },
+  {
+    "url": "https://lalal.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.lalal.ai/"
+  },
+  {
+    "url": "https://podcast.adobe.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://krisp.ai",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://peiyin.xunfei.cn",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://resemble.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.resemble.ai/"
+  },
+  {
+    "url": "https://wellsaidlabs.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.wellsaid.io/"
+  },
+  {
+    "url": "https://naturalreaders.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.naturalreaders.com/"
+  },
+  {
+    "url": "https://speechify.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://voicemod.net",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.voicemod.net/"
+  },
+  {
+    "url": "https://uberduck.ai",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://soundraw.io",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://boomy.com/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://ecrettmusic.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://cleanvoice.ai",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://audo.ai",
+    "status": 307,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.audo.ai/"
+  },
+  {
+    "url": "https://voice.ai/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://notion.so",
+    "status": "ERROR",
+    "ok": false,
+    "error": "read ECONNRESET"
+  },
+  {
+    "url": "https://copilot.microsoft.com/",
+    "status": "ERROR",
+    "ok": false,
+    "error": "read ECONNRESET"
+  },
+  {
+    "url": "https://grammarly.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.grammarly.com/"
+  },
+  {
+    "url": "https://otter.ai",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://fireflies.ai",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://beautiful.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.beautiful.ai"
+  },
+  {
+    "url": "https://gamma.app/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://tome.app/",
+    "status": 404,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://www.mindmeister.com",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://zapier.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://feishu.cn",
+    "status": 307,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.feishu.cn/"
+  },
+  {
+    "url": "https://dingtalk.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.dingtalk.com/"
+  },
+  {
+    "url": "https://www.motion.com",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://reclaim.ai",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://clockwise.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://mem.ai",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://taskade.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.taskade.com/"
+  },
+  {
+    "url": "https://clickup.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://monday.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://airtable.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.airtable.com/"
+  },
+  {
+    "url": "https://superhuman.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://shortwave.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.shortwave.com/#r"
+  },
+  {
+    "url": "https://www.rewind.ai",
+    "status": "ERROR",
+    "ok": false,
+    "error": "socket hang up"
+  },
+  {
+    "url": "https://granola.so",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.granola.ai/"
+  },
+  {
+    "url": "https://www.supernormal.com",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://www.tableau.com",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://powerbi.microsoft.com",
+    "status": 302,
+    "ok": true,
+    "redirect": true,
+    "location": "/en-us/"
+  },
+  {
+    "url": "https://cloud.google.com/looker",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://datarobot.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.datarobot.com/"
+  },
+  {
+    "url": "https://akkio.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.akkio.com/"
+  },
+  {
+    "url": "https://julius.ai/",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://thoughtspot.com",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.thoughtspot.com/"
+  },
+  {
+    "url": "https://chartgpt.io",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://polymersearch.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.polymersearch.com/"
+  },
+  {
+    "url": "https://finebi.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://guandata.com",
+    "status": 302,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.guandata.com/"
+  },
+  {
+    "url": "https://sisense.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.sisense.com/"
+  },
+  {
+    "url": "https://www.domo.com",
+    "status": 404,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://qlik.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.qlik.com/"
+  },
+  {
+    "url": "https://mode.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://metabase.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.metabase.com/"
+  },
+  {
+    "url": "https://redash.io",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://chartio.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://periscopedata.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.sisense.com/product/data-teams/"
+  },
+  {
+    "url": "https://holistics.io",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.holistics.io/"
+  },
+  {
+    "url": "https://datawrapper.de",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.datawrapper.de/"
+  },
+  {
+    "url": "https://infogram.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://intercom.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.intercom.com/"
+  },
+  {
+    "url": "https://drift.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.salesloft.com/platform/drift/"
+  },
+  {
+    "url": "https://cloud.google.com/dialogflow/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://rasa.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://landbot.io/",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://www.manychat.com",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://tidio.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.tidio.com/"
+  },
+  {
+    "url": "https://botpress.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://replika.ai",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://character.ai/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://xiaoice.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://freshworks.com/freshchat",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.freshworks.com/freshchat"
+  },
+  {
+    "url": "https://liveperson.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.liveperson.com/"
+  },
+  {
+    "url": "https://www.ada.cx",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://kore.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.kore.ai/"
+  },
+  {
+    "url": "https://ibm.com/watson",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.ibm.com/watson"
+  },
+  {
+    "url": "https://aws.amazon.com/lex",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "/lex/"
+  },
+  {
+    "url": "https://dev.botframework.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://chatfuel.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://mobilemonkey.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://customers.ai/"
+  },
+  {
+    "url": "https://flowxo.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://botsify.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://hootsuite.com/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://buffer.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://sproutsocial.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://later.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://socialbee.io",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://socialbee.com:443/"
+  },
+  {
+    "url": "https://lately.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.lately.ai/"
+  },
+  {
+    "url": "https://phantombuster.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://agorapulse.com",
+    "status": 202,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://meetedgar.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://newrank.cn",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://www.gsdata.cn",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://coschedule.com/",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://sendible.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.sendible.com/"
+  },
+  {
+    "url": "https://crowdfireapp.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.crowdfireapp.com/"
+  },
+  {
+    "url": "https://tailwindapp.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.tailwindapp.com:443/"
+  },
+  {
+    "url": "https://www.planoly.com",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://iconosquare.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.iconosquare.com/"
+  },
+  {
+    "url": "https://socialbakers.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.socialbakers.com/"
+  },
+  {
+    "url": "https://brandwatch.com",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://mention.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://mention.com/en/"
+  },
+  {
+    "url": "https://buzzsumo.com/",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://napoleoncat.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://cursor.sh",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://cursor.com/"
+  },
+  {
+    "url": "https://github.com/features/copilot",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://replit.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://codeium.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://windsurf.com/"
+  },
+  {
+    "url": "https://tabnine.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.tabnine.com/"
+  },
+  {
+    "url": "https://aws.amazon.com/codewhisperer",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "/codewhisperer/"
+  },
+  {
+    "url": "https://sourcegraph.com/cody",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://codeium.com/windsurf",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://windsurf.com/windsurf"
+  },
+  {
+    "url": "https://continue.dev",
+    "status": 307,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.continue.dev/"
+  },
+  {
+    "url": "https://v0.dev",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://v0.app/"
+  },
+  {
+    "url": "https://builder.io",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.builder.io/"
+  },
+  {
+    "url": "https://codesandbox.io",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://www.blackbox.ai",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://bolt.new",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://lovable.dev",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://durable.co",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://durable.com/"
+  },
+  {
+    "url": "https://10web.io/",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://framer.com",
+    "status": 307,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.framer.com/"
+  },
+  {
+    "url": "https://relume.io",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.relume.io/"
+  },
+  {
+    "url": "https://animaapp.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.animaapp.com/"
+  },
+  {
+    "url": "https://locofy.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.locofy.ai/"
+  },
+  {
+    "url": "https://plasmic.app",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.plasmic.app/"
+  },
+  {
+    "url": "https://webflow.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://mintlify.com",
+    "status": 307,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.mintlify.com/"
+  },
+  {
+    "url": "https://sourcery.ai",
+    "status": 307,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.sourcery.ai/"
+  },
+  {
+    "url": "https://duolingo.com",
+    "status": 302,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.duolingo.cn"
+  },
+  {
+    "url": "https://khanacademy.org/khanmigo",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.khanacademy.org/khanmigo"
+  },
+  {
+    "url": "https://quizlet.com/",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://coursera.org",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.coursera.org/"
+  },
+  {
+    "url": "https://photomath.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://socratic.org/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://brainly.com/",
+    "status": 403,
+    "ok": false,
+    "redirect": false
+  },
+  {
+    "url": "https://wolframalpha.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.wolframalpha.com/"
+  },
+  {
+    "url": "https://www.grammarly.com/edu",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://magicschool.ai",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.magicschool.ai/"
+  },
+  {
+    "url": "https://diffit.me",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://app.diffit.me/"
+  },
+  {
+    "url": "https://educationcopilot.com/",
+    "status": "ERROR",
+    "ok": false,
+    "error": "certificate has expired"
+  },
+  {
+    "url": "https://twee.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://conker.ai",
+    "status": 308,
+    "ok": false,
+    "redirect": false,
+    "location": "https://www.conker.ai/"
+  },
+  {
+    "url": "https://goformative.com",
+    "status": 200,
+    "ok": true,
+    "redirect": false
+  },
+  {
+    "url": "https://century.tech/",
+    "status": "ERROR",
+    "ok": false,
+    "error": "read ECONNRESET"
+  },
+  {
+    "url": "https://carnegielearning.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.carnegielearning.com/"
+  },
+  {
+    "url": "https://knowji.com/",
+    "status": "TIMEOUT",
+    "ok": false,
+    "error": "Request timeout"
+  },
+  {
+    "url": "https://elsaspeak.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://elsaspeak.com/en/"
+  },
+  {
+    "url": "https://speak.com",
+    "status": 301,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.speak.com/"
+  },
+  {
+    "url": "https://xuetangx.com",
+    "status": 302,
+    "ok": true,
+    "redirect": true,
+    "location": "https://www.xuetangx.com/"
+  },
+  {
+    "url": "https://youdao.com",
+    "status": 302,
+    "ok": true,
+    "redirect": true,
+    "location": "http://error.youdao.com/503_a.youdao.html"
+  }
+]

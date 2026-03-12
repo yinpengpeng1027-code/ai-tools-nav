@@ -1,8 +1,6 @@
 'use client';
 
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 
 // 模拟工具数据
 const FEATURED_TOOLS = [
@@ -77,414 +75,313 @@ const PRICING_PLANS = [
   },
 ];
 
-// 动画变体
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-} as const;
-
-const floatAnimation = {
-  y: [0, -10, 0],
-  transition: {
-    duration: 3,
-    repeat: Infinity,
-  },
-} as const;
-
 export default function Home() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  const heroY = useTransform(scrollYProgress, [0, 0.2], [0, 100]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
-
   return (
-    <motion.div
-      ref={containerRef}
-      className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white text-slate-900"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white text-slate-900">
       {/* Navigation */}
-      <motion.nav
-        className="border-b border-slate-200 bg-white/80 backdrop-blur-xl sticky top-0 z-50"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
+      <nav className="border-b border-slate-200 bg-white/80 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <motion.div
-              className="flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
+            <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <span className="text-2xl">🚀</span>
               <span className="text-xl font-bold bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
                 AI 工具导航站
               </span>
-            </motion.div>
+            </Link>
             <div className="flex items-center gap-6">
-              {['工具库', '分类', 'VIP 专区'].map((item, index) => (
-                <motion.div
-                  key={item}
-                  whileHover={{ y: -2 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Link
-                    href={index === 0 ? '/tools' : index === 1 ? '/categories' : '/vip'}
-                    className="text-sm text-slate-600 hover:text-slate-900 transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </motion.div>
-              ))}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.2 }}
-                className="px-4 py-2 text-sm bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md"
-              >
+              <Link href="/tools" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+                工具库
+              </Link>
+              <Link href="/categories" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+                分类
+              </Link>
+              <Link href="/vip" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+                VIP 专区
+              </Link>
+              <button className="px-4 py-2 text-sm bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md">
                 登录
-              </motion.button>
+              </button>
             </div>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Hero Section */}
-      <motion.section
-        className="relative overflow-hidden"
-        style={{ y: heroY, opacity: heroOpacity }}
-      >
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
-            className="absolute -top-1/2 -left-1/2 w-[100%] h-[100%] bg-gradient-to-br from-blue-400/10 to-transparent rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-          <motion.div
-            className="absolute -bottom-1/2 -right-1/2 w-[100%] h-[100%] bg-gradient-to-tl from-purple-400/10 to-transparent rounded-full blur-3xl"
-            animate={{
-              scale: [1.2, 1, 1.2],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
-          />
+          <div className="absolute -top-1/2 -left-1/2 w-[100%] h-[100%] bg-gradient-to-br from-blue-400/10 to-transparent rounded-full blur-3xl" />
+          <div className="absolute -bottom-1/2 -right-1/2 w-[100%] h-[100%] bg-gradient-to-tl from-purple-400/10 to-transparent rounded-full blur-3xl" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
-          <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-blue-600 text-sm mb-8"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 }}
-            whileHover={{ scale: 1.05 }}
-          >
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-blue-600 text-sm mb-8">
             <span>🎉</span>
             <span>即将上线</span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            className="text-5xl sm:text-7xl font-bold mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
+          <h1 className="text-5xl sm:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               发现最好的 AI 工具
             </span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            className="text-xl text-slate-600 max-w-3xl mx-auto mb-10"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-10">
             国内最全面的 AI 工具发现与学习平台
             <br />
             <span className="text-slate-500">60% 免费资源 + 40% 精选付费，助你快速掌握 AI 工具</span>
-          </motion.p>
+          </p>
 
-          <motion.div
-            className="max-w-2xl mx-auto mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
+          <div className="max-w-2xl mx-auto mb-12">
             <div className="relative">
               <input
                 type="text"
                 placeholder="搜索 AI 工具、教程、资源..."
                 className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 shadow-md"
               />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl font-medium hover:opacity-90 transition-opacity shadow-md"
-              >
+              <button className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl font-medium hover:opacity-90 transition-opacity shadow-md">
                 搜索
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="flex flex-wrap justify-center gap-4"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-          >
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.4)" }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl font-semibold text-lg shadow-lg shadow-blue-500/30"
-            >
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl font-semibold text-lg shadow-lg shadow-blue-500/30 hover:opacity-90 transition-opacity">
               🔔 抢先体验
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white border border-slate-200 rounded-xl font-semibold text-lg hover:bg-slate-50 transition-colors shadow-md"
-            >
+            </button>
+            <button className="px-8 py-4 bg-white border border-slate-200 rounded-xl font-semibold text-lg hover:bg-slate-50 transition-colors shadow-md">
               📖 了解更多
-            </motion.button>
-          </motion.div>
+            </button>
+          </div>
         </div>
-      </motion.section>
+      </section>
+
+      {/* OpenClaw Quick Start Section */}
+      <section className="py-24 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 border-y border-orange-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 border border-orange-200 rounded-full text-orange-600 text-sm mb-6">
+              <span>🦞</span>
+              <span>开源 AI 助理平台</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              7 天掌握 OpenClaw
+            </h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              你的 24/7 个人 AI 助理，真正能做事的家伙<br/>
+              从安装配置到高级自动化，循序渐进成为高手
+            </p>
+          </div>
+
+          {/* OpenClaw Features */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="group p-6 bg-white border border-orange-200 rounded-2xl hover:bg-orange-50 hover:border-orange-300 transition-all duration-300 shadow-md">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="font-semibold text-lg text-slate-900 mb-2">多平台连接</h3>
+              <p className="text-slate-600 text-sm">
+                无缝连接 WhatsApp、Telegram、Discord、飞书等平台，随时随地与 AI 对话
+              </p>
+            </div>
+            <div className="group p-6 bg-white border border-orange-200 rounded-2xl hover:bg-orange-50 hover:border-orange-300 transition-all duration-300 shadow-md">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="font-semibold text-lg text-slate-900 mb-2">5494+ 技能扩展</h3>
+              <p className="text-slate-600 text-sm">
+                从天气查询到代码生成，一键安装社区技能，无限扩展 AI 能力
+              </p>
+            </div>
+            <div className="group p-6 bg-white border border-orange-200 rounded-2xl hover:bg-orange-50 hover:border-orange-300 transition-all duration-300 shadow-md">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="font-semibold text-lg text-slate-900 mb-2">自托管部署</h3>
+              <p className="text-slate-600 text-sm">
+                完全的数据主权，你的数据留在你的服务器上，隐私安全掌握手中
+              </p>
+            </div>
+          </div>
+
+          {/* 7 Days Learning Path */}
+          <div className="bg-white border border-orange-200 rounded-3xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">学习路径</h3>
+            <div className="grid md:grid-cols-7 gap-4">
+              {[
+                { day: 'Day 1', title: '安装配置', desc: '系统要求与通道配置' },
+                { day: 'Day 2', title: '理解架构', desc: 'Gateway 与 Node' },
+                { day: 'Day 3', title: '技能安装', desc: 'ClawHub 使用' },
+                { day: 'Day 4', title: '记忆系统', desc: 'MEMORY.md 管理' },
+                { day: 'Day 5', title: '定时任务', desc: 'Cron 与心跳' },
+                { day: 'Day 6', title: '多 Agent', desc: '六部制协作' },
+                { day: 'Day 7', title: '高级自动化', desc: '工作流设计' },
+              ].map((item, idx) => (
+                <div key={idx} className="text-center">
+                  <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-full font-bold text-sm mb-3 shadow-md">
+                    {idx + 1}
+                  </div>
+                  <div className="text-xs text-orange-600 font-semibold mb-1">{item.day}</div>
+                  <div className="text-sm font-semibold text-slate-900 mb-1">{item.title}</div>
+                  <div className="text-xs text-slate-500">{item.desc}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Stats & CTA */}
+            <div className="grid md:grid-cols-4 gap-6 mt-10 pt-8 border-t border-orange-100">
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1">
+                  5494+
+                </div>
+                <div className="text-xs text-slate-600">社区技能</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1">
+                  31
+                </div>
+                <div className="text-xs text-slate-600">技能分类</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1">
+                  391+
+                </div>
+                <div className="text-xs text-slate-600">精选教程</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1">
+                  开源
+                </div>
+                <div className="text-xs text-slate-600">MIT 许可</div>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <div className="inline-flex items-center gap-3 px-6 py-3 bg-slate-900 text-white rounded-xl font-mono text-sm shadow-lg">
+                <code>npx clawhub@latest install {'<skill-name>'}</code>
+                <button 
+                  className="px-3 py-1 bg-orange-500 hover:bg-orange-600 rounded-lg text-xs transition-colors"
+                  onClick={() => {
+                    navigator.clipboard.writeText('npx clawhub@latest install skill-name');
+                    alert('已复制！');
+                  }}
+                >
+                  复制
+                </button>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
+                <a
+                  href="https://docs.openclaw.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-medium hover:opacity-90 transition-opacity shadow-md"
+                >
+                  开始学习 →
+                </a>
+                <a
+                  href="https://github.com/openclaw/openclaw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-white border border-orange-200 text-orange-600 rounded-xl font-medium hover:bg-orange-50 transition-colors shadow-md"
+                >
+                  GitHub 仓库
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Stats Section */}
-      <motion.section
-        className="border-y border-slate-200 bg-slate-50"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
+      <section className="border-y border-slate-200 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {STATS.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                className="text-center"
-                variants={itemVariants}
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.2 }}
-              >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {STATS.map((stat) => (
+              <div key={stat.label} className="text-center">
                 <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mb-2">
                   {stat.value}
                 </div>
                 <div className="text-slate-600 font-medium">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Categories Section */}
-      <motion.section
-        className="py-24"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-slate-900">探索分类</h2>
             <p className="text-slate-600 text-lg">10 大专业分类，覆盖所有 AI 应用场景</p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {CATEGORIES.map((category) => (
-              <motion.div
+              <Link
                 key={category.name}
-                variants={itemVariants}
-                whileHover={{ y: -8, scale: 1.05 }}
-                transition={{ duration: 0.3 }}
+                href={`/category/${category.name}`}
+                className="group p-6 bg-white border border-slate-200 rounded-2xl hover:bg-slate-50 hover:border-blue-300 transition-all duration-300 shadow-md hover:shadow-lg"
               >
-                <Link
-                  href={`/category/${category.name}`}
-                  className="group p-6 bg-white border border-slate-200 rounded-2xl hover:bg-slate-50 hover:border-blue-300 transition-all duration-300 shadow-md hover:shadow-lg"
-                >
-                  <motion.div
-                    className="text-4xl mb-3"
-                    animate={{ rotate: [0, 5, -5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                  >
-                    {category.icon}
-                  </motion.div>
-                  <div className="font-semibold text-slate-900 mb-1">{category.name}</div>
-                  <div className="text-sm text-slate-500">{category.count} 个工具</div>
-                </Link>
-              </motion.div>
+                <div className="text-4xl mb-3">{category.icon}</div>
+                <div className="font-semibold text-slate-900 mb-1">{category.name}</div>
+                <div className="text-sm text-slate-500">{category.count} 个工具</div>
+              </Link>
             ))}
-          </motion.div>
+          </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Featured Tools Section */}
-      <motion.section
-        className="py-24 border-t border-white/5"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
+      <section className="py-24 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="flex items-center justify-between mb-12"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <div className="flex items-center justify-between mb-12">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2">精选工具</h2>
               <p className="text-slate-600 text-lg">编辑精选，高质量 AI 工具推荐</p>
             </div>
-            <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
-              <Link href="/tools" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
-                查看全部 →
-              </Link>
-            </motion.div>
-          </motion.div>
+            <Link href="/tools" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+              查看全部 →
+            </Link>
+          </div>
 
-          <motion.div
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {FEATURED_TOOLS.map((tool) => (
-              <motion.div
+              <Link
                 key={tool.id}
-                variants={itemVariants}
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+                href={`/tool/${tool.id}`}
+                className="group p-6 bg-white border border-slate-200 rounded-2xl hover:bg-slate-50 hover:border-blue-300 transition-all duration-300 shadow-md hover:shadow-xl"
               >
-                <Link
-                  href={`/tool/${tool.id}`}
-                  className="group p-6 bg-white border border-slate-200 rounded-2xl hover:bg-slate-50 hover:border-blue-300 transition-all duration-300 shadow-md hover:shadow-xl"
-                >
-                  <div className="flex items-start gap-4">
-                    <motion.div
-                      className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 shadow-md"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      {tool.logo}
-                    </motion.div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h3 className="font-semibold text-lg text-slate-900 truncate">{tool.name}</h3>
-                        {tool.isVip && (
-                          <motion.span
-                            className="px-2 py-0.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded text-xs font-medium"
-                            animate={{ opacity: [0.8, 1, 0.8] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                          >
-                            VIP
-                          </motion.span>
-                        )}
-                      </div>
-                      <p className="text-slate-600 text-sm mb-2 line-clamp-2">{tool.description}</p>
-                      <div className="flex items-center gap-2 text-xs text-slate-500">
-                        <span className="px-2 py-1 bg-slate-100 rounded text-slate-600">{tool.category}</span>
-                      </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 shadow-md">
+                    {tool.logo}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="font-semibold text-lg text-slate-900 truncate">{tool.name}</h3>
+                      {tool.isVip && (
+                        <span className="px-2 py-0.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded text-xs font-medium">
+                          VIP
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-slate-600 text-sm mb-2 line-clamp-2">{tool.description}</p>
+                    <div className="flex items-center gap-2 text-xs text-slate-500">
+                      <span className="px-2 py-1 bg-slate-100 rounded text-slate-600">{tool.category}</span>
                     </div>
                   </div>
-                </Link>
-              </motion.div>
+                </div>
+              </Link>
             ))}
-          </motion.div>
+          </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Pricing Section */}
-      <motion.section
-        className="py-24 border-t border-white/5"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
+      <section className="py-24 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">会员计划</h2>
             <p className="text-slate-600 text-lg">选择适合你的方案，解锁更多优质资源</p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {PRICING_PLANS.map((plan, index) => (
-              <motion.div
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {PRICING_PLANS.map((plan) => (
+              <div
                 key={plan.name}
-                variants={itemVariants}
-                whileHover={{ y: -12, scale: 1.03 }}
-                transition={{ duration: 0.3 }}
                 className={`p-8 rounded-3xl shadow-lg ${
                   plan.variant === 'popular'
                     ? 'relative bg-gradient-to-b from-blue-50 to-purple-50 border-2 border-blue-400'
@@ -492,13 +389,9 @@ export default function Home() {
                 }`}
               >
                 {plan.badge && (
-                  <motion.div
-                    className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium shadow-md"
-                    animate={{ scale: [1, 1.05, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium shadow-md">
                     {plan.badge}
-                  </motion.div>
+                  </div>
                 )}
                 <div className="text-2xl font-bold text-slate-900 mb-2">{plan.name}</div>
                 <div className="text-4xl font-bold text-slate-900 mb-6">
@@ -507,26 +400,20 @@ export default function Home() {
                 </div>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
-                    <motion.li
+                    <li
                       key={idx}
                       className={`flex items-center gap-3 ${
                         feature.available ? 'text-slate-700' : 'text-slate-400'
                       }`}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: idx * 0.1 }}
                     >
                       <span className={feature.available ? 'text-green-500' : 'text-slate-300'}>
                         {feature.available ? '✓' : '✗'}
                       </span>
                       {feature.text}
-                    </motion.li>
+                    </li>
                   ))}
                 </ul>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <button
                   className={`w-full py-3 rounded-xl font-medium transition-colors ${
                     plan.variant === 'popular'
                       ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:opacity-90 shadow-md'
@@ -534,46 +421,38 @@ export default function Home() {
                   }`}
                 >
                   {plan.button}
-                </motion.button>
-              </motion.div>
+                </button>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Footer */}
       <footer className="border-t border-slate-200 bg-slate-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <motion.div
-              className="flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-            >
+            <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <span className="text-2xl">🚀</span>
               <span className="font-bold text-slate-900">AI 工具导航站</span>
-            </motion.div>
+            </Link>
             <div className="text-slate-500 text-sm">
               © 2026 AI 工具导航站 · 保留所有权利
             </div>
             <div className="flex gap-6 text-sm">
-              {['关于我们', '联系我们', '隐私政策'].map((item, index) => (
-                <motion.div
-                  key={item}
-                  whileHover={{ y: -2 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Link
-                    href={index === 0 ? '/about' : index === 1 ? '/contact' : '/privacy'}
-                    className="text-slate-600 hover:text-blue-600 transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </motion.div>
-              ))}
+              <Link href="/about" className="text-slate-600 hover:text-blue-600 transition-colors">
+                关于我们
+              </Link>
+              <Link href="/contact" className="text-slate-600 hover:text-blue-600 transition-colors">
+                联系我们
+              </Link>
+              <Link href="/privacy" className="text-slate-600 hover:text-blue-600 transition-colors">
+                隐私政策
+              </Link>
             </div>
           </div>
         </div>
       </footer>
-    </motion.div>
+    </div>
   );
 }
