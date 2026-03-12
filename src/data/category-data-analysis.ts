@@ -1,4 +1,4 @@
-import type { EnhancedTool, RelatedSite } from '../types';
+import type { EnhancedTool, RelatedSite } from './types';
 
 export const DATA_ANALYSIS_TOOLS: EnhancedTool[] = [
   // ==================== BI 可视化 ====================

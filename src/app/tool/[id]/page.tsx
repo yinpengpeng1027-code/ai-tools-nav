@@ -1,11 +1,14 @@
 // 工具详情页面 - 服务器端组件 - 明亮风格
 import Link from "next/link";
-import { getToolById, getRelatedTools, type EnhancedTool } from "@/data/index";
+import { getToolById, type EnhancedTool } from "@/data/index";
+import { generateRelatedTools } from "@/lib/related-tools";
 import ToolPageClient from "./page-client";
 
-export function generateStaticParams() {
-  // 从新的数据源生成静态参数
-  return [];
+export async function generateStaticParams() {
+  const { ALL_TOOLS } = await import("@/data/index");
+  return ALL_TOOLS.map((tool) => ({
+    id: tool.id.toString(),
+  }));
 }
 
 // 使用动态工具数据
@@ -40,7 +43,7 @@ export default async function ToolPage({ params }: { params: Promise<{ id: strin
   }
 
   // 获取相关工具
-  const relatedTools = getRelatedTools(tool.id, 5);
+  const relatedTools = generateRelatedTools(tool, 5);
   
   return <ToolPageClient tool={tool} relatedTools={relatedTools} />;
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import { Tool, RichTool } from "@/data/tools-data-rich";
+import { RichTool } from "@/data/tools-data-rich";
 import ToolLogo from "./Logo";
 
 // 域名映射表
@@ -108,7 +108,7 @@ const TOOL_DOMAINS: Record<number, string> = {
 };
 
 interface ToolCardProps {
-  tool: Tool | RichTool;
+  tool: RichTool;
   showLogo?: boolean;
   showCategory?: boolean;
   showTags?: boolean;

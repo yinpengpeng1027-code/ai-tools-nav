@@ -1,4 +1,4 @@
-import type { EnhancedTool, RelatedSite } from '../types';
+import type { EnhancedTool, RelatedSite } from './types';
 
 export const officeProductivityTools: EnhancedTool[] = [
   {

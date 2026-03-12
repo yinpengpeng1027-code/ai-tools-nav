@@ -2,15 +2,14 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Tool, TOOLS_DATA } from "@/data/tools-data-rich";
+import { RichTool, TOOLS_DATA } from "@/data/tools-data-rich";
 import ToolCard from "@/components/ToolCard";
-import { generateRelatedTools } from "@/lib/related-tools";
 
 // 热门工具数据
-const POPULAR_TOOLS: Tool[] = TOOLS_DATA.slice(0, 20);
+const POPULAR_TOOLS: RichTool[] = TOOLS_DATA.slice(0, 20);
 
 // 完整工具数据
-const ALL_TOOLS: Tool[] = TOOLS_DATA;
+const ALL_TOOLS: RichTool[] = TOOLS_DATA;
 
 const CATEGORIES = [
   { name: "文本生成", icon: "📝", color: "from-blue-500 to-cyan-500" },
@@ -38,8 +37,11 @@ export default function ToolsPage() {
   });
 
   // 获取相关工具（基于当前分类）
-  const getRelatedTools = (tool: Tool, count: number = 3) => {
-    return generateRelatedTools(tool, count);
+  const getRelatedTools = (tool: RichTool, count: number = 3) => {
+    return ALL_TOOLS
+      .filter(t => t.category === tool.category && t.id !== tool.id)
+      .slice(0, count)
+      .map(t => ({ tool: t, matchScore: 10, reason: `同属「${tool.category}」分类` }));
   };
 
   return (
@@ -213,13 +215,13 @@ export default function ToolsPage() {
                       <div className="space-y-2">
                         {relatedTools.map((related) => (
                           <Link
-                            key={related.id}
-                            href={`/tool/${related.id}`}
+                            key={related.tool.id}
+                            href={`/tool/${related.tool.id}`}
                             className="block p-3 bg-slate-50 rounded-xl hover:bg-blue-50 transition-colors"
                           >
                             <div className="flex items-center gap-2">
-                              <span className="text-sm">{related.logo}</span>
-                              <span className="text-sm font-medium text-slate-700">{related.name}</span>
+                              <span className="text-sm">{related.tool.logo}</span>
+                              <span className="text-sm font-medium text-slate-700">{related.tool.name}</span>
                             </div>
                           </Link>
                         ))}

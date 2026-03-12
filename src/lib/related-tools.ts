@@ -1,7 +1,7 @@
 // 相关工具推荐算法
 // 基于工具的分类、标签和特征进行智能匹配
 
-import { EnhancedTool } from "@/data/index";
+import { EnhancedTool, ALL_TOOLS } from "@/data/index";
 
 export interface RelatedTool {
   tool: EnhancedTool;
@@ -19,13 +19,10 @@ export function generateRelatedTools(
   tool: EnhancedTool, 
   count: number = 3
 ): RelatedTool[] {
-  // 动态导入工具数据
-  const { ALL_TOOLS } = require("@/data/index");
-  
   // 计算每个工具的相关度分数
   const scoredTools = ALL_TOOLS
-    .filter(t => t.id !== tool.id)
-    .map(targetTool => ({
+    .filter((t: EnhancedTool) => t.id !== tool.id)
+    .map((targetTool: EnhancedTool) => ({
       tool: targetTool,
       score: calculateMatchScore(tool, targetTool),
       reason: generateMatchReason(tool, targetTool)
