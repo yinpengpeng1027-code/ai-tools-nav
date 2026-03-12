@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { EnhancedTool } from "@/data/index";
-import ToolLogo from "@/components/ToolLogo";
 import { generateRelatedTools } from "@/lib/related-tools";
 
 interface ToolPageClientProps {
@@ -53,11 +52,7 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
           <div className="flex flex-col md:flex-row items-start gap-6">
             {/* Logo */}
             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-5xl shadow-lg shadow-blue-500/30 flex-shrink-0 overflow-hidden">
-              <ToolLogo 
-                domain={domain} 
-                fallbackEmoji={fallbackEmoji}
-                size="large"
-              />
+              {fallbackEmoji}
             </div>
 
             {/* Info */}
