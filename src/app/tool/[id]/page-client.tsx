@@ -234,11 +234,7 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
                     >
                       <div className="flex items-start gap-3">
                         <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-sm flex-shrink-0 overflow-hidden">
-                          <ToolLogo 
-                            domain={new URL(related.tool.url).hostname.replace('www.', '')}
-                            fallbackEmoji={related.tool.logo}
-                            size="small"
-                          />
+                          {related.tool.logo || '🔗'}
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="font-medium text-slate-900 group-hover:text-blue-600 transition-colors">
