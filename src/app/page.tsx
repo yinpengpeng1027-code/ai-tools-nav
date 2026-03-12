@@ -26,24 +26,24 @@ const FEATURED_TOOLS = [
   { id: 1001, name: "Jasper", description: "AI 营销文案", category: "文本生成", logo: "✍️", url: "https://jasper.ai" },
 ];
 
-const CATEGORIES = [
-  { name: "文本生成", icon: "📝", count: 200 },
-  { name: "图像设计", icon: "🎨", count: 150 },
-  { name: "视频制作", icon: "🎬", count: 100 },
-  { name: "音频处理", icon: "🎵", count: 80 },
-  { name: "办公效率", icon: "💼", count: 150 },
-  { name: "数据分析", icon: "📊", count: 100 },
-  { name: "对话机器人", icon: "🤖", count: 100 },
-  { name: "社交媒体", icon: "📱", count: 120 },
-  { name: "开发工具", icon: "💻", count: 150 },
-  { name: "学习教育", icon: "🎓", count: 100 },
+const STATS = [
+  { value: "308+", label: "收录工具" },
+  { value: "10+", label: "专业分类" },
+  { value: "100%", label: "免费资源" },
+  { value: "24/7", label: "全天候服务" },
 ];
 
-const STATS = [
-  { value: "2000+", label: "收录工具" },
-  { value: "10+", label: "专业分类" },
-  { value: "500+", label: "原创教程" },
-  { value: "24/7", label: "全天候服务" },
+const CATEGORIES = [
+  { name: "文本生成", icon: "📝", count: 25 },
+  { name: "图像设计", icon: "🎨", count: 25 },
+  { name: "视频制作", icon: "🎬", count: 25 },
+  { name: "音频处理", icon: "🎵", count: 22 },
+  { name: "办公效率", icon: "💼", count: 25 },
+  { name: "数据分析", icon: "📊", count: 22 },
+  { name: "对话机器人", icon: "🤖", count: 22 },
+  { name: "社交媒体", icon: "📱", count: 22 },
+  { name: "开发工具", icon: "💻", count: 25 },
+  { name: "学习教育", icon: "🎓", count: 22 },
 ];
 
 export default function Home() {
