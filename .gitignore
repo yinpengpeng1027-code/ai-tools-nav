@@ -2,3 +2,13 @@
 out/
 node_modules/
 *.log
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
