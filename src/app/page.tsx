@@ -148,9 +148,13 @@ export default function Home() {
             <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl font-semibold text-lg shadow-lg shadow-blue-500/30 hover:opacity-90 transition-opacity">
               🔔 抢先体验
             </button>
-            <button className="px-8 py-4 bg-white border border-slate-200 rounded-xl font-semibold text-lg hover:bg-slate-50 transition-colors shadow-md">
-              📖 了解更多
-            </button>
+            <Link
+              href="/openclaw"
+              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-semibold text-lg shadow-lg shadow-orange-500/30 hover:opacity-90 transition-opacity inline-flex items-center gap-2"
+            >
+              <span>🦞</span>
+              <span>免费部署 OpenClaw</span>
+            </Link>
           </div>
         </div>
       </section>
