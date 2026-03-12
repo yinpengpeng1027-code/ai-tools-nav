@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Tool, TOOLS_DATA } from "@/data/tools-data-rich";
 import ToolCard from "@/components/ToolCard";
-import { generate related tools } from "@/lib/related-tools";
+import { generateRelatedTools } from "@/lib/related-tools";
 
 // 热门工具数据
 const POPULAR_TOOLS: Tool[] = TOOLS_DATA.slice(0, 20);
