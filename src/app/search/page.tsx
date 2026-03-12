@@ -6,6 +6,7 @@ import { searchTools, type EnhancedTool } from "@/data/index";
 import type { EnhancedTool as Tool } from "@/data/index";
 import BrandLogo from "@/components/BrandLogo";
 import SearchBar from "@/components/SearchBar";
+import ToolLogo from "@/components/Logo";
 import { FadeIn, SlideDown, HoverCard, StaggerContainer, StaggerItem } from "@/components/animations";
 
 const CATEGORIES = [
@@ -285,7 +286,9 @@ export default function SearchPage() {
             {/* Results Grid */}
             <StaggerContainer>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {results.map(({ tool, highlights }) => (
+                {results.map(({ tool, highlights }) => {
+                  const domain = tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/^www\./, '');
+                  return (
                   <StaggerItem key={tool.id}>
                     <Link
                       href={`/tool/${tool.id}`}
@@ -294,8 +297,13 @@ export default function SearchPage() {
                       <HoverCard scale={1.03}>
                         <div className="group p-6 bg-white border-2 border-slate-100 rounded-2xl hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300">
                           <div className="flex items-start gap-4 mb-4">
-                            <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 shadow-lg shadow-blue-500/30">
-                              {tool.logo}
+                            <div className="flex-shrink-0">
+                              <ToolLogo 
+                                domain={domain} 
+                                fallbackEmoji={tool.logo}
+                                size="medium"
+                                className="shadow-lg shadow-blue-500/30"
+                              />
                             </div>
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center gap-2 mb-1">
@@ -341,7 +349,8 @@ export default function SearchPage() {
                       </HoverCard>
                     </Link>
                   </StaggerItem>
-                ))}
+                );
+              })}
               </div>
             </StaggerContainer>
           </div>

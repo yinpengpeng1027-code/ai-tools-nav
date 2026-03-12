@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ALL_TOOLS, type EnhancedTool } from "@/data/index";
 import ToolCard from "@/components/ToolCard";
+import ToolLogo from "@/components/Logo";
 
 // 热门工具数据
 const POPULAR_TOOLS: EnhancedTool[] = ALL_TOOLS.slice(0, 20);
@@ -215,18 +216,25 @@ export default function ToolsPage() {
                     <div className="mt-4">
                       <h3 className="text-sm font-semibold text-slate-900 mb-2">相似工具</h3>
                       <div className="space-y-2">
-                        {relatedTools.map((related) => (
+                        {relatedTools.map((related) => {
+                          const relatedDomain = related.tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/^www\./, '');
+                          return (
                           <Link
                             key={related.tool.id}
                             href={`/tool/${related.tool.id}`}
                             className="block p-3 bg-slate-50 rounded-xl hover:bg-blue-50 transition-colors"
                           >
                             <div className="flex items-center gap-2">
-                              <span className="text-sm">{related.tool.logo}</span>
+                              <ToolLogo 
+                                domain={relatedDomain} 
+                                fallbackEmoji={related.tool.logo || '🔗'}
+                                size="small"
+                              />
                               <span className="text-sm font-medium text-slate-700">{related.tool.name}</span>
                             </div>
                           </Link>
-                        ))}
+                        );
+                      })}
                       </div>
                     </div>
                   </div>

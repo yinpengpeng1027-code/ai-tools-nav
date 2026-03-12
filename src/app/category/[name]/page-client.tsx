@@ -3,9 +3,11 @@
 import Link from "next/link";
 import React, { useMemo, useCallback } from "react";
 import { TOOLS_BY_CATEGORY } from "@/data/tools-data";
+import ToolLogo from "@/components/Logo";
 
 // 性能优化：工具卡片组件 - 使用 React.memo 避免不必要的重渲染
 const ToolCard = React.memo(({ tool }: { tool: typeof TOOLS_BY_CATEGORY[string][0] }) => {
+  const domain = tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/^www\./, '');
   return (
     <Link
       href={`/tool/${tool.id}`}
@@ -13,11 +15,13 @@ const ToolCard = React.memo(({ tool }: { tool: typeof TOOLS_BY_CATEGORY[string][
       style={{ contentVisibility: 'auto', containIntrinsicSize: '0 200px' }}
     >
       <div className="flex items-start gap-4">
-        <div 
-          className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform duration-300"
-          style={{ contain: 'layout' }}
-        >
-          {tool.logo}
+        <div className="flex-shrink-0">
+          <ToolLogo 
+            domain={domain} 
+            fallbackEmoji={tool.logo}
+            size="medium"
+            className="shadow-lg shadow-blue-500/30"
+          />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">

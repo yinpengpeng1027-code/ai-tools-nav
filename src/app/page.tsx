@@ -3,6 +3,7 @@
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
 import SearchBar from "@/components/SearchBar";
+import ToolLogo from "@/components/Logo";
 import {
   FadeIn,
   SlideDown,
@@ -17,12 +18,12 @@ import {
 
 // 模拟工具数据
 const FEATURED_TOOLS = [
-  { id: 1, name: "ChatGPT", description: "OpenAI 的智能对话 AI", category: "文本生成", logo: "🤖", isVip: false },
-  { id: 2, name: "Midjourney", description: "AI 绘画工具", category: "图像设计", logo: "🎨", isVip: true },
-  { id: 3, name: "Notion AI", description: "智能笔记助手", category: "办公效率", logo: "📝", isVip: false },
-  { id: 4, name: "Runway", description: "AI 视频生成", category: "视频制作", logo: "🎬", isVip: true },
-  { id: 5, name: "ElevenLabs", description: "AI 语音合成", category: "音频处理", logo: "🎵", isVip: true },
-  { id: 6, name: "Jasper", description: "AI 营销文案", category: "文本生成", logo: "✍️", isVip: false },
+  { id: 1, name: "ChatGPT", description: "OpenAI 的智能对话 AI", category: "文本生成", logo: "🤖", url: "https://chatgpt.com", isVip: false },
+  { id: 2, name: "Midjourney", description: "AI 绘画工具", category: "图像设计", logo: "🎨", url: "https://midjourney.com", isVip: true },
+  { id: 3, name: "Notion AI", description: "智能笔记助手", category: "办公效率", logo: "📝", url: "https://notion.so", isVip: false },
+  { id: 4, name: "Runway", description: "AI 视频生成", category: "视频制作", logo: "🎬", url: "https://runwayml.com", isVip: true },
+  { id: 5, name: "ElevenLabs", description: "AI 语音合成", category: "音频处理", logo: "🎵", url: "https://elevenlabs.io", isVip: true },
+  { id: 6, name: "Jasper", description: "AI 营销文案", category: "文本生成", logo: "✍️", url: "https://jasper.ai", isVip: false },
 ];
 
 const CATEGORIES = [
@@ -421,7 +422,9 @@ export default function Home() {
 
             <StaggerContainer>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {FEATURED_TOOLS.map((tool, index) => (
+                {FEATURED_TOOLS.map((tool, index) => {
+                  const domain = tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/^www\./, '');
+                  return (
                   <StaggerItem key={tool.id}>
                     <Link
                       href={`/tool/${tool.id}`}
@@ -430,8 +433,13 @@ export default function Home() {
                       <HoverCard scale={1.03}>
                         <ShineEffect className="group p-6 bg-white border border-slate-200 rounded-2xl">
                           <div className="flex items-start gap-4">
-                            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 shadow-md">
-                              {tool.logo}
+                            <div className="flex-shrink-0">
+                              <ToolLogo 
+                                domain={domain} 
+                                fallbackEmoji={tool.logo}
+                                size="medium"
+                                className="shadow-md"
+                              />
                             </div>
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center gap-2 mb-1">
@@ -452,7 +460,8 @@ export default function Home() {
                       </HoverCard>
                     </Link>
                   </StaggerItem>
-                ))}
+                );
+              })}
               </div>
             </StaggerContainer>
           </div>

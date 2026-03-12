@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { EnhancedTool } from "@/data/index";
 import { generateRelatedTools } from "@/lib/related-tools";
+import ToolLogo from "@/components/Logo";
 
 interface ToolPageClientProps {
   tool: EnhancedTool;
@@ -51,8 +52,13 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
         <section className="bg-white rounded-3xl shadow-xl p-8 mb-8 border border-slate-200">
           <div className="flex flex-col md:flex-row items-start gap-6">
             {/* Logo */}
-            <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-5xl shadow-lg shadow-blue-500/30 flex-shrink-0 overflow-hidden">
-              {fallbackEmoji}
+            <div className="flex-shrink-0">
+              <ToolLogo 
+                domain={domain} 
+                fallbackEmoji={fallbackEmoji}
+                size="large"
+                className="shadow-lg shadow-blue-500/30"
+              />
             </div>
 
             {/* Info */}
@@ -226,27 +232,34 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
               
               {relatedTools.length > 0 ? (
                 <div className="space-y-3">
-                  {relatedTools.map((related) => (
-                    <Link
-                      key={related.tool.id}
-                      href={`/tool/${related.tool.id}`}
-                      className="block p-3 bg-slate-50 rounded-xl hover:bg-blue-50 transition-colors group"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-sm flex-shrink-0 overflow-hidden">
-                          {related.tool.logo || '🔗'}
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="font-medium text-slate-900 group-hover:text-blue-600 transition-colors">
-                            {related.tool.name}
+                  {relatedTools.map((related) => {
+                    const relatedDomain = related.tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/^www\./, '');
+                    return (
+                      <Link
+                        key={related.tool.id}
+                        href={`/tool/${related.tool.id}`}
+                        className="block p-3 bg-slate-50 rounded-xl hover:bg-blue-50 transition-colors group"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0">
+                            <ToolLogo 
+                              domain={relatedDomain} 
+                              fallbackEmoji={related.tool.logo || '🔗'}
+                              size="small"
+                            />
                           </div>
-                          <div className="text-xs text-slate-500 mt-1 line-clamp-2">
-                            {related.tool.description}
+                          <div className="flex-1 min-w-0">
+                            <div className="font-medium text-slate-900 group-hover:text-blue-600 transition-colors">
+                              {related.tool.name}
+                            </div>
+                            <div className="text-xs text-slate-500 mt-1 line-clamp-2">
+                              {related.tool.description}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </Link>
-                  ))}
+                      </Link>
+                    );
+                  })}
                 </div>
               ) : (
                 <p className="text-slate-500 text-center py-4">暂无相关推荐</p>
