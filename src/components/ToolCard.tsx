@@ -112,7 +112,6 @@ interface ToolCardProps {
   showLogo?: boolean;
   showCategory?: boolean;
   showTags?: boolean;
-  showVipBadge?: boolean;
   size?: 'small' | 'medium' | 'large';
 }
 
@@ -120,8 +119,7 @@ export default function ToolCard({
   tool, 
   showLogo = true, 
   showCategory = true, 
-  showTags = true, 
-  showVipBadge = true,
+  showTags = true,
   size = 'medium' 
 }: ToolCardProps) {
   const domain = TOOL_DOMAINS[tool.id] || new URL(tool.url).hostname.replace('www.', '');
@@ -157,11 +155,6 @@ export default function ToolCard({
             <h3 className={`font-bold ${size === 'large' ? 'text-2xl' : 'text-xl'} text-slate-900 truncate`}>
               {tool.name}
             </h3>
-            {showVipBadge && tool.isVip && (
-              <span className="px-2.5 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg text-xs font-bold shadow-md">
-                VIP
-              </span>
-            )}
           </div>
           
           <p className={`text-slate-600 ${size === 'large' ? 'text-base' : 'text-sm'} line-clamp-2 font-medium mb-2`}>

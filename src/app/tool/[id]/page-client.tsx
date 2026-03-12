@@ -65,15 +65,9 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-2 flex-wrap">
                 <h1 className="text-4xl font-bold text-slate-900">{tool.name}</h1>
-                {tool.isVip ? (
-                  <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium">
-                    VIP 专属
-                  </span>
-                ) : (
-                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
-                    免费可用
-                  </span>
-                )}
+                <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                  免费可用
+                </span>
               </div>
               <p className="text-lg text-slate-600 mb-4">{tool.description}</p>
               
@@ -99,7 +93,9 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
                 >
                   访问官网 →
                 </a>
-                <span className="text-lg font-semibold text-slate-700">{tool.price}</span>
+                <span className="px-4 py-2 bg-green-50 text-green-700 rounded-lg text-sm font-medium">
+                  完全免费
+                </span>
               </div>
             </div>
           </div>
@@ -196,7 +192,7 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
                 </div>
                 <div>
                   <span className="text-slate-500">类型</span>
-                  <p className="text-slate-900 font-medium">{tool.isVip ? 'VIP 专属' : '免费可用'}</p>
+                  <p className="text-slate-900 font-medium">免费可用</p>
                 </div>
                 <div>
                   <span className="text-slate-500">标签</span>

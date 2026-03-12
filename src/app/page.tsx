@@ -46,49 +46,6 @@ const STATS = [
   { value: "24/7", label: "全天候服务" },
 ];
 
-const PRICING_PLANS = [
-  {
-    name: "🆓 免费版",
-    price: "¥0",
-    period: "/永久",
-    features: [
-      { text: "访问 60% 免费资源", available: true },
-      { text: "基础搜索功能", available: true },
-      { text: "收藏工具", available: true },
-      { text: "VIP 专属内容", available: false },
-    ],
-    button: "免费注册",
-    variant: "basic",
-  },
-  {
-    name: "💎 VIP 会员",
-    price: "¥168",
-    period: "/年",
-    badge: "最受欢迎",
-    features: [
-      { text: "访问 80% 付费资源", available: true },
-      { text: "深度教程与方案", available: true },
-      { text: "无广告体验", available: true },
-      { text: "专属客服支持", available: true },
-    ],
-    button: "立即开通",
-    variant: "popular",
-  },
-  {
-    name: "👑 私域高端",
-    price: "¥999",
-    period: "/年起",
-    features: [
-      { text: "100% 资源访问", available: true },
-      { text: "1v1 咨询服务", available: true },
-      { text: "私董会门票", available: true },
-      { text: "企业定制服务", available: true },
-    ],
-    button: "联系咨询",
-    variant: "premium",
-  },
-];
-
 export default function Home() {
   const handleSearch = (query: string) => {
     console.log('Searching:', query);
@@ -112,8 +69,8 @@ export default function Home() {
                 <Link href="/categories" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
                   分类
                 </Link>
-                <Link href="/vip" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
-                  VIP 专区
+                <Link href="/openclaw" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+                  OpenClaw 课程
                 </Link>
                 <ClickButton className="px-4 py-2 text-sm bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md">
                   登录
@@ -468,69 +425,36 @@ export default function Home() {
         </section>
       </ScrollReveal>
 
-      {/* Pricing Section */}
+      {/* Free Statement Section */}
       <ScrollReveal direction="up">
-        <section className="py-24 border-t border-white/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-24 border-t border-white/5 bg-gradient-to-r from-green-50 to-emerald-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <FadeIn>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">会员计划</h2>
-                <p className="text-slate-600 text-lg">选择适合你的方案，解锁更多优质资源</p>
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-white text-4xl mb-6 shadow-lg">
+                🆓
+              </div>
+              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6">
+                完全免费 · 开放共享
+              </h2>
+              <p className="text-xl text-slate-700 mb-8 leading-relaxed">
+                本站所有 AI 工具资源完全免费开放，无任何 VIP 限制<br/>
+                我们相信知识应该自由流动，让每个人都能平等获取优质资源
+              </p>
+              <div className="grid sm:grid-cols-3 gap-6 mt-12">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-2">100%</div>
+                  <div className="text-slate-600">免费资源</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-2">0 元</div>
+                  <div className="text-slate-600">无需付费</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-2">∞</div>
+                  <div className="text-slate-600">无限访问</div>
+                </div>
               </div>
             </FadeIn>
-
-            <StaggerContainer staggerInterval={0.15}>
-              <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                {PRICING_PLANS.map((plan, index) => (
-                  <StaggerItem key={plan.name}>
-                    <HoverCard scale={1.02}>
-                      <div
-                        className={`relative p-8 rounded-3xl shadow-lg h-full ${
-                          plan.variant === 'popular'
-                            ? 'relative bg-gradient-to-b from-blue-50 to-purple-50 border-2 border-blue-400'
-                            : 'bg-white border border-slate-200'
-                        }`}
-                      >
-                        {plan.badge && (
-                          <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium shadow-md">
-                            {plan.badge}
-                          </div>
-                        )}
-                        <div className="text-2xl font-bold text-slate-900 mb-2">{plan.name}</div>
-                        <div className="text-4xl font-bold text-slate-900 mb-6">
-                          {plan.price}
-                          <span className="text-lg text-slate-500 font-normal">{plan.period}</span>
-                        </div>
-                        <ul className="space-y-4 mb-8">
-                          {plan.features.map((feature, idx) => (
-                            <li
-                              key={idx}
-                              className={`flex items-center gap-3 ${
-                                feature.available ? 'text-slate-700' : 'text-slate-400'
-                              }`}
-                            >
-                              <span className={feature.available ? 'text-green-500' : 'text-slate-300'}>
-                                {feature.available ? '✓' : '✗'}
-                              </span>
-                              {feature.text}
-                            </li>
-                          ))}
-                        </ul>
-                        <ClickButton
-                          className={`w-full py-3 rounded-xl font-medium transition-colors ${
-                            plan.variant === 'popular'
-                              ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:opacity-90 shadow-md'
-                              : 'bg-white border border-slate-300 text-slate-700 hover:bg-slate-50'
-                          }`}
-                        >
-                          {plan.button}
-                        </ClickButton>
-                      </div>
-                    </HoverCard>
-                  </StaggerItem>
-                ))}
-              </div>
-            </StaggerContainer>
           </div>
         </section>
       </ScrollReveal>
