@@ -1,20 +1,458 @@
+'use client';
+
 import Link from "next/link";
-import ToolLogo from "@/components/ToolLogo";
 
 // 模拟工具数据
 const FEATURED_TOOLS = [
-  { id: 1, name: "ChatGPT", description: "OpenAI 的智能对话 AI", category: "文本生成", url: "https://chatgpt.com", logo: "🤖", isVip: false },
-  { id: 2, name: "Midjourney", description: "AI 绘画工具", category: "图像设计", url: "https://midjourney.com", logo: "🎨", isVip: true },
-  { id: 3, name: "Notion AI", description: "智能笔记助手", category: "办公效率", url: "https://notion.so", logo: "📝", isVip: false },
-  { id: 4, name: "Runway", description: "AI 视频生成", category: "视频制作", url: "https://runwayml.com", logo: "🎬", isVip: true },
-  { id: 5, name: "ElevenLabs", description: "AI 语音合成", category: "音频处理", url: "https://elevenlabs.io", logo: "🎵", isVip: true },
-  { id: 6, name: "Jasper", description: "AI 营销文案", category: "文本生成", url: "https://jasper.ai", logo: "✍️", isVip: false },
+  { id: 1, name: "ChatGPT", description: "OpenAI 的智能对�?AI", category: "文本生成", logo: "🤖", isVip: false },
+  { id: 2, name: "Midjourney", description: "AI 绘画工具", category: "图像设计", logo: "🎨", isVip: true },
+  { id: 3, name: "Notion AI", description: "智能笔记助手", category: "办公效率", logo: "📝", isVip: false },
+  { id: 4, name: "Runway", description: "AI 视频生成", category: "视频制作", logo: "🎬", isVip: true },
+  { id: 5, name: "ElevenLabs", description: "AI 语音合成", category: "音频处理", logo: "🎵", isVip: true },
+  { id: 6, name: "Jasper", description: "AI 营销文案", category: "文本生成", logo: "✍️", isVip: false },
 ];
 
-export function getDomainFromUrl(url: string): string {
-  try {
-    return new URL(url).hostname.replace('www.', '');
-  } catch {
-    return '';
-  }
+const CATEGORIES = [
+  { name: "文本生成", icon: "📝", count: 200 },
+  { name: "图像设计", icon: "🎨", count: 150 },
+  { name: "视频制作", icon: "🎬", count: 100 },
+  { name: "音频处理", icon: "🎵", count: 80 },
+  { name: "办公效率", icon: "💼", count: 150 },
+  { name: "数据分析", icon: "📊", count: 100 },
+  { name: "对话机器�?, icon: "🤖", count: 100 },
+  { name: "社交媒体", icon: "📱", count: 120 },
+  { name: "开发工�?, icon: "💻", count: 150 },
+  { name: "学习教育", icon: "🎓", count: 100 },
+];
+
+const STATS = [
+  { value: "2000+", label: "收录工具" },
+  { value: "10+", label: "专业分类" },
+  { value: "500+", label: "原创教程" },
+  { value: "24/7", label: "全天候服�? },
+];
+
+const PRICING_PLANS = [
+  {
+    name: "🆓 免费�?,
+    price: "¥0",
+    period: "/永久",
+    features: [
+      { text: "访问 60% 免费资源", available: true },
+      { text: "基础搜索功能", available: true },
+      { text: "收藏工具", available: true },
+      { text: "VIP 专属内容", available: false },
+    ],
+    button: "免费注册",
+    variant: "basic",
+  },
+  {
+    name: "💎 VIP 会员",
+    price: "¥168",
+    period: "/�?,
+    badge: "最受欢�?,
+    features: [
+      { text: "访问 80% 付费资源", available: true },
+      { text: "深度教程与方�?, available: true },
+      { text: "无广告体�?, available: true },
+      { text: "专属客服支持", available: true },
+    ],
+    button: "立即开�?,
+    variant: "popular",
+  },
+  {
+    name: "👑 私域高端",
+    price: "¥999",
+    period: "/年起",
+    features: [
+      { text: "100% 资源访问", available: true },
+      { text: "1v1 咨询服务", available: true },
+      { text: "私董会门�?, available: true },
+      { text: "企业定制服务", available: true },
+    ],
+    button: "联系咨询",
+    variant: "premium",
+  },
+];
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white text-slate-900">
+      {/* Navigation */}
+      <nav className="border-b border-slate-200 bg-white/80 backdrop-blur-xl sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <span className="text-2xl">🚀</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+                AI 工具导航�?
+              </span>
+            </Link>
+            <div className="flex items-center gap-6">
+              <Link href="/tools" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+                工具�?
+              </Link>
+              <Link href="/categories" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+                分类
+              </Link>
+              <Link href="/vip" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+                VIP 专区
+              </Link>
+              <button className="px-4 py-2 text-sm bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md">
+                登录
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-1/2 -left-1/2 w-[100%] h-[100%] bg-gradient-to-br from-blue-400/10 to-transparent rounded-full blur-3xl" />
+          <div className="absolute -bottom-1/2 -right-1/2 w-[100%] h-[100%] bg-gradient-to-tl from-purple-400/10 to-transparent rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-blue-600 text-sm mb-8">
+            <span>🎉</span>
+            <span>即将上线</span>
+          </div>
+
+          <h1 className="text-5xl sm:text-7xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              发现最好的 AI 工具
+            </span>
+          </h1>
+
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-10">
+            国内最全面�?AI 工具发现与学习平�?
+            <br />
+            <span className="text-slate-500">60% 免费资源 + 40% 精选付费，助你快速掌�?AI 工具</span>
+          </p>
+
+          <div className="max-w-2xl mx-auto mb-12">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="搜索 AI 工具、教程、资�?.."
+                className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 shadow-md"
+              />
+              <button className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl font-medium hover:opacity-90 transition-opacity shadow-md">
+                搜索
+              </button>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl font-semibold text-lg shadow-lg shadow-blue-500/30 hover:opacity-90 transition-opacity">
+              🔔 抢先体验
+            </button>
+            <button className="px-8 py-4 bg-white border border-slate-200 rounded-xl font-semibold text-lg hover:bg-slate-50 transition-colors shadow-md">
+              📖 了解更多
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* OpenClaw Quick Start Section */}
+      <section className="py-24 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 border-y border-orange-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 border border-orange-200 rounded-full text-orange-600 text-sm mb-6">
+              <span>🦞</span>
+              <span>开�?AI 助理平台</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              7 天掌�?OpenClaw
+            </h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              你的 24/7 个人 AI 助理，真正能做事的家�?br/>
+              从安装配置到高级自动化，循序渐进成为高手
+            </p>
+          </div>
+
+          {/* OpenClaw Features */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="group p-6 bg-white border border-orange-200 rounded-2xl hover:bg-orange-50 hover:border-orange-300 transition-all duration-300 shadow-md">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="font-semibold text-lg text-slate-900 mb-2">多平台连�?/h3>
+              <p className="text-slate-600 text-sm">
+                无缝连接 WhatsApp、Telegram、Discord、飞书等平台，随时随地与 AI 对话
+              </p>
+            </div>
+            <div className="group p-6 bg-white border border-orange-200 rounded-2xl hover:bg-orange-50 hover:border-orange-300 transition-all duration-300 shadow-md">
+              <div className="text-4xl mb-4">�?/div>
+              <h3 className="font-semibold text-lg text-slate-900 mb-2">5494+ 技能扩�?/h3>
+              <p className="text-slate-600 text-sm">
+                从天气查询到代码生成，一键安装社区技能，无限扩展 AI 能力
+              </p>
+            </div>
+            <div className="group p-6 bg-white border border-orange-200 rounded-2xl hover:bg-orange-50 hover:border-orange-300 transition-all duration-300 shadow-md">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="font-semibold text-lg text-slate-900 mb-2">自托管部�?/h3>
+              <p className="text-slate-600 text-sm">
+                完全的数据主权，你的数据留在你的服务器上，隐私安全掌握手�?
+              </p>
+            </div>
+          </div>
+
+          {/* 7 Days Learning Path */}
+          <div className="bg-white border border-orange-200 rounded-3xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">学习路径</h3>
+            <div className="grid md:grid-cols-7 gap-4">
+              {[
+                { day: 'Day 1', title: '安装配置', desc: '系统要求与通道配置' },
+                { day: 'Day 2', title: '理解架构', desc: 'Gateway �?Node' },
+                { day: 'Day 3', title: '技能安�?, desc: 'ClawHub 使用' },
+                { day: 'Day 4', title: '记忆系统', desc: 'MEMORY.md 管理' },
+                { day: 'Day 5', title: '定时任务', desc: 'Cron 与心�? },
+                { day: 'Day 6', title: '�?Agent', desc: '六部制协�? },
+                { day: 'Day 7', title: '高级自动�?, desc: '工作流设�? },
+              ].map((item, idx) => (
+                <div key={idx} className="text-center">
+                  <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-full font-bold text-sm mb-3 shadow-md">
+                    {idx + 1}
+                  </div>
+                  <div className="text-xs text-orange-600 font-semibold mb-1">{item.day}</div>
+                  <div className="text-sm font-semibold text-slate-900 mb-1">{item.title}</div>
+                  <div className="text-xs text-slate-500">{item.desc}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Stats & CTA */}
+            <div className="grid md:grid-cols-4 gap-6 mt-10 pt-8 border-t border-orange-100">
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1">
+                  5494+
+                </div>
+                <div className="text-xs text-slate-600">社区技�?/div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1">
+                  31
+                </div>
+                <div className="text-xs text-slate-600">技能分�?/div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1">
+                  391+
+                </div>
+                <div className="text-xs text-slate-600">精选教�?/div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1">
+                  开�?
+                </div>
+                <div className="text-xs text-slate-600">MIT 许可</div>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <div className="inline-flex items-center gap-3 px-6 py-3 bg-slate-900 text-white rounded-xl font-mono text-sm shadow-lg">
+                <code>npx clawhub@latest install {'<skill-name>'}</code>
+                <button 
+                  className="px-3 py-1 bg-orange-500 hover:bg-orange-600 rounded-lg text-xs transition-colors"
+                  onClick={() => {
+                    navigator.clipboard.writeText('npx clawhub@latest install skill-name');
+                    alert('已复制！');
+                  }}
+                >
+                  复制
+                </button>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
+                <a
+                  href="https://docs.openclaw.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-medium hover:opacity-90 transition-opacity shadow-md"
+                >
+                  开始学�?�?
+                </a>
+                <a
+                  href="https://github.com/openclaw/openclaw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-white border border-orange-200 text-orange-600 rounded-xl font-medium hover:bg-orange-50 transition-colors shadow-md"
+                >
+                  GitHub 仓库
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="border-y border-slate-200 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {STATS.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-slate-600 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Categories Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-slate-900">探索分类</h2>
+            <p className="text-slate-600 text-lg">10 大专业分类，覆盖所�?AI 应用场景</p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            {CATEGORIES.map((category) => (
+              <Link
+                key={category.name}
+                href={`/category/${category.name}`}
+                className="group p-6 bg-white border border-slate-200 rounded-2xl hover:bg-slate-50 hover:border-blue-300 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                <div className="text-4xl mb-3">{category.icon}</div>
+                <div className="font-semibold text-slate-900 mb-1">{category.name}</div>
+                <div className="text-sm text-slate-500">{category.count} 个工�?/div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Tools Section */}
+      <section className="py-24 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-12">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2">精选工�?/h2>
+              <p className="text-slate-600 text-lg">编辑精选，高质�?AI 工具推荐</p>
+            </div>
+            <Link href="/tools" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+              查看全部 �?
+            </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {FEATURED_TOOLS.map((tool) => (
+              <Link
+                key={tool.id}
+                href={`/tool/${tool.id}`}
+                className="group p-6 bg-white border border-slate-200 rounded-2xl hover:bg-slate-50 hover:border-blue-300 transition-all duration-300 shadow-md hover:shadow-xl"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 shadow-md">
+                    {tool.logo}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="font-semibold text-lg text-slate-900 truncate">{tool.name}</h3>
+                      {tool.isVip && (
+                        <span className="px-2 py-0.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded text-xs font-medium">
+                          VIP
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-slate-600 text-sm mb-2 line-clamp-2">{tool.description}</p>
+                    <div className="flex items-center gap-2 text-xs text-slate-500">
+                      <span className="px-2 py-1 bg-slate-100 rounded text-slate-600">{tool.category}</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-24 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">会员计划</h2>
+            <p className="text-slate-600 text-lg">选择适合你的方案，解锁更多优质资�?/p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {PRICING_PLANS.map((plan) => (
+              <div
+                key={plan.name}
+                className={`p-8 rounded-3xl shadow-lg ${
+                  plan.variant === 'popular'
+                    ? 'relative bg-gradient-to-b from-blue-50 to-purple-50 border-2 border-blue-400'
+                    : 'bg-white border border-slate-200'
+                }`}
+              >
+                {plan.badge && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium shadow-md">
+                    {plan.badge}
+                  </div>
+                )}
+                <div className="text-2xl font-bold text-slate-900 mb-2">{plan.name}</div>
+                <div className="text-4xl font-bold text-slate-900 mb-6">
+                  {plan.price}
+                  <span className="text-lg text-slate-500 font-normal">{plan.period}</span>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li
+                      key={idx}
+                      className={`flex items-center gap-3 ${
+                        feature.available ? 'text-slate-700' : 'text-slate-400'
+                      }`}
+                    >
+                      <span className={feature.available ? 'text-green-500' : 'text-slate-300'}>
+                        {feature.available ? '�? : '�?}
+                      </span>
+                      {feature.text}
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  className={`w-full py-3 rounded-xl font-medium transition-colors ${
+                    plan.variant === 'popular'
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:opacity-90 shadow-md'
+                      : 'bg-white border border-slate-300 text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  {plan.button}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-200 bg-slate-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <span className="text-2xl">🚀</span>
+              <span className="font-bold text-slate-900">AI 工具导航�?/span>
+            </Link>
+            <div className="text-slate-500 text-sm">
+              © 2026 AI 工具导航�?· 保留所有权�?
+            </div>
+            <div className="flex gap-6 text-sm">
+              <Link href="/about" className="text-slate-600 hover:text-blue-600 transition-colors">
+                关于我们
+              </Link>
+              <Link href="/contact" className="text-slate-600 hover:text-blue-600 transition-colors">
+                联系我们
+              </Link>
+              <Link href="/privacy" className="text-slate-600 hover:text-blue-600 transition-colors">
+                隐私政策
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 }
