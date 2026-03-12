@@ -2,14 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { RichTool, TOOLS_DATA } from "@/data/tools-data-rich";
+import { ALL_TOOLS, type EnhancedTool } from "@/data/index";
 import ToolCard from "@/components/ToolCard";
 
 // 热门工具数据
-const POPULAR_TOOLS: RichTool[] = TOOLS_DATA.slice(0, 20);
-
-// 完整工具数据
-const ALL_TOOLS: RichTool[] = TOOLS_DATA;
+const POPULAR_TOOLS: EnhancedTool[] = ALL_TOOLS.slice(0, 20);
 
 const CATEGORIES = [
   { name: "文本生成", icon: "📝", color: "from-blue-500 to-cyan-500" },
@@ -37,7 +34,7 @@ export default function ToolsPage() {
   });
 
   // 获取相关工具（基于当前分类）
-  const getRelatedTools = (tool: RichTool, count: number = 3) => {
+  const getRelatedTools = (tool: EnhancedTool, count: number = 3) => {
     return ALL_TOOLS
       .filter(t => t.category === tool.category && t.id !== tool.id)
       .slice(0, count)
