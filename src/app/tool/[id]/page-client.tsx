@@ -2,12 +2,21 @@
 
 import Link from "next/link";
 import { RichTool } from "@/data/tools-data-rich";
+import ToolLogo from "@/components/ToolLogo";
+import { generateRelatedTools } from "@/lib/related-tools";
+import { getToolDomain } from "@/data/tool-domains";
 
 interface ToolPageClientProps {
   tool: RichTool;
 }
 
 export default function ToolPageClient({ tool }: ToolPageClientProps) {
+  // 生成相关推荐工具
+  const relatedTools = generateRelatedTools(tool, 5);
+
+  const domain = getToolDomain(tool.id) || new URL(tool.url).hostname.replace('www.', '');
+  const fallbackEmoji = tool.logo;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50">
       {/* Navigation */}
@@ -16,7 +25,9 @@ export default function ToolPageClient({ tool }: ToolPageClientProps) {
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-2">
               <span className="text-2xl">🚀</span>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">AI 工具导航站</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                AI 工具导航站
+              </span>
             </Link>
             <div className="flex items-center gap-6">
               <Link href="/tools" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">工具库</Link>
@@ -40,8 +51,12 @@ export default function ToolPageClient({ tool }: ToolPageClientProps) {
         <section className="bg-white rounded-3xl shadow-xl p-8 mb-8 border border-slate-200">
           <div className="flex flex-col md:flex-row items-start gap-6">
             {/* Logo */}
-            <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-5xl shadow-lg shadow-blue-500/30 flex-shrink-0">
-              {tool.logo}
+            <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-5xl shadow-lg shadow-blue-500/30 flex-shrink-0 overflow-hidden">
+              <ToolLogo 
+                domain={domain} 
+                fallbackEmoji={fallbackEmoji}
+                size="large"
+              />
             </div>
 
             {/* Info */}
@@ -49,9 +64,13 @@ export default function ToolPageClient({ tool }: ToolPageClientProps) {
               <div className="flex items-center gap-3 mb-2 flex-wrap">
                 <h1 className="text-4xl font-bold text-slate-900">{tool.name}</h1>
                 {tool.isVip ? (
-                  <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium">VIP 专属</span>
+                  <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium">
+                    VIP 专属
+                  </span>
                 ) : (
-                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">免费可用</span>
+                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                    免费可用
+                  </span>
                 )}
               </div>
               <p className="text-lg text-slate-600 mb-4">{tool.description}</p>
@@ -68,7 +87,7 @@ export default function ToolPageClient({ tool }: ToolPageClientProps) {
                 ))}
               </div>
 
-              {/* CTA Buttons - 官网链接 */}
+              {/* CTA Buttons */}
               <div className="flex flex-wrap items-center gap-4">
                 <a
                   href={tool.url}
@@ -93,7 +112,7 @@ export default function ToolPageClient({ tool }: ToolPageClientProps) {
               <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
                 <span>📖</span> 详细介绍
               </h2>
-              <p className="text-slate-600 leading-relaxed text-base">
+              <p className="text-slate-600 leading-relaxed text-base whitespace-pre-line">
                 {tool.longDescription}
               </p>
             </section>
@@ -126,6 +145,37 @@ export default function ToolPageClient({ tool }: ToolPageClientProps) {
                 ))}
               </div>
             </section>
+
+            {/* Pros and Cons */}
+            <section className="grid md:grid-cols-2 gap-6">
+              <section className="bg-white rounded-2xl shadow-lg p-6 border border-slate-200">
+                <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <span>👍</span> 优势
+                </h2>
+                <ul className="space-y-2">
+                  {tool.pros.map((pro) => (
+                    <li key={pro} className="flex items-start gap-2 text-slate-600">
+                      <span className="text-green-500 mt-1">✓</span>
+                      <span>{pro}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+              <section className="bg-white rounded-2xl shadow-lg p-6 border border-slate-200">
+                <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <span>👎</span> 劣势
+                </h2>
+                <ul className="space-y-2">
+                  {tool.cons.map((con) => (
+                    <li key={con} className="flex items-start gap-2 text-slate-600">
+                      <span className="text-red-500 mt-1">✗</span>
+                      <span>{con}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </section>
           </div>
 
           {/* Sidebar - Right column */}
@@ -146,6 +196,16 @@ export default function ToolPageClient({ tool }: ToolPageClientProps) {
                   <span className="text-slate-500">类型</span>
                   <p className="text-slate-900 font-medium">{tool.isVip ? 'VIP 专属' : '免费可用'}</p>
                 </div>
+                <div>
+                  <span className="text-slate-500">标签</span>
+                  <div className="flex flex-wrap gap-1 mt-1">
+                    {tool.tags.slice(0, 3).map(tag => (
+                      <span key={tag} className="px-2 py-1 bg-slate-100 rounded text-xs">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </aside>
 
@@ -160,6 +220,45 @@ export default function ToolPageClient({ tool }: ToolPageClientProps) {
               >
                 访问官网 →
               </a>
+            </aside>
+
+            {/* Related Tools */}
+            <aside className="bg-white rounded-2xl shadow-lg p-6 border border-slate-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <span>🔗</span> 相关推荐
+              </h3>
+              
+              {relatedTools.length > 0 ? (
+                <div className="space-y-3">
+                  {relatedTools.map((related) => (
+                    <Link
+                      key={related.tool.id}
+                      href={`/tool/${related.tool.id}`}
+                      className="block p-3 bg-slate-50 rounded-xl hover:bg-blue-50 transition-colors group"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-sm flex-shrink-0 overflow-hidden">
+                          <ToolLogo 
+                            domain={new URL(related.tool.url).hostname.replace('www.', '')}
+                            fallbackEmoji={related.tool.logo}
+                            size="small"
+                          />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-medium text-slate-900 group-hover:text-blue-600 transition-colors">
+                            {related.tool.name}
+                          </div>
+                          <div className="text-xs text-slate-500 mt-1 line-clamp-2">
+                            {related.tool.description}
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-slate-500 text-center py-4">暂无相关推荐</p>
+              )}
             </aside>
           </div>
         </div>
@@ -183,4 +282,14 @@ export default function ToolPageClient({ tool }: ToolPageClientProps) {
       </footer>
     </div>
   );
+}
+
+// 从 URL 中提取域名
+function getDomainFromUrl(url: string): string {
+  try {
+    const domain = new URL(url).hostname.replace('www.', '');
+    return domain;
+  } catch {
+    return url;
+  }
 }
