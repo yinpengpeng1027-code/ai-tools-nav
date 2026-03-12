@@ -5,8 +5,8 @@ import "./globals.css";
 const BUILD_VERSION = process.env.NEXT_PUBLIC_BUILD_VERSION || Date.now().toString();
 
 export const metadata: Metadata = {
-  title: "AI 工具导航站",
-  description: "发现最好的 AI 工具",
+  title: "AI Nexus - AI 枢纽",
+  description: "发现最好的 AI 工具，连接 AI 未来",
   // 浏览器缓存控制 meta 标签
   other: {
     // 禁止 IE 缓存

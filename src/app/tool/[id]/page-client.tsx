@@ -1,21 +1,22 @@
 'use client';
 
 import Link from "next/link";
-import { RichTool } from "@/data/tools-data-rich";
+import { EnhancedTool } from "@/data/index";
 import ToolLogo from "@/components/ToolLogo";
 import { generateRelatedTools } from "@/lib/related-tools";
-import { getToolDomain } from "@/data/tool-domains";
 
 interface ToolPageClientProps {
-  tool: RichTool;
+  tool: EnhancedTool;
+  relatedTools?: { tool: EnhancedTool; matchScore: number; reason: string }[];
 }
 
-export default function ToolPageClient({ tool }: ToolPageClientProps) {
-  // 生成相关推荐工具
-  const relatedTools = generateRelatedTools(tool, 5);
-
-  const domain = getToolDomain(tool.id) || new URL(tool.url).hostname.replace('www.', '');
+export default function ToolPageClient({ tool, relatedTools: propRelatedTools }: ToolPageClientProps) {
+  // 从 URL 中提取域名
+  const domain = tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/^www\./, '');
   const fallbackEmoji = tool.logo;
+
+  // 如果没有传入相关工具，生成推荐
+  const relatedTools = propRelatedTools || generateRelatedTools(tool, 5);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50">
@@ -26,7 +27,7 @@ export default function ToolPageClient({ tool }: ToolPageClientProps) {
             <Link href="/" className="flex items-center gap-2">
               <span className="text-2xl">🚀</span>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                AI 工具导航站
+                AI Nexus
               </span>
             </Link>
             <div className="flex items-center gap-6">
@@ -270,7 +271,7 @@ export default function ToolPageClient({ tool }: ToolPageClientProps) {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <span className="text-2xl">🚀</span>
-              <span className="font-bold text-slate-900">AI 工具导航站</span>
+              <span className="font-bold text-slate-900">AI Nexus</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-slate-600">
               <Link href="/tools" className="hover:text-slate-900">工具库</Link>

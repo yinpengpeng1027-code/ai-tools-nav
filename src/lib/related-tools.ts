@@ -1,10 +1,10 @@
 // 相关工具推荐算法
 // 基于工具的分类、标签和特征进行智能匹配
 
-import { Tool, RichTool } from "@/data/tools-data-rich";
+import { EnhancedTool } from "@/data/index";
 
 export interface RelatedTool {
-  tool: Tool | RichTool;
+  tool: EnhancedTool;
   matchScore: number;
   reason: string;
 }
@@ -16,14 +16,14 @@ export interface RelatedTool {
  * @returns 相关工具列表
  */
 export function generateRelatedTools(
-  tool: Tool | RichTool, 
+  tool: EnhancedTool, 
   count: number = 3
 ): RelatedTool[] {
-  // 加载完整工具数据
-  const allTools = loadAllTools();
+  // 动态导入工具数据
+  const { ALL_TOOLS } = require("@/data/index");
   
   // 计算每个工具的相关度分数
-  const scoredTools = allTools
+  const scoredTools = ALL_TOOLS
     .filter(t => t.id !== tool.id)
     .map(targetTool => ({
       tool: targetTool,
@@ -45,7 +45,7 @@ export function generateRelatedTools(
 /**
  * 计算两个工具的相关度分数
  */
-function calculateMatchScore(source: Tool | RichTool, target: Tool | RichTool): number {
+function calculateMatchScore(source: EnhancedTool, target: EnhancedTool): number {
   let score = 0;
 
   // 1. 分类匹配 (权重: 30分)
@@ -62,14 +62,6 @@ function calculateMatchScore(source: Tool | RichTool, target: Tool | RichTool): 
     score += 10;
   }
 
-  // 4. 功能重叠度 (权重: 按重叠功能数计算)
-  if ('features' in source && 'features' in target) {
-    const commonFeatures = (source as RichTool).features.filter(
-      f => (target as RichTool).features.includes(f)
-    );
-    score += commonFeatures.length * 5;
-  }
-
   return score;
 }
 
@@ -77,8 +69,8 @@ function calculateMatchScore(source: Tool | RichTool, target: Tool | RichTool): 
  * 生成匹配原因
  */
 function generateMatchReason(
-  source: Tool | RichTool, 
-  target: Tool | RichTool
+  source: EnhancedTool, 
+  target: EnhancedTool
 ): string {
   const reasons: string[] = [];
 
@@ -93,16 +85,6 @@ function generateMatchReason(
     reasons.push(`支持 ${commonTags.slice(0, 2).join('、')}`);
   }
 
-  // 功能原因
-  if ('features' in source && 'features' in target) {
-    const commonFeatures = (source as RichTool).features.filter(
-      f => (target as RichTool).features.includes(f)
-    );
-    if (commonFeatures.length > 0) {
-      reasons.push(`支持 ${commonFeatures.slice(0, 2).join('、')}`);
-    }
-  }
-
   if (reasons.length === 0) {
     return "热门推荐";
   }
@@ -113,9 +95,10 @@ function generateMatchReason(
 /**
  * 加载所有工具数据
  */
-function loadAllTools(): (Tool | RichTool)[] {
-  // 从 tools-data-rich 导入
-  return require("@/data/tools-data-rich").TOOLS_DATA;
+function loadAllTools(): EnhancedTool[] {
+  // 从新的数据索引导入
+  const { ALL_TOOLS } = require("@/data/index");
+  return ALL_TOOLS;
 }
 
 /**
@@ -125,8 +108,8 @@ export function getToolsByCategory(
   category: string, 
   excludeIds: number[] = [], 
   limit: number = 5
-): Tool[] {
-  const allTools = loadAllTools() as Tool[];
+): EnhancedTool[] {
+  const allTools = loadAllTools();
   
   return allTools
     .filter(t => t.category === category && !excludeIds.includes(t.id))

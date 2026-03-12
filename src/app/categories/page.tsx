@@ -2,11 +2,28 @@
 
 import Link from "next/link";
 import React, { useState, useMemo, useCallback } from "react";
-import { TOOLS_BY_CATEGORY } from "@/data/tools-data";
+import { TOOLS_BY_CATEGORY, getAllSubCategories, type EnhancedTool } from "@/data/index";
 
 // 性能优化：分类卡片组件 - 使用 React.memo
 const CategoryCard = React.memo(({ category }: { category: typeof CATEGORIES[0] }) => {
   const toolCount = TOOLS_BY_CATEGORY[category.name]?.length || 0;
+  
+  // 获取分类描述
+  const getCategoryDesc = (name: string): string => {
+    const descriptions: Record<string, string> = {
+      "文本生成": "AI 写作、翻译、润色、内容生成",
+      "图像设计": "文生图、图生图、图像编辑、Logo 设计",
+      "视频制作": "视频生成、剪辑、特效、字幕",
+      "音频处理": "音乐生成、语音合成、播客制作",
+      "办公效率": "PPT、Excel、邮件、文档自动化",
+      "数据分析": "BI、可视化、数据洞察、报表",
+      "对话机器人": "客服、助手、陪伴、问答",
+      "社交媒体": "运营、营销、增长、内容分发",
+      "开发工具": "代码生成、测试、部署、DevOps",
+      "学习教育": "课程、题库、辅导、语言学习"
+    };
+    return descriptions[name] || "AI 工具集合";
+  };
   
   return (
     <Link
@@ -27,7 +44,7 @@ const CategoryCard = React.memo(({ category }: { category: typeof CATEGORIES[0] 
             {category.name}
           </h3>
           <p className="text-slate-600 font-medium mb-3 line-clamp-2">
-            {category.desc}
+            {getCategoryDesc(category.name)}
           </p>
           <div className="inline-flex items-center px-3 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold">
             {toolCount} 个工具
@@ -81,7 +98,7 @@ export default function CategoriesPage() {
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <span className="text-2xl">🚀</span>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                AI 工具导航站
+                AI Nexus
               </span>
             </Link>
             <div className="flex items-center gap-6">
@@ -116,7 +133,7 @@ export default function CategoriesPage() {
             </span>
           </h1>
           <p className="text-slate-600 text-center text-lg font-medium">
-            10 大专业分类，覆盖所有 AI 应用场景
+            AI Nexus - 10 大专业分类，覆盖所有 AI 应用场景
           </p>
 
           {/* Search Filter */}
@@ -153,10 +170,10 @@ export default function CategoriesPage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <span className="text-2xl">🚀</span>
-              <span className="font-bold text-slate-900">AI 工具导航站</span>
+              <span className="font-bold text-slate-900">AI Nexus</span>
             </Link>
             <div className="text-slate-500 text-sm font-medium">
-              © 2026 AI 工具导航站 · 保留所有权利
+              © 2026 AI Nexus - AI 枢纽 · 保留所有权利
             </div>
             <div className="flex gap-6 text-sm text-slate-600 font-medium">
               <Link href="/about" className="hover:text-slate-900 transition-colors">关于我们</Link>

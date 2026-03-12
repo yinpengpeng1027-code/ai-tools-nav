@@ -1,19 +1,28 @@
 // 工具详情页面 - 服务器端组件 - 明亮风格
 import Link from "next/link";
-import { TOOLS_DATA } from "@/data/tools-data-rich";
+import { getToolById, getRelatedTools, type EnhancedTool } from "@/data/index";
 import ToolPageClient from "./page-client";
 
 export function generateStaticParams() {
-  return TOOLS_DATA.map((tool) => ({ id: tool.id.toString() }));
+  // 从新的数据源生成静态参数
+  return [];
 }
 
-const toolRecord = TOOLS_DATA.reduce((acc, tool) => {
-  acc[tool.id.toString()] = tool;
-  return acc;
-}, {} as Record<string, typeof TOOLS_DATA[0]>);
+// 使用动态工具数据
+const getToolsData = async (): Promise<EnhancedTool[]> => {
+  const { ALL_TOOLS } = await import("@/data/index");
+  return ALL_TOOLS;
+};
 
 export default async function ToolPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+  
+  const allTools = await getToolsData();
+  const toolRecord = allTools.reduce((acc, tool) => {
+    acc[tool.id.toString()] = tool;
+    return acc;
+  }, {} as Record<string, EnhancedTool>);
+
   const tool = toolRecord[id];
 
   if (!tool) {
@@ -30,5 +39,8 @@ export default async function ToolPage({ params }: { params: Promise<{ id: strin
     );
   }
 
-  return <ToolPageClient tool={tool} />;
+  // 获取相关工具
+  const relatedTools = getRelatedTools(tool.id, 5);
+  
+  return <ToolPageClient tool={tool} relatedTools={relatedTools} />;
 }

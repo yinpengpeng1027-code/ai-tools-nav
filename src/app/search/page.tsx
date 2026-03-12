@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { TOOLS_DATA, type Tool } from "@/data/tools-data-rich";
+import { searchTools, type EnhancedTool } from "@/data/index";
+import type { EnhancedTool as Tool } from "@/data/index";
 
 const CATEGORIES = [
   { name: "文本生成", icon: "📝" },
@@ -38,19 +39,21 @@ export default function SearchPage() {
   const [isLoading, setIsLoading] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // 搜索工具函数
-  const searchTools = (searchQuery: string) => {
+  // 搜索工具函数 - 使用新的数据索引
+  const searchToolsFunction = (searchQuery: string) => {
     if (!searchQuery.trim() && selectedCategories.length === 0 && selectedTags.length === 0) {
       setResults([]);
       return;
     }
 
-    const normalizedQuery = searchQuery.toLowerCase().trim();
+    const allTools = searchTools(searchQuery);
     
-    const matchedTools = TOOLS_DATA.map((tool) => {
+    const matchedTools = allTools.map((tool) => {
       let score = 0;
       const highlights: SearchResult['highlights'] = {};
 
+      const normalizedQuery = searchQuery.toLowerCase().trim();
+      
       // 按名称匹配
       if (tool.name.toLowerCase().includes(normalizedQuery)) {
         score += 10;
@@ -91,7 +94,7 @@ export default function SearchPage() {
   // 实时搜索（防抖）
   useEffect(() => {
     const timer = setTimeout(() => {
-      searchTools(query);
+      searchToolsFunction(query);
     }, 300);
 
     return () => clearTimeout(timer);
@@ -120,6 +123,7 @@ export default function SearchPage() {
     setSelectedCategories([]);
     setSelectedTags([]);
     setQuery("");
+    searchToolsFunction("");
   };
 
   return (
@@ -131,7 +135,7 @@ export default function SearchPage() {
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <span className="text-2xl">🚀</span>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                AI 工具导航站
+                AI Nexus
               </span>
             </Link>
             <div className="flex items-center gap-6">
@@ -152,7 +156,7 @@ export default function SearchPage() {
                 搜索 AI 工具
               </span>
             </h1>
-            <p className="text-slate-600 text-lg">支持按名称、描述、分类、标签实时搜索</p>
+            <p className="text-slate-600 text-lg">AI Nexus - 连接 AI 未来，发现最好用的 AI 工具</p>
           </div>
 
           {/* Main Search Bar */}
