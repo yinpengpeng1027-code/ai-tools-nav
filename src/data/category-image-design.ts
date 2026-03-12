@@ -1,4 +1,4 @@
-// AI 工具导航站 - 图像设计分类工具数据
+﻿// AI 工具导航站 - 图像设计分类工具数据
 // 最后更新：2026-03-12
 // 包含 25 个图像设计类 AI 工具的详细数据
 
@@ -17,8 +17,7 @@ export interface EnhancedTool {
   category: string;
   subCategory: string; // 子分类
   logo: string;
-  url: string;
-  isVip: boolean;
+  url: string;;
   price: string;
   tags: string[];
   features: string[]; // 6 个功能特点
@@ -33,7 +32,7 @@ export interface EnhancedTool {
 export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
   // ==================== AI 绘画 ====================
   {
-    id: 1,
+    id: 101,
     name: "Midjourney",
     description: "顶级 AI 绘画工具，以艺术性和创造力著称，生成高质量艺术作品",
     highlights: "艺术风格独特，细节精致，社区活跃",
@@ -41,7 +40,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "🎨",
     url: "https://midjourney.com",
-    isVip: true,
     price: "$10-120/月",
     tags: ["付费", "英文", "Discord"],
     features: [
@@ -80,7 +78,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 2,
+    id: 102,
     name: "DALL-E 3",
     description: "OpenAI 的图像生成模型，精准理解文本提示，生成多样化图像",
     highlights: "提示词理解精准，集成 ChatGPT，使用便捷",
@@ -88,7 +86,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "🖼️",
     url: "https://openai.com/dall-e-3",
-    isVip: true,
     price: "通过 ChatGPT Plus ($20/月)",
     tags: ["付费", "英文", "Web"],
     features: [
@@ -127,7 +124,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 3,
+    id: 103,
     name: "Stable Diffusion",
     description: "开源图像生成模型，可本地部署，高度可定制和扩展",
     highlights: "开源免费，可本地运行，插件生态丰富",
@@ -135,7 +132,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "🌊",
     url: "https://stability.ai",
-    isVip: false,
     price: "免费 (本地部署)",
     tags: ["免费", "开源", "本地"],
     features: [
@@ -174,7 +170,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "advanced"
   },
   {
-    id: 4,
+    id: 104,
     name: "Leonardo AI",
     description: "专业 AI 艺术平台，提供游戏资产、概念艺术等专业工具",
     highlights: "游戏资产专用，训练自定义模型，实时生成",
@@ -182,7 +178,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "🦁",
     url: "https://leonardo.ai",
-    isVip: true,
     price: "免费 + $10-48/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -221,7 +216,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 5,
+    id: 105,
     name: "Playground AI",
     description: "易用 AI 图像生成平台，快速创建和编辑 AI 艺术作品",
     highlights: "界面简洁易用，快速迭代，免费额度高",
@@ -229,7 +224,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "🎪",
     url: "https://playgroundai.com",
-    isVip: true,
     price: "免费 + $15-29/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -268,7 +262,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 6,
+    id: 106,
     name: "SeaArt AI",
     description: "多功能 AI 艺术平台，集成多种模型和强大编辑功能",
     highlights: "模型选择多，编辑功能强，中文支持好",
@@ -276,7 +270,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "模型/资源",
     logo: "🌊",
     url: "https://seaart.ai",
-    isVip: true,
     price: "免费 + 订阅制",
     tags: ["免费增值", "多语言", "Web"],
     features: [
@@ -315,7 +308,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 7,
+    id: 107,
     name: "Civitai",
     description: "Stable Diffusion 模型和资源分享平台，社区驱动的内容中心",
     highlights: "模型资源最全，社区活跃，免费分享",
@@ -323,7 +316,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "模型/资源",
     logo: "🏛️",
     url: "https://civitai.com",
-    isVip: false,
     price: "免费",
     tags: ["免费", "社区", "Web"],
     features: [
@@ -364,7 +356,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
 
   // ==================== 图像编辑 ====================
   {
-    id: 8,
+    id: 108,
     name: "美图 AI",
     description: "美图秀秀 AI 功能，人像美化、智能抠图、滤镜特效一站式处理",
     highlights: "人像优化专业，中文本地化好，操作简单",
@@ -372,7 +364,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "💄",
     url: "https://xiuxiu.meitu.com",
-    isVip: true,
     price: "免费 + VIP 会员",
     tags: ["免费增值", "中文", "多平台"],
     features: [
@@ -411,7 +402,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 9,
+    id: 109,
     name: "Magic Studio",
     description: "AI 图像编辑套件，提供抠图、背景移除、图像增强等多种工具",
     highlights: "工具集合全面，API 可集成，批量处理",
@@ -419,7 +410,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "✨",
     url: "https://magicstudio.com",
-    isVip: true,
     price: "免费 + $9-99/月",
     tags: ["免费增值", "英文", "Web/API"],
     features: [
@@ -458,7 +448,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 10,
+    id: 110,
     name: "Remove.bg",
     description: "专注背景移除的 AI 工具，5 秒自动抠图，精准识别主体",
     highlights: "抠图速度快，识别精准，API 成熟",
@@ -466,7 +456,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "✂️",
     url: "https://remove.bg",
-    isVip: true,
     price: "免费 + $9-99/月",
     tags: ["免费增值", "英文", "Web/API"],
     features: [
@@ -505,7 +494,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 11,
+    id: 111,
     name: "Adobe Firefly",
     description: "Adobe 的创意 AI 模型，深度集成 Creative Cloud，商业安全",
     highlights: "Adobe 生态集成，商业授权安全，专业工作流",
@@ -513,7 +502,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "🔥",
     url: "https://firefly.adobe.com",
-    isVip: true,
     price: "免费 + Creative Cloud 订阅",
     tags: ["免费增值", "多语言", "Web"],
     features: [
@@ -552,7 +540,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 12,
+    id: 112,
     name: "稿定设计",
     description: "在线设计工具，海量模板，AI 辅助设计，适合快速出图",
     highlights: "模板海量，中文本地化，团队协作",
@@ -560,7 +548,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "📐",
     url: "https://gaoding.com",
-    isVip: true,
     price: "免费 + 会员制",
     tags: ["免费增值", "中文", "Web"],
     features: [
@@ -601,7 +588,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
 
   // ==================== Logo/品牌设计 ====================
   {
-    id: 13,
+    id: 113,
     name: "Looka",
     description: "AI Logo 设计平台，快速生成专业品牌标识和全套视觉方案",
     highlights: "Logo 设计专业，品牌套件完整，商业授权",
@@ -609,7 +596,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "Logo/品牌设计",
     logo: "🔍",
     url: "https://looka.com",
-    isVip: true,
     price: "$20-96 一次性",
     tags: ["付费", "英文", "Web"],
     features: [
@@ -648,7 +634,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 14,
+    id: 114,
     name: "Brandmark",
     description: "AI 驱动的品牌设计工具，生成 Logo、配色、字体等完整品牌方案",
     highlights: "品牌方案完整，AI 智能推荐，实时预览",
@@ -656,7 +642,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "Logo/品牌设计",
     logo: "🏷️",
     url: "https://brandmark.io",
-    isVip: true,
     price: "$25-65 一次性",
     tags: ["付费", "英文", "Web"],
     features: [
@@ -695,7 +680,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 15,
+    id: 115,
     name: "Canva AI",
     description: "全能设计平台，AI 功能加持，海量模板支持多场景设计",
     highlights: "模板生态强大，AI 功能丰富，协作便捷",
@@ -703,7 +688,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "Logo/品牌设计",
     logo: "🎨",
     url: "https://canva.com",
-    isVip: true,
     price: "免费 + $12.99-100/月",
     tags: ["免费增值", "多语言", "多平台"],
     features: [
@@ -744,7 +728,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
 
   // ==================== 图像增强 ====================
   {
-    id: 16,
+    id: 116,
     name: "Upscale.media",
     description: "AI 图像放大工具，无损提升分辨率，修复模糊老照片",
     highlights: "放大质量高，批量处理，免费额度足",
@@ -752,7 +736,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像增强",
     logo: "🔍",
     url: "https://upscale.media",
-    isVip: true,
     price: "免费 + $9-39/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -791,7 +774,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 17,
+    id: 117,
     name: "Palette.fm",
     description: "AI 照片上色工具，自动为黑白照片添加自然色彩",
     highlights: "上色自然准确，多风格选择，免费使用",
@@ -799,7 +782,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像增强",
     logo: "🎨",
     url: "https://palette.fm",
-    isVip: false,
     price: "免费 + 付费下载",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -840,7 +822,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
 
   // ==================== 设计工具 ====================
   {
-    id: 18,
+    id: 118,
     name: "Uizard",
     description: "AI 驱动的 UI/UX 设计工具，草图转设计稿，快速原型",
     highlights: "草图识别强大，原型快速，协作方便",
@@ -848,7 +830,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "设计工具",
     logo: "🧙",
     url: "https://uizard.io",
-    isVip: true,
     price: "免费 + $12-39/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -887,7 +868,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 19,
+    id: 119,
     name: "Khroma",
     description: "AI 配色工具，学习用户喜好，生成个性化色彩方案",
     highlights: "个性化学习，配色专业，灵感丰富",
@@ -895,7 +876,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "设计工具",
     logo: "🌈",
     url: "https://khroma.co",
-    isVip: false,
     price: "免费",
     tags: ["免费", "英文", "Web"],
     features: [
@@ -936,7 +916,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
 
   // ==================== 创意艺术 ====================
   {
-    id: 20,
+    id: 120,
     name: "NightCafe",
     description: "AI 艺术创作平台，多种算法支持，社区活跃，每日挑战",
     highlights: "算法选择多，社区活动丰富，免费额度高",
@@ -944,7 +924,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "创意艺术",
     logo: "🌙",
     url: "https://nightcafe.studio",
-    isVip: true,
     price: "免费 + $5.99-79.99/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -983,7 +962,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 21,
+    id: 121,
     name: "Gencraft",
     description: "AI 图像和视频生成平台，专注高质量艺术创作和商业用途",
     highlights: "图像视频双支持，商业授权清晰，质量优秀",
@@ -991,7 +970,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "创意艺术",
     logo: "🎬",
     url: "https://gencraft.com",
-    isVip: true,
     price: "免费 + $29.99-99.99/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -1030,7 +1008,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 22,
+    id: 122,
     name: "Pollinations",
     description: "开源 AI 图像生成，免费无限制，API 友好，快速生成",
     highlights: "完全免费开源，无使用限制，API 简单",
@@ -1038,7 +1016,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "创意艺术",
     logo: "🌸",
     url: "https://pollinations.ai",
-    isVip: false,
     price: "免费",
     tags: ["免费", "开源", "API"],
     features: [
@@ -1077,7 +1054,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 23,
+    id: 123,
     name: "Lucidpic",
     description: "AI 图像生成工具，专注创意设计和艺术探索",
     highlights: "创意风格多样，操作简单，快速出图",
@@ -1085,7 +1062,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "创意艺术",
     logo: "💡",
     url: "https://lucidpic.com",
-    isVip: true,
     price: "订阅制",
     tags: ["付费", "英文", "Web"],
     features: [
@@ -1126,7 +1102,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
 
   // ==================== 其他专业工具 ====================
   {
-    id: 24,
+    id: 124,
     name: "Profile Picture AI",
     description: "专业头像生成工具，创建职业照、社交媒体头像等个人形象",
     highlights: "头像专业化，多风格选择，隐私安全",
@@ -1134,7 +1110,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "图像编辑",
     logo: "👤",
     url: "https://pfpmaker.com",
-    isVip: true,
     price: "免费 + $9.90-49.90",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -1173,7 +1148,7 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 25,
+    id: 125,
     name: "Ideogram",
     description: "擅长文字渲染的 AI 图像生成工具，海报、Logo 文字效果出色",
     highlights: "文字渲染最强，海报设计优，创意独特",
@@ -1181,7 +1156,6 @@ export const IMAGE_DESIGN_TOOLS: EnhancedTool[] = [
     subCategory: "AI 绘画",
     logo: "💬",
     url: "https://ideogram.ai",
-    isVip: true,
     price: "免费 + $8-24/月",
     tags: ["免费增值", "英文", "Web"],
     features: [

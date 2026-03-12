@@ -1,4 +1,4 @@
-// 开发工具分类 - 增强版工具数据
+﻿// 开发工具分类 - 增强版工具数据
 // 包含详细描述、功能特点、使用场景、优缺点、相关网站等
 // 最后更新：2026-03-12
 
@@ -17,8 +17,7 @@ export interface EnhancedTool {
   category: string;
   subCategory: string; // 子分类
   logo: string;
-  url: string;
-  isVip: boolean;
+  url: string;;
   price: string;
   tags: string[];
   features: string[]; // 6 个功能特点
@@ -33,7 +32,7 @@ export interface EnhancedTool {
 export const DEV_TOOLS: EnhancedTool[] = [
   // ==================== AI 代码编辑器 ====================
   {
-    id: 1,
+    id: 801,
     name: "Cursor",
     description: "AI 优先的代码编辑器，基于 VS Code 构建",
     highlights: "AI 深度集成，编码效率倍增",
@@ -41,7 +40,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "AI 代码编辑器",
     logo: "🟣",
     url: "https://cursor.sh",
-    isVip: true,
     price: "免费 + $20/月",
     tags: ["免费增值", "多语言", "Desktop"],
     features: ["AI 代码补全", "自然语言编辑", "代码库理解", "智能重构", "调试辅助", "Git 集成"],
@@ -57,7 +55,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2,
+    id: 802,
     name: "Windsurf",
     description: "下一代 AI 代码编辑器，智能编码助手",
     highlights: "智能代码理解，流畅开发体验",
@@ -65,7 +63,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "AI 代码编辑器",
     logo: "🌊",
     url: "https://windsurf.ai",
-    isVip: true,
     price: "免费 + 付费计划",
     tags: ["免费增值", "英文", "Desktop"],
     features: ["AI 代码生成", "智能导航", "代码解释", "自动测试", "性能优化", "协作功能"],
@@ -83,7 +80,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
 
   // ==================== 代码补全 ====================
   {
-    id: 3,
+    id: 803,
     name: "GitHub Copilot",
     description: "GitHub 和 OpenAI 合作的 AI 编程助手",
     highlights: "行业标杆，代码补全最强",
@@ -91,7 +88,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "代码补全",
     logo: "🐙",
     url: "https://github.com/features/copilot",
-    isVip: true,
     price: "$10/月",
     tags: ["付费", "多语言", "IDE 插件"],
     features: ["智能代码补全", "多语言支持", "注释生成代码", "测试生成", "文档生成", "IDE 集成"],
@@ -107,7 +103,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 4,
+    id: 804,
     name: "Codeium",
     description: "免费 AI 代码补全和搜索工具",
     highlights: "免费强大，性价比高",
@@ -115,7 +111,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "代码补全",
     logo: "🔷",
     url: "https://codeium.com",
-    isVip: true,
     price: "免费 + 企业版",
     tags: ["免费增值", "多语言", "IDE 插件"],
     features: ["智能补全", "代码搜索", "聊天助手", "多 IDE 支持", "企业部署", "隐私保护"],
@@ -131,7 +126,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 5,
+    id: 805,
     name: "Tabnine",
     description: "AI 代码补全工具，支持本地运行",
     highlights: "本地 AI 模型，隐私安全",
@@ -139,7 +134,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "代码补全",
     logo: "🔶",
     url: "https://tabnine.com",
-    isVip: true,
     price: "免费 + $12/月",
     tags: ["免费增值", "多语言", "IDE 插件"],
     features: ["本地 AI 模型", "代码补全", "团队学习", "隐私保护", "离线使用", "多 IDE 支持"],
@@ -155,7 +149,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 6,
+    id: 806,
     name: "Amazon CodeWhisperer",
     description: "AWS 的 AI 编程伴侣，代码生成和安全扫描",
     highlights: "AWS 生态集成，安全扫描",
@@ -163,7 +157,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "代码补全",
     logo: "🟠",
     url: "https://aws.amazon.com/codewhisperer",
-    isVip: true,
     price: "免费 + 专业版",
     tags: ["免费增值", "多语言", "IDE 插件"],
     features: ["代码生成", "安全扫描", "AWS 集成", "引用追踪", "自定义建议", "合规检查"],
@@ -181,7 +174,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
 
   // ==================== 在线开发环境 ====================
   {
-    id: 7,
+    id: 807,
     name: "Replit AI",
     description: "云端 IDE 集成 AI 编程助手",
     highlights: "云端协作，AI 辅助开发",
@@ -189,7 +182,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "在线开发环境",
     logo: "🟩",
     url: "https://replit.com",
-    isVip: true,
     price: "免费 + $20/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["云端 IDE", "AI 代码助手", "实时协作", "一键部署", "多语言支持", "包管理"],
@@ -205,7 +197,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 8,
+    id: 808,
     name: "CodeSandbox AI",
     description: "云端开发平台集成 AI 辅助功能",
     highlights: "前端开发神器，AI 加速",
@@ -213,7 +205,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "在线开发环境",
     logo: "📦",
     url: "https://codesandbox.io",
-    isVip: true,
     price: "免费 + $9/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["云端沙盒", "AI 代码生成", "实时预览", "Git 集成", "团队协作", "模板库"],
@@ -231,7 +222,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
 
   // ==================== 代码搜索/审查 ====================
   {
-    id: 9,
+    id: 809,
     name: "Sourcegraph Cody",
     description: "代码搜索平台推出的 AI 编程助手",
     highlights: "代码库理解最强，企业级",
@@ -239,7 +230,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "代码搜索/审查",
     logo: "🔍",
     url: "https://sourcegraph.com/cody",
-    isVip: true,
     price: "免费 + $9/月",
     tags: ["免费增值", "多语言", "IDE 插件"],
     features: ["代码库搜索", "智能问答", "代码生成", "引用溯源", "企业部署", "多仓库支持"],
@@ -255,7 +245,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 10,
+    id: 810,
     name: "Blackbox AI",
     description: "AI 代码搜索和生成工具",
     highlights: "代码搜索快，生成质量高",
@@ -263,7 +253,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "代码搜索/审查",
     logo: "⬛",
     url: "https://blackbox.ai",
-    isVip: true,
     price: "免费 + 付费计划",
     tags: ["免费增值", "多语言", "Web"],
     features: ["代码搜索", "AI 生成", "代码解释", "多语言支持", "浏览器扩展", "API 访问"],
@@ -281,7 +270,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
 
   // ==================== AI 网站生成 ====================
   {
-    id: 11,
+    id: 811,
     name: "V0",
     description: "Vercel 的 AI 生成 UI 工具",
     highlights: "React 组件生成，设计到代码",
@@ -289,7 +278,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "AI 网站生成",
     logo: "⬤",
     url: "https://v0.dev",
-    isVip: true,
     price: "免费 + 付费计划",
     tags: ["免费增值", "英文", "Web"],
     features: ["AI 生成 UI", "React 组件", "Tailwind CSS", "即时预览", "代码导出", "迭代优化"],
@@ -305,7 +293,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 12,
+    id: 812,
     name: "Bolt.new",
     description: "AI 驱动的全栈应用生成器",
     highlights: "提示词生成全栈应用",
@@ -313,7 +301,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "AI 网站生成",
     logo: "⚡",
     url: "https://bolt.new",
-    isVip: true,
     price: "免费 + 付费计划",
     tags: ["免费增值", "英文", "Web"],
     features: ["全栈生成", "AI 对话", "实时预览", "代码编辑", "一键部署", "模板库"],
@@ -329,7 +316,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 13,
+    id: 813,
     name: "Durable",
     description: "AI 建站工具，30 秒生成网站",
     highlights: "极速建站，零代码",
@@ -337,7 +324,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "AI 网站生成",
     logo: "🛡️",
     url: "https://durable.co",
-    isVip: true,
     price: "免费 + $12/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["AI 建站", "域名注册", "托管服务", "CRM 集成", "发票工具", "营销工具"],
@@ -353,7 +339,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 14,
+    id: 814,
     name: "Framer AI",
     description: "设计工具 Framer 的 AI 建站功能",
     highlights: "设计驱动，视觉效果佳",
@@ -361,7 +347,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "AI 网站生成",
     logo: "🎨",
     url: "https://framer.com",
-    isVip: true,
     price: "免费 + $5/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["AI 生成设计", "可视化编辑", "响应式布局", "动画效果", "SEO 优化", "电商功能"],
@@ -377,7 +362,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 15,
+    id: 815,
     name: "Lovable",
     description: "AI 全栈应用构建平台",
     highlights: "自然语言构建应用",
@@ -385,7 +370,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "AI 网站生成",
     logo: "❤️",
     url: "https://lovable.dev",
-    isVip: true,
     price: "免费 + 付费计划",
     tags: ["免费增值", "英文", "Web"],
     features: ["AI 应用生成", "数据库集成", "用户认证", "API 连接", "实时协作", "版本控制"],
@@ -401,7 +385,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 16,
+    id: 816,
     name: "10Web",
     description: "AI 驱动的 WordPress 建站平台",
     highlights: "WordPress 自动化，AI 优化",
@@ -409,7 +393,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "AI 网站生成",
     logo: "🔟",
     url: "https://10web.io",
-    isVip: true,
     price: "$10+/月",
     tags: ["付费", "多语言", "Web"],
     features: ["AI 建站", "WordPress 托管", "性能优化", "自动备份", "安全保护", "电商支持"],
@@ -425,7 +408,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 17,
+    id: 817,
     name: "Relume",
     description: "AI 网站规划和设计工具",
     highlights: "站点地图生成，设计系统",
@@ -433,7 +416,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "AI 网站生成",
     logo: "📐",
     url: "https://relume.io",
-    isVip: true,
     price: "免费 + $15/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["AI 站点地图", "线框图生成", "设计系统", "内容规划", "Figma 导出", "Webflow 导出"],
@@ -451,7 +433,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
 
   // ==================== 设计转代码 ====================
   {
-    id: 18,
+    id: 818,
     name: "Builder.io",
     description: "可视化建站平台，设计转代码",
     highlights: "拖拽建站，代码导出",
@@ -459,7 +441,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "设计转代码",
     logo: "🏗️",
     url: "https://builder.io",
-    isVip: true,
     price: "免费 + $20/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["可视化编辑", "设计导入", "代码生成", "A/B 测试", "多框架支持", "CMS 集成"],
@@ -475,7 +456,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 19,
+    id: 819,
     name: "Anima",
     description: "设计稿转前端代码工具",
     highlights: "Figma 转代码，高保真",
@@ -483,7 +464,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "设计转代码",
     logo: "🦄",
     url: "https://animaapp.com",
-    isVip: true,
     price: "免费 + $15/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["Figma 插件", "设计转代码", "响应式生成", "交互导出", "多框架支持", "团队协作"],
@@ -499,7 +479,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 20,
+    id: 820,
     name: "Locofy",
     description: "设计稿转前端代码平台",
     highlights: "多设计工具支持，代码灵活",
@@ -507,7 +487,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "设计转代码",
     logo: "📱",
     url: "https://locofy.ai",
-    isVip: true,
     price: "免费 + 付费计划",
     tags: ["免费增值", "多语言", "Web"],
     features: ["Figma 插件", "Adobe XD 支持", "代码生成", "响应式优化", "组件库", "多框架导出"],
@@ -523,7 +502,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 21,
+    id: 821,
     name: "Plasmic",
     description: "可视化网页构建器，代码集成",
     highlights: "无代码 + 代码混合",
@@ -531,7 +510,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "设计转代码",
     logo: "🔮",
     url: "https://plasmic.app",
-    isVip: true,
     price: "免费 + $20/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["可视化构建", "代码组件", "React 集成", "CMS 连接", "发布托管", "团队协作"],
@@ -547,7 +525,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 22,
+    id: 822,
     name: "Webflow AI",
     description: "Webflow 的 AI 辅助设计工具",
     highlights: "设计 + CMS+AI，专业建站",
@@ -555,7 +533,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "设计转代码",
     logo: "💠",
     url: "https://webflow.com",
-    isVip: true,
     price: "免费 + $14/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["AI 内容生成", "可视化设计", "CMS 系统", "电商功能", "SEO 工具", "托管服务"],
@@ -573,7 +550,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
 
   // ==================== 开源工具 ====================
   {
-    id: 23,
+    id: 823,
     name: "Continue",
     description: "开源 AI 代码助手，本地运行",
     highlights: "开源免费，隐私安全",
@@ -581,7 +558,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "开源工具",
     logo: "▶️",
     url: "https://continue.dev",
-    isVip: false,
     price: "免费开源",
     tags: ["开源", "多语言", "IDE 插件"],
     features: ["开源免费", "本地模型", "多 LLM 支持", "自定义配置", "隐私保护", "VS Code 集成"],
@@ -597,7 +573,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 24,
+    id: 824,
     name: "Mintlify",
     description: "AI 驱动的技术文档平台",
     highlights: "文档自动生成，美观专业",
@@ -605,7 +581,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "开源工具",
     logo: "🌿",
     url: "https://mintlify.com",
-    isVip: true,
     price: "免费 + 付费计划",
     tags: ["免费增值", "英文", "Web"],
     features: ["AI 文档生成", "代码扫描", "自动更新", "美观模板", "SEO 优化", "分析统计"],
@@ -621,7 +596,7 @@ export const DEV_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 25,
+    id: 825,
     name: "Sourcery",
     description: "开源代码审查和重构工具",
     highlights: "实时代码审查，自动重构",
@@ -629,7 +604,6 @@ export const DEV_TOOLS: EnhancedTool[] = [
     subCategory: "开源工具",
     logo: "🧙",
     url: "https://sourcery.ai",
-    isVip: true,
     price: "免费 + $9/月",
     tags: ["免费增值", "多语言", "IDE 插件"],
     features: ["实时审查", "自动重构", "代码质量", "多语言支持", "自定义规则", "团队协作"],

@@ -1,4 +1,4 @@
-// 学习教育分类 - 增强版工具数据
+﻿// 学习教育分类 - 增强版工具数据
 // 包含详细描述、功能特点、使用场景、优缺点、相关网站等
 // 最后更新：2026-03-12
 
@@ -17,8 +17,7 @@ export interface EnhancedTool {
   category: string;
   subCategory: string; // 子分类
   logo: string;
-  url: string;
-  isVip: boolean;
+  url: string;;
   price: string;
   tags: string[];
   features: string[]; // 6 个功能特点
@@ -33,7 +32,7 @@ export interface EnhancedTool {
 export const EDUCATION_TOOLS: EnhancedTool[] = [
   // ==================== 语言学习 ====================
   {
-    id: 1,
+    id: 901,
     name: "Duolingo Max",
     description: "全球最受欢迎的语言学习应用，AI 增强版",
     highlights: "游戏化学习，AI 角色扮演对话",
@@ -41,7 +40,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "语言学习",
     logo: "🦉",
     url: "https://duolingo.com",
-    isVip: true,
     price: "免费 + $13.99/月 (Max)",
     tags: ["免费增值", "多语言", "App"],
     features: ["AI 角色扮演", "语法解释 AI", "游戏化课程", "多语言学习", "进度追踪", "离线学习"],
@@ -57,7 +55,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2,
+    id: 902,
     name: "ELSA Speak",
     description: "AI 驱动的英语发音纠正应用",
     highlights: "语音识别精准，发音反馈即时",
@@ -65,7 +63,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "语言学习",
     logo: "🎤",
     url: "https://elsaspeak.com",
-    isVip: true,
     price: "免费 + $11.99/月",
     tags: ["免费增值", "英文", "App"],
     features: ["AI 发音分析", "实时反馈", "个性化课程", "语音识别", "进度追踪", "情景对话"],
@@ -81,7 +78,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 3,
+    id: 903,
     name: "Speak",
     description: "AI 驱动的口语练习平台，真实对话场景",
     highlights: "真实场景对话，AI 即时反馈",
@@ -89,7 +86,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "语言学习",
     logo: "💬",
     url: "https://speak.com",
-    isVip: true,
     price: "$11.99/月",
     tags: ["付费", "多语言", "App"],
     features: ["AI 对话练习", "场景模拟", "发音纠正", "语法反馈", "个性化学习", "进度追踪"],
@@ -107,7 +103,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
 
   // ==================== AI 辅导 ====================
   {
-    id: 4,
+    id: 904,
     name: "Khanmigo",
     description: "可汗学院的 AI 学习助手，个性化辅导",
     highlights: "苏格拉底式引导，不直接给答案",
@@ -115,7 +111,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "AI 辅导",
     logo: "🎓",
     url: "https://khanacademy.org/khanmigo",
-    isVip: true,
     price: "$4/月",
     tags: ["付费", "多语言", "Web"],
     features: ["AI 个性化辅导", "苏格拉底式提问", "学科覆盖广", "进度追踪", "教师工具", "家长监控"],
@@ -131,7 +126,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 5,
+    id: 905,
     name: "Coursera Coach",
     description: "Coursera 的 AI 学习助手，课程辅导",
     highlights: "名校课程配套，AI 学习指导",
@@ -139,7 +134,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "AI 辅导",
     logo: "📚",
     url: "https://coursera.org",
-    isVip: true,
     price: "免费 + 课程费用",
     tags: ["免费增值", "多语言", "Web"],
     features: ["AI 学习指导", "课程问答", "学习规划", "知识总结", "作业辅导", "证书追踪"],
@@ -155,7 +149,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 6,
+    id: 906,
     name: "Socratic",
     description: "Google 的 AI 作业辅导应用，拍照解题",
     highlights: "拍照解题，步骤详解",
@@ -163,7 +157,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "AI 辅导",
     logo: "📸",
     url: "https://socratic.org",
-    isVip: false,
     price: "免费",
     tags: ["免费", "多语言", "App"],
     features: ["拍照解题", "步骤详解", "多学科支持", "视频讲解", "概念解释", "资源推荐"],
@@ -181,7 +174,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
 
   // ==================== 学习卡片/测验 ====================
   {
-    id: 7,
+    id: 907,
     name: "Quizlet AI",
     description: "智能学习卡片和测验平台",
     highlights: "AI 生成学习材料，多种学习模式",
@@ -189,7 +182,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "学习卡片/测验",
     logo: "📇",
     url: "https://quizlet.com",
-    isVip: true,
     price: "免费 + $7.99/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["AI 卡片生成", "多种学习模式", "测验练习", "进度追踪", "协作学习", "移动应用"],
@@ -205,7 +197,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 8,
+    id: 908,
     name: "Conker",
     description: "AI 测验和表单生成器",
     highlights: "快速生成测验，多种题型",
@@ -213,7 +205,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "学习卡片/测验",
     logo: "🌰",
     url: "https://conker.ai",
-    isVip: true,
     price: "免费 + 付费计划",
     tags: ["免费增值", "英文", "Web"],
     features: ["AI 测验生成", "多种题型", "自动评分", "导出功能", "模板库", "协作分享"],
@@ -229,7 +220,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 9,
+    id: 909,
     name: "Formative",
     description: "实时课堂评估和反馈平台",
     highlights: "实时反馈，数据驱动教学",
@@ -237,7 +228,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "学习卡片/测验",
     logo: "📊",
     url: "https://goformative.com",
-    isVip: true,
     price: "免费 + $20+/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["实时评估", "自动评分", "数据分析", "多媒体题目", "同伴互评", "学习报告"],
@@ -255,7 +245,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
 
   // ==================== 数学学习 ====================
   {
-    id: 10,
+    id: 910,
     name: "Photomath",
     description: "拍照解数学题应用，步骤详解",
     highlights: "拍照即解，步骤清晰",
@@ -263,7 +253,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "数学学习",
     logo: "📐",
     url: "https://photomath.com",
-    isVip: true,
     price: "免费 + $9.99/月",
     tags: ["免费增值", "多语言", "App"],
     features: ["拍照解题", "步骤详解", "多种解法", "图形计算器", "知识点讲解", "练习推荐"],
@@ -279,7 +268,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 11,
+    id: 911,
     name: "Carnegie Learning",
     description: "AI 驱动的数学学习平台，个性化路径",
     highlights: "自适应学习，数据驱动",
@@ -287,7 +276,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "数学学习",
     logo: "🧮",
     url: "https://carnegielearning.com",
-    isVip: true,
     price: "定制报价",
     tags: ["付费", "英文", "Web"],
     features: ["自适应学习", "AI 辅导", "实时反馈", "数据分析", "课程完整", "教师仪表板"],
@@ -303,7 +291,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 12,
+    id: 912,
     name: "Wolfram Alpha",
     description: "计算知识引擎，数学和科学计算",
     highlights: "强大计算引擎，知识全面",
@@ -311,7 +299,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "数学学习",
     logo: "🔮",
     url: "https://wolframalpha.com",
-    isVip: true,
     price: "免费 + $5/月 (Pro)",
     tags: ["免费增值", "多语言", "Web"],
     features: ["计算引擎", "知识查询", "步骤解答", "数据可视化", "科学计算", "API 访问"],
@@ -329,7 +316,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
 
   // ==================== 作业帮助 ====================
   {
-    id: 13,
+    id: 913,
     name: "Brainly",
     description: "全球最大作业帮助社区，AI 增强",
     highlights: "社区互助，AI 解答",
@@ -337,7 +324,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "作业帮助",
     logo: "🧠",
     url: "https://brainly.com",
-    isVip: true,
     price: "免费 + $14.99/月",
     tags: ["免费增值", "多语言", "App"],
     features: ["作业问答", "AI 解答", "社区互助", "学科覆盖广", "专家验证", "步骤详解"],
@@ -355,7 +341,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
 
   // ==================== 教师工具 ====================
   {
-    id: 14,
+    id: 914,
     name: "Magic School AI",
     description: "教师 AI 助手，教学资源生成",
     highlights: "50+ 教学工具，一键生成",
@@ -363,7 +349,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "教师工具",
     logo: "🪄",
     url: "https://magicschool.ai",
-    isVip: true,
     price: "免费 + $12.99/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["教案生成", "测验创建", "差异化教学", "邮件撰写", " rubric 生成", "IEP 支持"],
@@ -379,7 +364,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 15,
+    id: 915,
     name: "Diffit",
     description: "AI 教学资源生成器，差异化教学",
     highlights: "一键生成分层材料",
@@ -387,7 +372,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "教师工具",
     logo: "📝",
     url: "https://web.diffit.me",
-    isVip: true,
     price: "免费 + 付费计划",
     tags: ["免费增值", "多语言", "Web"],
     features: ["资源生成", "分层教学", "阅读理解", "词汇练习", "问答生成", "多格式导出"],
@@ -403,7 +387,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 16,
+    id: 916,
     name: "Twee",
     description: "AI 英语教学助手，课程材料生成",
     highlights: "英语教学专用，材料丰富",
@@ -411,7 +395,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "教师工具",
     logo: "🐝",
     url: "https://twee.com",
-    isVip: true,
     price: "免费 + $9/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["课程计划", "练习生成", "视频活动", "对话创建", "语法练习", "词汇活动"],
@@ -427,7 +410,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 17,
+    id: 917,
     name: "Education Copilot",
     description: "AI 教学助手，课程和资源生成",
     highlights: "全方位教学支持",
@@ -435,7 +418,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "教师工具",
     logo: "🎒",
     url: "https://educationcopilot.com",
-    isVip: true,
     price: "$10/月",
     tags: ["付费", "多语言", "Web"],
     features: ["课程计划", "工作表生成", "PPT 创建", "邮件撰写", "评估设计", "学生反馈"],
@@ -453,7 +435,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
 
   // ==================== 中文学习平台 ====================
   {
-    id: 18,
+    id: 918,
     name: "学堂在线 AI",
     description: "清华大学慕课平台，AI 学习助手",
     highlights: "名校课程，本土化强",
@@ -461,7 +443,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "中文学习平台",
     logo: "🎓",
     url: "https://xuetangx.com",
-    isVip: true,
     price: "免费 + 证书费用",
     tags: ["免费增值", "中文", "Web"],
     features: ["名校课程", "AI 辅导", "学习追踪", "证书认证", "讨论区", "移动应用"],
@@ -477,7 +458,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 19,
+    id: 919,
     name: "网易有道 AI",
     description: "网易有道智能学习平台，全科辅导",
     highlights: "AI 精准学，本土化强",
@@ -485,7 +466,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "中文学习平台",
     logo: "📖",
     url: "https://youdao.com",
-    isVip: true,
     price: "免费 + 会员服务",
     tags: ["免费增值", "中文", "App"],
     features: ["AI 精准学", "全科辅导", "错题本", "学习规划", "真题练习", "名师课程"],
@@ -503,7 +483,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
 
   // ==================== 更多语言学习工具 ====================
   {
-    id: 20,
+    id: 920,
     name: "Knowji",
     description: "AI 词汇学习应用，科学记忆法",
     highlights: "间隔重复，高效记忆",
@@ -511,7 +491,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "语言学习",
     logo: "🧠",
     url: "https://knowji.com",
-    isVip: true,
     price: "$9.99/应用",
     tags: ["付费", "多语言", "App"],
     features: ["间隔重复", "发音指导", "词根词缀", "例句丰富", "进度追踪", "离线学习"],
@@ -529,7 +508,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
 
   // ==================== 更多 AI 辅导工具 ====================
   {
-    id: 21,
+    id: 921,
     name: "Grammarly Edu",
     description: "教育版写作助手，语法和写作指导",
     highlights: "写作反馈详细，教育专用",
@@ -537,7 +516,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "AI 辅导",
     logo: "✍️",
     url: "https://grammarly.com/edu",
-    isVip: true,
     price: "免费 + $12/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["语法检查", "写作建议", "抄袭检测", "引用格式", "语气调整", "教育折扣"],
@@ -555,7 +533,7 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
 
   // ==================== 更多数学学习工具 ====================
   {
-    id: 22,
+    id: 922,
     name: "Century Tech",
     description: "AI 学习平台，个性化学习路径",
     highlights: "神经科学驱动，自适应学习",
@@ -563,7 +541,6 @@ export const EDUCATION_TOOLS: EnhancedTool[] = [
     subCategory: "AI 辅导",
     logo: "🧬",
     url: "https://century.tech",
-    isVip: true,
     price: "定制报价",
     tags: ["付费", "多语言", "Web"],
     features: ["自适应学习", "AI 推荐", "知识图谱", "实时分析", "教师仪表板", "学校集成"],

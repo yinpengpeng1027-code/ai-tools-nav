@@ -1,4 +1,4 @@
-// 视频制作分类 - 完整的 AI 工具数据库（25 个工具）
+﻿// 视频制作分类 - 完整的 AI 工具数据库（25 个工具）
 // 最后更新：2026-03-12
 
 export interface RelatedSite {
@@ -16,8 +16,7 @@ export interface EnhancedTool {
   category: string;
   subCategory: string; // 子分类
   logo: string;
-  url: string;
-  isVip: boolean;
+  url: string;;
   price: string;
   tags: string[];
   features: string[]; // 6 个功能特点
@@ -32,7 +31,7 @@ export interface EnhancedTool {
 export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
   // ==================== 文生视频 ====================
   {
-    id: 1,
+    id: 201,
     name: "Runway",
     description: "AI 视频生成和编辑工具，功能强大专业",
     highlights: "Gen-2 文生视频模型，电影级特效制作",
@@ -40,7 +39,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "文生视频",
     logo: "🎬",
     url: "https://runwayml.com",
-    isVip: true,
     price: "免费 + $12-95/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["Gen-2 文生视频", "智能抠图", "运动追踪", "视频修复", "风格转换", "绿幕移除"],
@@ -57,7 +55,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 2,
+    id: 202,
     name: "Sora",
     description: "OpenAI 的文生视频模型，电影级质量",
     highlights: "OpenAI 最新技术，理解复杂场景动作",
@@ -65,7 +63,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "文生视频",
     logo: "🎞️",
     url: "https://openai.com/sora",
-    isVip: true,
     price: "待定（预计付费）",
     tags: ["付费", "英文", "Web"],
     features: ["电影级质量", "复杂场景理解", "长视频生成", "多风格支持", "物理模拟", "角色一致性"],
@@ -82,7 +79,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "advanced"
   },
   {
-    id: 3,
+    id: 203,
     name: "Pika Labs",
     description: "AI 视频生成工具，支持多种艺术风格",
     highlights: "Discord 便捷操作，快速生成创意视频",
@@ -90,7 +87,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "文生视频",
     logo: "✨",
     url: "https://pika.art",
-    isVip: true,
     price: "免费 + $10-58/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["文生视频", "图生视频", "视频扩展", "风格转换", "局部编辑", "镜头控制"],
@@ -107,7 +103,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 4,
+    id: 204,
     name: "Kinetix",
     description: "AI 视频生成平台，专注于创意内容",
     highlights: "快速文生视频，适合社交媒体创作",
@@ -115,7 +111,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "文生视频",
     logo: "🎥",
     url: "https://kinetix.tech",
-    isVip: true,
     price: "免费 + $20-100/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["文生视频", "动作捕捉", "3D 动画", "角色生成", "场景创建", "批量生成"],
@@ -132,7 +127,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 5,
+    id: 205,
     name: "Rawshorts",
     description: "AI 动画视频制作工具，企业级解决方案",
     highlights: "白board 动画专家，企业演示首选",
@@ -140,7 +135,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "文生视频",
     logo: "📊",
     url: "https://rawshorts.com",
-    isVip: true,
     price: "$29-99/月",
     tags: ["付费", "英文", "Web"],
     features: ["白板动画", "模板库", "云渲染", "团队协作", "品牌定制", "数据分析"],
@@ -159,7 +153,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
 
   // ==================== 数字人/虚拟主播 ====================
   {
-    id: 6,
+    id: 206,
     name: "HeyGen",
     description: "AI 数字人视频生成，多语言口型同步",
     highlights: "视频翻译保持口型，140+ 数字人形象",
@@ -167,7 +161,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "数字人/虚拟主播",
     logo: "👤",
     url: "https://heygen.com",
-    isVip: true,
     price: "免费 + $29-99/月",
     tags: ["付费", "多语言", "Web"],
     features: ["数字人生成", "多语言支持", "口型同步", "视频翻译", "自定义形象", "API 集成"],
@@ -184,7 +177,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 7,
+    id: 207,
     name: "Synthesia",
     description: "AI 虚拟主播视频生成，企业级平台",
     highlights: "140+AI 数字人，120+ 语言，企业首选",
@@ -192,7 +185,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "数字人/虚拟主播",
     logo: "🎭",
     url: "https://synthesia.io",
-    isVip: true,
     price: "$22-67/月",
     tags: ["付费", "多语言", "Web"],
     features: ["140+ 数字人", "120+ 语言", "企业模板", "品牌定制", "团队协作", "SCORM 导出"],
@@ -209,7 +201,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 8,
+    id: 208,
     name: "D-ID",
     description: "AI 数字人视频生成，照片说话",
     highlights: "让静态照片说话，创意数字人效果",
@@ -217,7 +209,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "数字人/虚拟主播",
     logo: "🗣️",
     url: "https://d-id.com",
-    isVip: true,
     price: "免费 + $6-150/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["照片说话", "数字人生成", "实时直播", "API 服务", "多语言", "表情控制"],
@@ -234,7 +225,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 9,
+    id: 209,
     name: "Colossyan",
     description: "AI 虚拟演员视频生成，企业学习平台",
     highlights: "多演员对话场景，专为学习设计",
@@ -242,7 +233,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "数字人/虚拟主播",
     logo: "🎬",
     url: "https://colossyan.com",
-    isVip: true,
     price: "$27-97/月",
     tags: ["付费", "多语言", "Web"],
     features: ["多演员对话", "70+ 数字人", "多语言", "学习模板", "互动测验", "LMS 集成"],
@@ -259,7 +249,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 10,
+    id: 210,
     name: "Elai.io",
     description: "AI 视频生成平台，文本转视频",
     highlights: "80+ 数字人，25+ 语言，快速生成",
@@ -267,7 +257,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "数字人/虚拟主播",
     logo: "🎥",
     url: "https://elai.io",
-    isVip: true,
     price: "免费 + $29-499/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["80+ 数字人", "25+ 语言", "PPT 转视频", "自定义背景", "声音克隆", "批量生成"],
@@ -286,7 +275,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
 
   // ==================== 视频剪辑 ====================
   {
-    id: 11,
+    id: 211,
     name: "剪映",
     description: "抖音官方视频剪辑工具，AI 功能丰富",
     highlights: "免费全能剪辑，抖音生态深度集成",
@@ -294,7 +283,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "视频剪辑",
     logo: "🎥",
     url: "https://capcut.cn",
-    isVip: false,
     price: "免费 + 部分付费素材",
     tags: ["免费", "中文", "Web/App"],
     features: ["自动字幕", "智能抠图", "视频特效", "美颜功能", "海量模板", "多端同步"],
@@ -311,7 +299,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 12,
+    id: 212,
     name: "Descript",
     description: "AI 视频编辑，像编辑文档一样剪视频",
     highlights: "文本编辑视频，AI 语音克隆修复",
@@ -319,7 +307,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "视频剪辑",
     logo: "📝",
     url: "https://descript.com",
-    isVip: true,
     price: "免费 + $12-65/月",
     tags: ["付费", "英文", "桌面"],
     features: ["文本编辑视频", "自动转录", "AI 语音克隆", "Overdub 修复", "屏幕录制", "多轨道"],
@@ -336,7 +323,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 13,
+    id: 213,
     name: "Veed.io",
     description: "在线视频编辑工具，AI 字幕生成",
     highlights: "网页端剪辑，AI 字幕自动精准",
@@ -344,7 +331,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "视频剪辑",
     logo: "▶️",
     url: "https://veed.io",
-    isVip: true,
     price: "免费 + $18-59/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["AI 字幕", "背景移除", "视频剪辑", "屏幕录制", "滤镜特效", "进度条"],
@@ -361,7 +347,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 14,
+    id: 214,
     name: "Wisecut",
     description: "AI 视频剪辑，自动去除静音片段",
     highlights: "智能跳跃剪辑，自动配乐字幕",
@@ -369,7 +355,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "视频剪辑",
     logo: "✂️",
     url: "https://wisecut.video",
-    isVip: true,
     price: "免费 + $15-60/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["自动跳跃剪辑", "智能配乐", "自动字幕", "语音增强", "场景检测", "批量处理"],
@@ -386,7 +371,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 15,
+    id: 215,
     name: "Shuffll",
     description: "AI 视频制作平台，团队协作",
     highlights: "企业视频协作，模板化快速生产",
@@ -394,7 +379,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "视频剪辑",
     logo: "🎬",
     url: "https://shuffll.com",
-    isVip: true,
     price: "$20-100/月",
     tags: ["付费", "英文", "Web"],
     features: ["团队协作", "模板库", "品牌套件", "云存储", "审批流程", "分析追踪"],
@@ -413,7 +397,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
 
   // ==================== 文本转视频 ====================
   {
-    id: 16,
+    id: 216,
     name: "InVideo",
     description: "AI 视频创作平台，5000+ 专业模板",
     highlights: "文本转视频，海量模板媒体库",
@@ -421,7 +405,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "文本转视频",
     logo: "🎪",
     url: "https://invideo.io",
-    isVip: true,
     price: "免费 + $20-60/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["5000+ 模板", "文本转视频", "媒体库", "AI 脚本", "品牌工具", "团队协作"],
@@ -438,7 +421,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 17,
+    id: 217,
     name: "Lumen5",
     description: "文章转视频 AI 工具，内容营销利器",
     highlights: "博客文章自动转视频，智能匹配素材",
@@ -446,7 +429,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "文本转视频",
     logo: "📰",
     url: "https://lumen5.com",
-    isVip: true,
     price: "免费 + $29-149/月",
     tags: ["付费", "英文", "Web"],
     features: ["文章转视频", "AI 匹配素材", "品牌定制", "媒体库", "多分辨率", "分析工具"],
@@ -463,7 +445,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 18,
+    id: 218,
     name: "Pictory",
     description: "AI 视频摘要工具，长内容转短视频",
     highlights: "长视频自动摘要，博客转视频",
@@ -471,7 +453,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "文本转视频",
     logo: "🎞️",
     url: "https://pictory.ai",
-    isVip: true,
     price: "免费 + $19-99/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["视频摘要", "博客转视频", "自动字幕", "场景检测", "媒体库", "品牌定制"],
@@ -488,7 +469,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 19,
+    id: 219,
     name: "Fliki",
     description: "AI 文本转视频，语音合成集成",
     highlights: "文本转视频 + 语音，多语言支持",
@@ -496,7 +477,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "文本转视频",
     logo: "📹",
     url: "https://fliki.ai",
-    isVip: true,
     price: "免费 + $21-108/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["文本转视频", "AI 语音", "多语言", "媒体库", "批量生成", "字幕同步"],
@@ -513,7 +493,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 20,
+    id: 220,
     name: "万兴播爆",
     description: "万兴科技 AI 视频营销工具",
     highlights: "中文本地化，营销视频模板丰富",
@@ -521,7 +501,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "文本转视频",
     logo: "🎬",
     url: "https://virbo.wondershare.cn",
-    isVip: true,
     price: "免费 + ¥68-699/月",
     tags: ["免费增值", "中文", "Web/App"],
     features: ["数字人播报", "文本转视频", "多语言", "模板库", "AI 配音", "批量生成"],
@@ -540,7 +519,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
 
   // ==================== 短视频处理 ====================
   {
-    id: 21,
+    id: 221,
     name: "Opus Clip",
     description: "AI 短视频剪辑，长视频自动切片",
     highlights: "一键生成短视频，病毒式传播优化",
@@ -548,7 +527,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "短视频处理",
     logo: "📱",
     url: "https://opus.pro",
-    isVip: true,
     price: "免费 + $19-99/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["自动切片", "病毒评分", "自动字幕", "表情检测", "多格式", "批量处理"],
@@ -565,7 +543,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 22,
+    id: 222,
     name: "Munch",
     description: "AI 内容切片工具，趋势驱动剪辑",
     highlights: "AI 趋势分析，智能提取高光片段",
@@ -573,7 +551,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "短视频处理",
     logo: "🍕",
     url: "https://getmunch.com",
-    isVip: true,
     price: "$49-199/月",
     tags: ["付费", "英文", "Web"],
     features: ["趋势分析", "自动切片", "关键词提取", "多平台优化", "协作工具", "分析追踪"],
@@ -590,7 +567,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 23,
+    id: 223,
     name: "Vidyo",
     description: "AI 短视频生成，多平台适配",
     highlights: "自动多平台适配，智能模板剪辑",
@@ -598,7 +575,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "短视频处理",
     logo: "🎬",
     url: "https://vidyo.ai",
-    isVip: true,
     price: "免费 + $29-99/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["自动切片", "多平台适配", "智能模板", "自动字幕", "品牌定制", "云存储"],
@@ -617,7 +593,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
 
   // ==================== 视频优化 ====================
   {
-    id: 24,
+    id: 224,
     name: "TubeMagic",
     description: "AI YouTube 视频优化工具",
     highlights: "YouTube 专属优化，标题标签生成",
@@ -625,7 +601,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "视频优化",
     logo: "📺",
     url: "https://tubemagic.com",
-    isVip: true,
     price: "$19-49/月",
     tags: ["付费", "英文", "Web"],
     features: ["标题生成", "标签优化", "描述写作", "缩略图建议", "SEO 分析", "竞品研究"],
@@ -642,7 +617,7 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 25,
+    id: 225,
     name: "Steve.ai",
     description: "AI 动画和真人视频生成平台",
     highlights: "动画 + 真人双模式，文本快速转视频",
@@ -650,7 +625,6 @@ export const VIDEO_PRODUCTION_TOOLS: EnhancedTool[] = [
     subCategory: "文本转视频",
     logo: "🎭",
     url: "https://steve.ai",
-    isVip: true,
     price: "免费 + $15-60/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["动画视频", "真人视频", "文本转视频", "模板库", "角色定制", "多语言"],

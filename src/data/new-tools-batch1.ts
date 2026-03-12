@@ -129,7 +129,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
 
   // ==================== AI写作工具补充 ====================
   {
-    id: 1010,
+    id: 1006,
     name: "蛙蛙写作",
     description: "AI小说和内容创作工具，专注长文本生成",
     highlights: "小说创作利器，长文本质量高",
@@ -153,7 +153,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 1011,
+    id: 1007,
     name: "讯飞绘文",
     description: "科大讯飞推出的免费AI写作工具，5分钟生成原创稿",
     highlights: "完全免费，一键生成原创内容",
@@ -177,7 +177,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1012,
+    id: 1008,
     name: "笔灵AI写作",
     description: "600+写作模板，AI一键生成论文/小说，论文降重降AI",
     highlights: "模板丰富，论文降重降AI率",
@@ -201,7 +201,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1013,
+    id: 1009,
     name: "新华妙笔",
     description: "新华社推出的体制内办公学习平台",
     highlights: "权威背书，公文写作专业",
@@ -225,7 +225,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 1014,
+    id: 1010,
     name: "Paperpal",
     description: "英文论文写作助手，学术润色专家",
     highlights: "英文论文专业润色，学术规范检查",
@@ -251,7 +251,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
 
   // ==================== AI图像工具补充 ====================
   {
-    id: 1020,
+    id: 1011,
     name: "堆友AI",
     description: "阿里堆友推出的免费AI绘画和生图神器",
     highlights: "完全免费，阿里技术，中文友好",
@@ -275,7 +275,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1021,
+    id: 1012,
     name: "LiblibAI·哩布哩布AI",
     description: "国内领先的AI图像创作平台和模型分享社区",
     highlights: "国内最大的AI模型社区，资源丰富",
@@ -299,7 +299,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 1022,
+    id: 1013,
     name: "可灵AI",
     description: "快手推出的AI图像和视频创作平台",
     highlights: "快手技术，图视频一体，效果出色",
@@ -323,7 +323,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1023,
+    id: 1014,
     name: "即梦AI",
     description: "一站式AI视频、图片、数字人创作工具",
     highlights: "全能创作平台，视频图片数字人全覆盖",
@@ -347,7 +347,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1024,
+    id: 1015,
     name: "通义万相",
     description: "阿里推出的AI创意内容生成平台",
     highlights: "阿里AI技术，多模态创作能力",
@@ -373,7 +373,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
 
   // ==================== AI视频工具补充 ====================
   {
-    id: 1030,
+    id: 1016,
     name: "海螺视频",
     description: "MiniMax公司推出的AI视频生成工具",
     highlights: "MiniMax大模型，视频质量出色",
@@ -397,7 +397,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1031,
+    id: 1017,
     name: "Vidu",
     description: "生数科技推出的AI视频生成大模型",
     highlights: "国产视频生成，效果媲美Sora",
@@ -421,7 +421,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 1032,
+    id: 1018,
     name: "蝉镜",
     description: "AI数字人视频生成平台",
     highlights: "数字人视频专家，口播视频利器",
@@ -445,7 +445,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 1033,
+    id: 1019,
     name: "白日梦",
     description: "领先AI创作平台，可生成最长50分钟的视频",
     highlights: "长视频生成专家，创意无限",
@@ -471,7 +471,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
 
   // ==================== AI办公工具补充 ====================
   {
-    id: 1040,
+    id: 1020,
     name: "AiPPT",
     description: "AI快速生成高质量PPT",
     highlights: "一键生成精美PPT，效率提升10倍",
@@ -495,7 +495,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1041,
+    id: 1021,
     name: "秘塔AI搜索",
     description: "最好用的AI搜索工具，没有广告，直达结果",
     highlights: "无广告纯净搜索，结果精准直达",
@@ -519,7 +519,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1042,
+    id: 1022,
     name: "秒哒",
     description: "无代码AI应用开发平台，一句话做应用",
     highlights: "零代码开发，一句话创建应用",
@@ -543,7 +543,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1043,
+    id: 1023,
     name: "办公小浣熊",
     description: "最强AI数据分析助手",
     highlights: "AI数据分析专家，Excel处理利器",
@@ -567,7 +567,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 1044,
+    id: 1024,
     name: "讯飞智文",
     description: "一键生成PPT和Word",
     highlights: "科大讯飞技术，一键生成文档",
@@ -593,7 +593,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
 
   // ==================== AI编程工具补充 ====================
   {
-    id: 1050,
+    id: 1025,
     name: "TRAE",
     description: "字节跳动推出的AI IDE编程工具",
     highlights: "字节技术，AI IDE新秀",
@@ -617,7 +617,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 1051,
+    id: 1026,
     name: "Claude Code",
     description: "Anthropic推出的AI编程工具",
     highlights: "Claude模型驱动，编程能力出众",
@@ -641,7 +641,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "advanced"
   },
   {
-    id: 1052,
+    id: 1027,
     name: "通义灵码",
     description: "阿里推出的免费AI编程工具，基于通义大模型",
     highlights: "完全免费，阿里技术，中文友好",
@@ -665,7 +665,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1053,
+    id: 1028,
     name: "代码小浣熊",
     description: "商汤科技推出的免费AI编程助手",
     highlights: "完全免费，商汤技术，功能全面",
@@ -691,7 +691,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
 
   // ==================== AI智能体补充 ====================
   {
-    id: 1060,
+    id: 1029,
     name: "扣子Coze",
     description: "免费全能的AI办公智能体",
     highlights: "字节出品，免费全能，插件丰富",
@@ -715,7 +715,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 1061,
+    id: 1030,
     name: "Manus",
     description: "蝴蝶效应公司推出的首款自主通用AI Agent",
     highlights: "自主执行任务，通用AI智能体",
@@ -739,7 +739,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "advanced"
   },
   {
-    id: 1062,
+    id: 1031,
     name: "Genspark",
     description: "通用AI智能体，您的一站式AI工作空间",
     highlights: "一站式AI工作空间，多功能集成",
@@ -765,7 +765,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
 
   // ==================== AI音频工具补充 ====================
   {
-    id: 1070,
+    id: 1032,
     name: "魔音工坊",
     description: "AI配音工具，轻松配出媲美真人的声音",
     highlights: "中文配音专家，声音自然逼真",
@@ -789,7 +789,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1071,
+    id: 1033,
     name: "海绵音乐",
     description: "字节跳动推出的免费AI音乐创作和发现平台",
     highlights: "完全免费，字节技术，音乐创作利器",
@@ -813,7 +813,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1072,
+    id: 1034,
     name: "Udio",
     description: "免费的AI音乐创作工具，每月可生成1200首歌曲",
     highlights: "免费额度大，音乐质量高",
@@ -839,7 +839,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
 
   // ==================== AI搜索引擎补充 ====================
   {
-    id: 1080,
+    id: 1035,
     name: "夸克AI",
     description: "集AI搜索、网盘、文档、创作等功能于一体的应用",
     highlights: "阿里出品，一站式AI工具箱",
@@ -863,7 +863,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1081,
+    id: 1036,
     name: "天工AI搜索",
     description: "昆仑万维最新推出的结合大模型的AI搜索引擎",
     highlights: "国产AI搜索，深度理解能力强",
@@ -889,7 +889,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
 
   // ==================== AI设计工具补充 ====================
   {
-    id: 1090,
+    id: 1037,
     name: "星流AI",
     description: "LiblibAI推出的一站式AI设计与创作工具",
     highlights: "设计创作一体化，模板资源丰富",
@@ -913,7 +913,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 1091,
+    id: 1038,
     name: "墨刀AI",
     description: "AI秒生原型稿",
     highlights: "产品原型设计，AI加速生成",
@@ -937,7 +937,7 @@ export const NEW_TOOLS_BATCH1: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 1092,
+    id: 1039,
     name: "Pixso AI",
     description: "Pixso推出的AI设计工具",
     highlights: "一站式设计协作，AI赋能设计",

@@ -7,7 +7,7 @@ import { EnhancedTool } from './types';
 export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
   // ==================== 更多AI聊天助手 ====================
   {
-    id: 2001,
+    id: 1101,
     name: "百小应",
     description: "百川智能推出的免费AI助手",
     highlights: "完全免费，百川大模型，中文优秀",
@@ -31,7 +31,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2002,
+    id: 1102,
     name: "商量SenseChat",
     description: "商汤科技推出的免费AI聊天助手",
     highlights: "完全免费，商汤技术，多模态强",
@@ -55,7 +55,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2003,
+    id: 1103,
     name: "阶跃AI",
     description: "阶跃星辰推出的支持多模态的AI聊天机器人",
     highlights: "多模态能力强，阶跃大模型",
@@ -79,7 +79,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2004,
+    id: 1104,
     name: "阶跃",
     description: "美团推出的自研大模型AI对话平台",
     highlights: "美团技术，外卖场景优化",
@@ -103,7 +103,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2005,
+    id: 1105,
     name: "华为小艺",
     description: "华为旗下小艺AI助手网页端，已接入DeepSeek-R1",
     highlights: "华为生态，DeepSeek加持",
@@ -129,7 +129,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
 
   // ==================== 更多AI写作工具 ====================
   {
-    id: 2010,
+    id: 1106,
     name: "光速写作",
     description: "AI写作、PPT生成工具，单篇最长15000字",
     highlights: "长文本写作，PPT一键生成",
@@ -153,7 +153,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2011,
+    id: 1107,
     name: "万能小in",
     description: "3分钟4万字150+应用，只需标题，快速生成毕业论文",
     highlights: "快速生成，多应用场景",
@@ -177,7 +177,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2012,
+    id: 1108,
     name: "千笔AI论文",
     description: "全网首家论文无限改稿平台",
     highlights: "无限改稿，专业论文服务",
@@ -201,7 +201,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 2013,
+    id: 1109,
     name: "茅茅虫",
     description: "一站式AI论文写作助手",
     highlights: "论文全流程，一站式服务",
@@ -227,7 +227,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
 
   // ==================== 更多AI图像工具 ====================
   {
-    id: 2020,
+    id: 1110,
     name: "吐司AI",
     description: "AI绘画模型社区和在线生图平台",
     highlights: "模型丰富，在线生图便捷",
@@ -251,7 +251,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 2021,
+    id: 1111,
     name: "秒画",
     description: "商汤科技推出的免费AI作画和图片生成平台",
     highlights: "完全免费，商汤技术，中文友好",
@@ -275,7 +275,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2022,
+    id: 1112,
     name: "WHEE",
     description: "美图推出的AI图片和绘画创作生成平台",
     highlights: "美图技术，图片处理专业",
@@ -299,7 +299,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2023,
+    id: 1113,
     name: "Krea AI",
     description: "实时AI图像、视频生成和编辑平台",
     highlights: "实时生成，效果惊艳",
@@ -325,7 +325,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
 
   // ==================== 更多AI视频工具 ====================
   {
-    id: 2030,
+    id: 1114,
     name: "献丑AI",
     description: "首个AI视频开源社区，支持一键Fork与共创",
     highlights: "开源社区，视频共创平台",
@@ -349,7 +349,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 2031,
+    id: 1115,
     name: "造点AI",
     description: "夸克团队推出的AI图像与视频创作平台",
     highlights: "夸克技术，图视频一体",
@@ -375,7 +375,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
 
   // ==================== 更多AI办公工具 ====================
   {
-    id: 2040,
+    id: 1116,
     name: "Kimi PPT助手",
     description: "Kimi全新自研的PPT助手，一键生成PPT",
     highlights: "月之暗面技术，PPT智能生成",
@@ -399,7 +399,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2041,
+    id: 1117,
     name: "夸克PPT",
     description: "夸克团队推出的AI PPT生成工具",
     highlights: "夸克技术，一键生成精美PPT",
@@ -423,7 +423,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2042,
+    id: 1118,
     name: "美图AI PPT",
     description: "美图秀秀推出的免费在线AI生成PPT设计工具",
     highlights: "完全免费，美图设计技术",
@@ -447,7 +447,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2043,
+    id: 1119,
     name: "万兴智演",
     description: "万兴科技推出的AI PPT和演示制作软件",
     highlights: "专业演示软件，AI赋能",
@@ -473,7 +473,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
 
   // ==================== 更多AI编程工具 ====================
   {
-    id: 2050,
+    id: 1120,
     name: "Lovable",
     description: "全栈AI编程工具，一句话构建网站应用",
     highlights: "全栈开发，一句话创建应用",
@@ -497,7 +497,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2051,
+    id: 1121,
     name: "Firebase Studio",
     description: "谷歌推出的AI编程工具，一站式开发全栈应用",
     highlights: "谷歌生态，全栈开发平台",
@@ -521,7 +521,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 2052,
+    id: 1122,
     name: "Windsurf",
     description: "Codeium公司推出的AI编程工具",
     highlights: "Codeium技术，AI编程助手",
@@ -547,7 +547,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
 
   // ==================== 更多AI智能体 ====================
   {
-    id: 2060,
+    id: 1123,
     name: "Flowith",
     description: "免费用Gemini 3、GPT-5，一站式AI智能体平台",
     highlights: "顶级模型免费，多模型聚合",
@@ -571,7 +571,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 2061,
+    id: 1124,
     name: "Operator",
     description: "OpenAI推出的AI智能体，能推理、联网自主执行任务",
     highlights: "OpenAI出品，自主执行能力强",
@@ -595,7 +595,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "advanced"
   },
   {
-    id: 2062,
+    id: 1125,
     name: "OpenClaw",
     description: "开源免费的个人AI助手",
     highlights: "开源免费，本地部署，隐私安全",
@@ -621,7 +621,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
 
   // ==================== 更多AI音频工具 ====================
   {
-    id: 2070,
+    id: 1126,
     name: "讯飞听见",
     description: "科大讯飞推出的在线AI语音转文字工具",
     highlights: "语音转文字专家，准确率领先",
@@ -645,7 +645,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2071,
+    id: 1127,
     name: "ElevenLabs",
     description: "AI文本转语音，支持包含中文在内的29种语言",
     highlights: "顶级TTS，声音自然逼真",
@@ -669,7 +669,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2072,
+    id: 1128,
     name: "音疯",
     description: "昆仑万维推出的AI音乐创作平台，一键生成原创歌曲",
     highlights: "一键生成歌曲，原创音乐创作",
@@ -695,7 +695,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
 
   // ==================== 更多AI搜索引擎 ====================
   {
-    id: 2080,
+    id: 1129,
     name: "知乎直答",
     description: "知乎推出的AI搜索引擎，直达问题答案",
     highlights: "知乎知识库，精准问答",
@@ -719,7 +719,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2081,
+    id: 1130,
     name: "纳米AI",
     description: "360推出的新一代超级AI搜索工具",
     highlights: "360技术，深度AI搜索",
@@ -743,7 +743,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2082,
+    id: 1131,
     name: "Felo",
     description: "免费AI智能搜索引擎，支持社交联网搜索和多语种问答结果",
     highlights: "多语言搜索，社交联网",
@@ -769,7 +769,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
 
   // ==================== 更多AI设计工具 ====================
   {
-    id: 2090,
+    id: 1132,
     name: "Figma AI",
     description: "Figma推出的原生AI设计工具",
     highlights: "Figma集成，设计AI助手",
@@ -793,7 +793,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 2091,
+    id: 1133,
     name: "创客贴AI",
     description: "AI辅助的智能在线设计工具",
     highlights: "在线设计，AI辅助创作",
@@ -817,7 +817,7 @@ export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2092,
+    id: 1134,
     name: "Recraft AI",
     description: "免费无限AI画板，生成高质量矢量艺术画、图标、3D图片和插画",
     highlights: "矢量图生成，专业级输出",

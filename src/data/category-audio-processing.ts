@@ -1,4 +1,4 @@
-// AI 工具导航站 - 音频处理分类工具数据
+﻿// AI 工具导航站 - 音频处理分类工具数据
 // 最后更新：2026-03-12
 // 包含 22 个音频处理类 AI 工具的详细数据
 
@@ -17,8 +17,7 @@ export interface EnhancedTool {
   category: string;
   subCategory: string; // 子分类
   logo: string;
-  url: string;
-  isVip: boolean;
+  url: string;;
   price: string;
   tags: string[];
   features: string[]; // 6 个功能特点
@@ -33,7 +32,7 @@ export interface EnhancedTool {
 export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
   // ==================== AI 语音合成 ====================
   {
-    id: 1,
+    id: 301,
     name: "ElevenLabs",
     description: "顶级 AI 语音合成平台，生成自然流畅的人声，支持多语言和情感表达",
     highlights: "语音质量行业领先，情感表达丰富，克隆效果好",
@@ -41,7 +40,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 语音合成",
     logo: "🎙️",
     url: "https://elevenlabs.io",
-    isVip: true,
     price: "免费 + $5-330/月",
     tags: ["免费增值", "英文", "Web/API"],
     features: [
@@ -80,7 +78,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 2,
+    id: 302,
     name: "Murf AI",
     description: "专业 AI 语音工作室，提供 120+ 声音，支持视频配音和团队协作",
     highlights: "声音选择丰富，工作室功能全，团队协作强",
@@ -88,7 +86,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 语音合成",
     logo: "🎬",
     url: "https://murf.ai",
-    isVip: true,
     price: "免费 + $19-75/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -127,7 +124,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 3,
+    id: 303,
     name: "Play.ht",
     description: "AI 语音生成平台，支持 800+ 声音，提供 WordPress 插件和 API 集成",
     highlights: "声音数量最多，WordPress 集成，API 灵活",
@@ -135,7 +132,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 语音合成",
     logo: "🔊",
     url: "https://play.ht",
-    isVip: true,
     price: "免费 + $31.2-399/月",
     tags: ["免费增值", "英文", "Web/API"],
     features: [
@@ -174,7 +170,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 4,
+    id: 304,
     name: "讯飞配音",
     description: "科大讯飞 AI 配音平台，中文语音合成领先，支持多方言和行业术语",
     highlights: "中文效果最佳，方言支持，行业专业",
@@ -182,7 +178,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 语音合成",
     logo: "🇨🇳",
     url: "https://peiyin.xunfei.cn",
-    isVip: true,
     price: "免费 + 会员制",
     tags: ["免费增值", "中文", "Web/App"],
     features: [
@@ -223,7 +218,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
 
   // ==================== AI 音乐创作 ====================
   {
-    id: 5,
+    id: 305,
     name: "Suno AI",
     description: "AI 音乐生成先锋，从文本提示创作完整歌曲，包括歌词和演唱",
     highlights: "完整歌曲生成，歌词创作，风格多样",
@@ -231,7 +226,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 音乐创作",
     logo: "🎵",
     url: "https://suno.ai",
-    isVip: true,
     price: "免费 + $8-24/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -270,7 +264,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 6,
+    id: 306,
     name: "Udio",
     description: "高质量 AI 音乐生成平台，专业音质，支持歌曲扩展和混音",
     highlights: "音质专业，歌曲扩展，混音功能",
@@ -278,7 +272,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 音乐创作",
     logo: "🎼",
     url: "https://udio.com",
-    isVip: true,
     price: "免费 + $10-30/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -317,7 +310,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 7,
+    id: 307,
     name: "AIVA",
     description: "AI 作曲助手，专注古典和影视配乐，支持 MIDI 导出和深度编辑",
     highlights: "古典音乐专业，MIDI 导出，可深度编辑",
@@ -325,7 +318,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 音乐创作",
     logo: "🎹",
     url: "https://aiva.ai",
-    isVip: true,
     price: "免费 + $11-49/月",
     tags: ["免费增值", "多语言", "Web"],
     features: [
@@ -364,7 +356,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 8,
+    id: 308,
     name: "Boomy",
     description: "快速 AI 音乐创作工具，几分钟生成原创歌曲，支持发行到流媒体",
     highlights: "创作速度快，流媒体发行，收益分成",
@@ -372,7 +364,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 音乐创作",
     logo: "🎸",
     url: "https://boomy.com",
-    isVip: true,
     price: "免费 + $2.99-9.99/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -411,7 +402,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 9,
+    id: 309,
     name: "Soundraw",
     description: "AI 背景音乐生成器，为视频内容创作定制音乐，可调整长度和情绪",
     highlights: "视频音乐专用，长度可调，情绪定制",
@@ -419,7 +410,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 音乐创作",
     logo: "🎧",
     url: "https://soundraw.io",
-    isVip: true,
     price: "免费 + $16.99-79.99/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -460,7 +450,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
 
   // ==================== 音频分离/处理 ====================
   {
-    id: 10,
+    id: 310,
     name: "LALAL.AI",
     description: "专业音频分离工具，精准分离人声、乐器，支持批量处理和高音质输出",
     highlights: "分离质量顶尖，支持格式多，批量处理",
@@ -468,7 +458,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "音频分离/处理",
     logo: "🎚️",
     url: "https://lalal.ai",
-    isVip: true,
     price: "免费试用 + $9.99-89.99",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -507,7 +496,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 11,
+    id: 311,
     name: "Adobe Podcast",
     description: "Adobe 的 AI 播客工具，智能降噪、语音增强，提升录音质量",
     highlights: "Adobe 品质，降噪强大，免费好用",
@@ -515,7 +504,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "音频分离/处理",
     logo: "🎙️",
     url: "https://podcast.adobe.com",
-    isVip: true,
     price: "免费 + Creative Cloud 订阅",
     tags: ["免费增值", "多语言", "Web"],
     features: [
@@ -554,7 +542,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 12,
+    id: 312,
     name: "Cleanvoice",
     description: "AI 音频清理工具，自动移除口癖、填充词和噪音，提升语音质量",
     highlights: "自动清理口癖，多语言支持，批量处理",
@@ -562,7 +550,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "音频分离/处理",
     logo: "🧹",
     url: "https://cleanvoice.ai",
-    isVip: true,
     price: "免费 + €10-50/月",
     tags: ["免费增值", "多语言", "Web"],
     features: [
@@ -603,7 +590,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
 
   // ==================== 语音克隆 ====================
   {
-    id: 13,
+    id: 313,
     name: "Resemble AI",
     description: "企业级语音克隆平台，创建定制 AI 声音，支持实时生成和情感控制",
     highlights: "克隆质量高，实时生成，企业级安全",
@@ -611,7 +598,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "语音克隆",
     logo: "👥",
     url: "https://resemble.ai",
-    isVip: true,
     price: "定制报价",
     tags: ["企业级", "英文", "Web/API"],
     features: [
@@ -650,7 +636,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "advanced"
   },
   {
-    id: 14,
+    id: 314,
     name: "Voice.ai",
     description: "实时语音变声软件，支持游戏、直播场景，拥有丰富的声音库",
     highlights: "实时变声，游戏直播专用，声音库丰富",
@@ -658,7 +644,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "语音克隆",
     logo: "🎮",
     url: "https://voice.ai",
-    isVip: true,
     price: "免费 + 积分制",
     tags: ["免费增值", "英文", "Windows"],
     features: [
@@ -699,7 +684,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
 
   // ==================== 降噪增强 ====================
   {
-    id: 15,
+    id: 315,
     name: "Krisp",
     description: "AI 降噪应用，实时消除背景噪音，适用于会议、录音和直播",
     highlights: "实时降噪，全平台支持，会议优化",
@@ -707,7 +692,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "降噪增强",
     logo: "🔇",
     url: "https://krisp.ai",
-    isVip: true,
     price: "免费 + $8-12/月",
     tags: ["免费增值", "多语言", "多平台"],
     features: [
@@ -746,7 +730,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 16,
+    id: 316,
     name: "Audo Studio",
     description: "一键 AI 音频增强，自动降噪、均衡和优化，简化音频后期流程",
     highlights: "一键处理，自动优化，流程简化",
@@ -754,7 +738,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "降噪增强",
     logo: "✨",
     url: "https://audo.ai",
-    isVip: true,
     price: "免费 + $19-79/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -795,7 +778,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
 
   // ==================== 文本朗读 ====================
   {
-    id: 17,
+    id: 317,
     name: "NaturalReader",
     description: "文本转语音阅读器，支持多种格式文档，适合学习和无障碍访问",
     highlights: "格式支持全，学习友好，无障碍优化",
@@ -803,7 +786,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "文本朗读",
     logo: "📖",
     url: "https://naturalreaders.com",
-    isVip: true,
     price: "免费 + $9.99-99.99/月",
     tags: ["免费增值", "多语言", "多平台"],
     features: [
@@ -842,7 +824,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 18,
+    id: 318,
     name: "Speechify",
     description: "AI 文本朗读应用，名人语音选项，支持扫描纸质书和网页朗读",
     highlights: "名人语音，扫描识别，多平台同步",
@@ -850,7 +832,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "文本朗读",
     logo: "🔈",
     url: "https://speechify.com",
-    isVip: true,
     price: "免费 + $139/年",
     tags: ["免费增值", "多语言", "多平台"],
     features: [
@@ -891,7 +872,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
 
   // ==================== 其他音频工具 ====================
   {
-    id: 19,
+    id: 319,
     name: "Voicemod",
     description: "实时语音变声器，内置音效板，适合游戏、直播和娱乐场景",
     highlights: "实时变声，音效板，直播集成",
@@ -899,7 +880,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "语音克隆",
     logo: "🎤",
     url: "https://voicemod.net",
-    isVip: true,
     price: "免费 + $9.99 永久",
     tags: ["免费增值", "多语言", "Windows"],
     features: [
@@ -938,7 +918,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 20,
+    id: 320,
     name: "Uberduck",
     description: "AI 语音和说唱生成平台，支持角色语音克隆和音乐创作",
     highlights: "角色语音丰富，说唱生成，社区活跃",
@@ -946,7 +926,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 语音合成",
     logo: "🦆",
     url: "https://uberduck.ai",
-    isVip: true,
     price: "免费 + $8-200/月",
     tags: ["免费增值", "英文", "Web/API"],
     features: [
@@ -985,7 +964,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 21,
+    id: 321,
     name: "Ecrett Music",
     description: "AI 背景音乐生成器，为视频内容快速创作无版权音乐",
     highlights: "视频音乐专用，场景分类，无版权风险",
@@ -993,7 +972,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 音乐创作",
     logo: "🎵",
     url: "https://ecrettmusic.com",
-    isVip: true,
     price: "免费 + $9.99-49.99/月",
     tags: ["免费增值", "英文", "Web"],
     features: [
@@ -1032,7 +1010,7 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 22,
+    id: 322,
     name: "WellSaid Labs",
     description: "企业级 AI 语音平台，提供专业配音质量，适合商业和品牌应用",
     highlights: "企业级品质，专业配音，品牌定制",
@@ -1040,7 +1018,6 @@ export const AUDIO_PROCESSING_TOOLS: EnhancedTool[] = [
     subCategory: "AI 语音合成",
     logo: "🏢",
     url: "https://wellsaidlabs.com",
-    isVip: true,
     price: "企业定制报价",
     tags: ["企业级", "英文", "Web/API"],
     features: [

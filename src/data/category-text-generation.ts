@@ -1,4 +1,4 @@
-// 文本生成分类 - 增强版工具数据
+﻿// 文本生成分类 - 增强版工具数据
 // 包含详细描述、功能特点、使用场景、优缺点、相关网站等
 // 最后更新：2026-03-12
 
@@ -17,8 +17,7 @@ export interface EnhancedTool {
   category: string;
   subCategory: string; // 子分类
   logo: string;
-  url: string;
-  isVip: boolean;
+  url: string;;
   price: string;
   tags: string[];
   features: string[]; // 6 个功能特点
@@ -41,7 +40,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "对话助手",
     logo: "🤖",
     url: "https://chatgpt.com",
-    isVip: false,
     price: "免费 + Plus $20/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["多轮对话理解", "代码生成与调试", "文案创作", "多语言翻译", "逻辑推理", "知识问答"],
@@ -65,7 +63,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "对话助手",
     logo: "📝",
     url: "https://claude.ai",
-    isVip: true,
     price: "$20/月",
     tags: ["付费", "英文", "Web"],
     features: ["超长上下文处理", "文档深度分析", "安全可靠的输出", "多轮对话", "代码生成", "多模态理解"],
@@ -81,7 +78,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 7,
+    id: 3,
     name: "文心一言",
     description: "百度大语言模型，中文对话 AI 助手",
     highlights: "完全免费，中文理解和本土化最强",
@@ -89,7 +86,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "对话助手",
     logo: "🇨🇳",
     url: "https://yiyan.baidu.com",
-    isVip: false,
     price: "免费",
     tags: ["免费", "中文", "Web"],
     features: ["中文深度优化", "多轮对话", "文案创作", "逻辑推理", "多模态理解", "代码生成"],
@@ -105,7 +101,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 8,
+    id: 4,
     name: "通义千问",
     description: "阿里大语言模型，多模态理解与生成",
     highlights: "多模态能力强，阿里生态集成",
@@ -113,7 +109,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "对话助手",
     logo: "🤖",
     url: "https://tongyi.aliyun.com",
-    isVip: false,
     price: "免费",
     tags: ["免费", "中文", "Web"],
     features: ["多模态理解", "超长上下文", "代码生成", "文档分析", "多语言翻译", "数学推理"],
@@ -129,7 +124,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 9,
+    id: 5,
     name: "Kimi",
     description: "月之暗面大模型，支持超长上下文理解",
     highlights: "上下文窗口超大，长文档处理专家",
@@ -137,7 +132,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "对话助手",
     logo: "🌙",
     url: "https://kimi.moonshot.cn",
-    isVip: false,
     price: "免费",
     tags: ["免费", "中文", "Web"],
     features: ["超长上下文", "文档深度分析", "信息提取", "多轮对话", "文件上传", "精准总结"],
@@ -153,7 +147,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 10,
+    id: 6,
     name: "智谱清言",
     description: "智谱 AI 大模型，清华技术背景",
     highlights: "学术背景强，API 开放",
@@ -161,7 +155,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "对话助手",
     logo: "🧠",
     url: "https://chatglm.cn",
-    isVip: false,
     price: "免费",
     tags: ["免费", "中文", "Web"],
     features: ["GLM 架构", "多轮对话", "代码生成", "逻辑推理", "知识问答", "API 支持"],
@@ -177,7 +170,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 11,
+    id: 7,
     name: "讯飞星火",
     description: "科大讯飞大模型，中文语音交互强",
     highlights: "语音能力强，垂直领域专业",
@@ -185,7 +178,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "对话助手",
     logo: "🔥",
     url: "https://xinghuo.xfyun.cn",
-    isVip: false,
     price: "免费",
     tags: ["免费", "中文", "Web"],
     features: ["语音交互", "中文深度优化", "多轮对话", "垂直领域知识", "多模态理解", "教育医疗专业"],
@@ -203,7 +195,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
 
   // ==================== 营销文案 ====================
   {
-    id: 3,
+    id: 8,
     name: "Jasper",
     description: "AI 营销文案生成器，专为品牌和内容营销打造",
     highlights: "模板丰富专业，品牌一致性好",
@@ -211,7 +203,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "营销文案",
     logo: "✍️",
     url: "https://jasper.ai",
-    isVip: true,
     price: "$49-125/月",
     tags: ["付费", "英文", "Web"],
     features: ["50+ 文案模板", "品牌语调学习", "SEO 优化集成", "多语言支持", "团队协作", "工作流自动化"],
@@ -227,7 +218,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 5,
+    id: 9,
     name: "Copy.ai",
     description: "AI 文案生成工具，快速创建营销内容",
     highlights: "上手简单，免费额度充足",
@@ -235,7 +226,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "营销文案",
     logo: "✨",
     url: "https://copy.ai",
-    isVip: true,
     price: "免费 + $49/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["90+ 文案工具", "工作流自动化", "Infobase 品牌库", "团队协作", "多语言支持", "模板市场"],
@@ -251,7 +241,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 4,
+    id: 10,
     name: "Writesonic",
     description: "AI 写作平台，支持博客、广告、邮件等多种内容",
     highlights: "SEO 功能强大，多语言支持好",
@@ -259,7 +249,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "营销文案",
     logo: "📄",
     url: "https://writesonic.com",
-    isVip: true,
     price: "免费 + $19-49/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["100+ 写作模板", "SEO 长文生成", "实时网络搜索", "25 种语言支持", "图片生成", "API 访问"],
@@ -275,7 +264,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 6,
+    id: 11,
     name: "Rytr",
     description: "AI 写作助手，支持多种语言和语调",
     highlights: "价格实惠，浏览器扩展方便",
@@ -283,7 +272,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "营销文案",
     logo: "🖊️",
     url: "https://rytr.me",
-    isVip: true,
     price: "免费 + $9-29/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["30+ 语言支持", "20+ 语调风格", "抄袭检查", "浏览器扩展", "图片生成", "格式转换"],
@@ -299,7 +287,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 18,
+    id: 12,
     name: "Anyword",
     description: "AI 营销文案优化，预测转化率",
     highlights: "数据驱动决策，转化预测独特",
@@ -307,7 +295,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "营销文案",
     logo: "📊",
     url: "https://anyword.com",
-    isVip: true,
     price: "$49-99/月",
     tags: ["付费", "英文", "Web"],
     features: ["转化率预测", "数据驱动", "多模板支持", "品牌声音", "A/B 测试", "性能分析"],
@@ -325,7 +312,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
 
   // ==================== 创意写作 ====================
   {
-    id: 16,
+    id: 13,
     name: "Sudowrite",
     description: "AI 创意写作助手，小说和故事创作",
     highlights: "专为创意写作，功能独特实用",
@@ -333,7 +320,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "创意写作",
     logo: "📖",
     url: "https://sudowrite.com",
-    isVip: true,
     price: "$19-29/月",
     tags: ["付费", "英文", "Web"],
     features: ["故事引擎", "角色开发", "情节构思", "描写增强", "上下文理解", "创意头脑风暴"],
@@ -349,7 +335,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 17,
+    id: 14,
     name: "NovelAI",
     description: "AI 辅助写作，customizable 故事生成",
     highlights: "高度可定制，隐私保护好",
@@ -357,7 +343,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "创意写作",
     logo: "🌟",
     url: "https://novelai.net",
-    isVip: true,
     price: "$10-25/月",
     tags: ["付费", "英文", "Web"],
     features: ["故事生成", "自定义模型", "风格学习", "图像生成", "隐私保护", "无限生成"],
@@ -383,7 +368,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "写作辅助",
     logo: "✅",
     url: "https://grammarly.com",
-    isVip: true,
     price: "免费 + $12-29/月",
     tags: ["免费增值", "英文", "Web/插件"],
     features: ["语法检查", "拼写纠正", "风格建议", "语气分析", "抄袭检测", "多平台支持"],
@@ -399,7 +383,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 14,
+    id: 16,
     name: "Quillbot",
     description: "AI 改写和摘要工具，提升写作效率",
     highlights: "改写质量高，模式多样",
@@ -407,7 +391,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "写作辅助",
     logo: "🦜",
     url: "https://quillbot.com",
-    isVip: true,
     price: "免费 + $19.95/月",
     tags: ["免费增值", "英文", "Web"],
     features: ["智能改写", "多种模式", "语法检查", "抄袭检测", "摘要生成", "浏览器扩展"],
@@ -423,7 +406,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 13,
+    id: 17,
     name: "DeepL Write",
     description: "AI 写作助手，智能润色和语法修正",
     highlights: "润色质量高，多语言支持好",
@@ -431,7 +414,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "写作辅助",
     logo: "🌐",
     url: "https://deepl.com/write",
-    isVip: true,
     price: "免费 + $9.99/月",
     tags: ["付费", "多语言", "Web"],
     features: ["智能润色", "语法修正", "表达优化", "多语言支持", "风格调整", "翻译集成"],
@@ -447,7 +429,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "beginner"
   },
   {
-    id: 12,
+    id: 18,
     name: "Notion AI",
     description: "智能笔记助手，自动总结、润色、翻译",
     highlights: "与 Notion 无缝集成，功能实用",
@@ -455,7 +437,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "写作辅助",
     logo: "📓",
     url: "https://notion.so",
-    isVip: true,
     price: "$10/月",
     tags: ["付费", "多语言", "Web"],
     features: ["笔记总结", "文章润色", "多语言翻译", "大纲生成", "头脑风暴", "Notion 深度集成"],
@@ -473,7 +454,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
 
   // ==================== SEO 内容 ====================
   {
-    id: 21,
+    id: 19,
     name: "Frase",
     description: "AI 内容优化和 SEO 写作工具",
     highlights: "SEO 功能强大，研究工具全面",
@@ -481,7 +462,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "SEO 内容",
     logo: "📝",
     url: "https://frase.io",
-    isVip: true,
     price: "$14.99-114.99/月",
     tags: ["付费", "英文", "Web"],
     features: ["内容研究", "SEO 优化", "大纲生成", "竞争分析", "Google 集成", "性能追踪"],
@@ -497,7 +477,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "advanced"
   },
   {
-    id: 19,
+    id: 20,
     name: "Hypotenuse",
     description: "AI 内容创作，SEO 优化文章生成",
     highlights: "事实核查功能，电商集成",
@@ -505,7 +485,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "SEO 内容",
     logo: "📐",
     url: "https://hypotenuse.ai",
-    isVip: true,
     price: "$49-99/月",
     tags: ["付费", "英文", "Web"],
     features: ["SEO 文章生成", "事实核查", "产品描述", "批量生成", "电商平台集成", "多语言支持"],
@@ -521,7 +500,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 20,
+    id: 21,
     name: "Peppertype",
     description: "AI 内容生成器，营销和销售文案",
     highlights: "模板丰富，内容日历实用",
@@ -529,7 +508,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "SEO 内容",
     logo: "🌶️",
     url: "https://peppertype.ai",
-    isVip: true,
     price: "$35-199/月",
     tags: ["付费", "英文", "Web"],
     features: ["50+ 模板", "内容日历", "协作编辑", "品牌学习", "多语言支持", "API 访问"],
@@ -547,7 +525,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
 
   // ==================== 学术写作 ====================
   {
-    id: 23,
+    id: 22,
     name: "Aithor",
     description: "AI 写作助手，论文和学术内容",
     highlights: "学术导向，引用格式全",
@@ -555,7 +533,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "学术写作",
     logo: "🎓",
     url: "https://aithor.com",
-    isVip: true,
     price: "免费 + $11.99-29.99/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["论文写作", "文献综述", "引用生成", "抄袭检查", "多语言支持", "多种格式"],
@@ -571,7 +548,7 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     difficulty: "intermediate"
   },
   {
-    id: 22,
+    id: 23,
     name: "ShortlyAI",
     description: "AI 写作伙伴，长篇文章生成",
     highlights: "界面简洁，长文能力强",
@@ -579,7 +556,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "学术写作",
     logo: "⚡",
     url: "https://shortlyai.com",
-    isVip: true,
     price: "$79/月",
     tags: ["付费", "英文", "Web"],
     features: ["长文生成", "命令控制", "简洁界面", "内容扩展", "改写优化", "无限字数"],
@@ -603,7 +579,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "学术写作",
     logo: "⚖️",
     url: "https://gravitywrite.com",
-    isVip: true,
     price: "免费 + $19-49/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["75+ 写作工具", "40+ 语言支持", "WordPress 集成", "SEO 优化", "批量生成", "团队协作"],
@@ -629,7 +604,6 @@ export const TEXT_GENERATION_TOOLS: EnhancedTool[] = [
     subCategory: "搜索问答",
     logo: "🔍",
     url: "https://perplexity.ai",
-    isVip: true,
     price: "免费 + $20/月",
     tags: ["免费增值", "多语言", "Web"],
     features: ["AI 搜索", "引用标注", "多轮对话", "多模型选择", "实时信息", "来源追踪"],
