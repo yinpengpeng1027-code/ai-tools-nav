@@ -109,7 +109,7 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
                 <span>📖</span> 详细介绍
               </h2>
               <p className="text-slate-600 leading-relaxed text-base whitespace-pre-line">
-                {tool.longDescription}
+                {tool.description}
               </p>
             </section>
 
