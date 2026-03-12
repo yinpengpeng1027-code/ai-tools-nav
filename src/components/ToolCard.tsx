@@ -19,10 +19,6 @@ export default function ToolCard({
   showTags = true,
   size = 'medium' 
 }: ToolCardProps) {
-  // 直接从工具数据的 URL 提取域名，确保链接与工具名称一致
-  const domain = new URL(tool.url).hostname.replace('www.', '');
-  const fallbackEmoji = tool.logo;
-
   const getLogoSize = () => {
     switch(size) {
       case 'small': return 'small';
@@ -40,8 +36,7 @@ export default function ToolCard({
         {showLogo && (
           <div className="flex-shrink-0">
             <ToolLogo 
-              domain={domain} 
-              fallbackEmoji={fallbackEmoji}
+              name={tool.name} 
               size={getLogoSize()}
               className="shadow-lg shadow-blue-500/30"
             />

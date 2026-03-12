@@ -8,7 +8,6 @@ import BrandLogo from "@/components/BrandLogo";
 
 // 性能优化：工具卡片组件 - 使用 React.memo 避免不必要的重渲染
 const ToolCard = React.memo(({ tool }: { tool: typeof TOOLS_BY_CATEGORY[string][0] }) => {
-  const domain = tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/^www\./, '');
   return (
     <Link
       href={`/tool/${tool.id}`}
@@ -18,8 +17,7 @@ const ToolCard = React.memo(({ tool }: { tool: typeof TOOLS_BY_CATEGORY[string][
       <div className="flex items-start gap-4">
         <div className="flex-shrink-0">
           <ToolLogo 
-            domain={domain} 
-            fallbackEmoji={tool.logo}
+            name={tool.name} 
             size="medium"
             className="shadow-lg shadow-blue-500/30"
           />

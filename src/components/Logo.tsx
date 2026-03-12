@@ -605,13 +605,6 @@ export const LOCAL_LOGO_MAP: Record<string, LogoConfig> = {
     initials: 'W',
     bgColor: '#146ef5',
   },
-  'Figma': {
-    url: 'https://static.figma.com/app/icon/1/favicon.png',
-    alt: 'Figma',
-    emoji: '🎯',
-    initials: 'F',
-    bgColor: '#f24e1e',
-  },
 
   // ==================== 图像生成 ====================
   'Stable Diffusion': {
@@ -1174,13 +1167,6 @@ export const LOCAL_LOGO_MAP: Record<string, LogoConfig> = {
   },
 
   // ==================== 更多搜索与知识工具 ====================
-  'Perplexity': {
-    url: 'https://www.perplexity.ai/logo.png',
-    alt: 'Perplexity',
-    emoji: '🔍',
-    initials: 'P',
-    bgColor: '#000000',
-  },
   'You.com': {
     url: 'https://you.com/logo.png',
     alt: 'You.com',
@@ -1202,266 +1188,12 @@ export const LOCAL_LOGO_MAP: Record<string, LogoConfig> = {
     initials: 'M',
     bgColor: '#000000',
   },
-
-  // ==================== 更多营销与社交工具 ====================
-  'Jasper': {
-    url: 'https://www.jasper.ai/logo.png',
-    alt: 'Jasper',
-    emoji: '✍️',
-    initials: 'J',
-    bgColor: '#000000',
-  },
-  'Copy.ai': {
-    url: 'https://copy.ai/logo.png',
-    alt: 'Copy.ai',
-    emoji: '✨',
-    initials: 'C',
-    bgColor: '#000000',
-  },
-  'Writesonic': {
-    url: 'https://writesonic.com/logo.png',
-    alt: 'Writesonic',
-    emoji: '📄',
-    initials: 'W',
-    bgColor: '#dc2626',
-  },
-  'Rytr': {
-    url: 'https://rytr.me/logo.png',
-    alt: 'Rytr',
-    emoji: '🖊️',
-    initials: 'R',
-    bgColor: '#000000',
-  },
-  'Grammarly': {
-    url: 'https://www.grammarly.com/logo.png',
-    alt: 'Grammarly',
-    emoji: '✅',
-    initials: 'G',
-    bgColor: '#15c39a',
-  },
-  'Quillbot': {
-    url: 'https://quillbot.com/logo.png',
-    alt: 'Quillbot',
-    emoji: '🦜',
-    initials: 'Q',
-    bgColor: '#1e40af',
-  },
-  'DeepL Write': {
-    url: 'https://www.deepl.com/logo.png',
-    alt: 'DeepL Write',
-    emoji: '🌐',
-    initials: 'D',
-    bgColor: '#0f2b46',
-  },
-  'Sudowrite': {
-    url: 'https://www.sudowrite.com/logo.png',
-    alt: 'Sudowrite',
-    emoji: '📖',
-    initials: 'S',
-    bgColor: '#000000',
-  },
-  'NovelAI': {
-    url: 'https://novelai.net/logo.png',
-    alt: 'NovelAI',
-    emoji: '🌟',
-    initials: 'N',
-    bgColor: '#000000',
-  },
-  'Anyword': {
-    url: 'https://anyword.com/logo.png',
-    alt: 'Anyword',
-    emoji: '📊',
-    initials: 'A',
-    bgColor: '#0066ff',
-  },
-  'Hypotenuse': {
-    url: 'https://www.hypotenuse.ai/logo.png',
-    alt: 'Hypotenuse',
-    emoji: '📐',
-    initials: 'H',
-    bgColor: '#000000',
-  },
-  'Peppertype': {
-    url: 'https://www.peppertype.ai/logo.png',
-    alt: 'Peppertype',
-    emoji: '🌶️',
-    initials: 'P',
-    bgColor: '#dc2626',
-  },
-  'Frase': {
-    url: 'https://www.frase.io/logo.png',
-    alt: 'Frase',
-    emoji: '📝',
-    initials: 'F',
-    bgColor: '#000000',
-  },
-  'ShortlyAI': {
-    url: 'https://www.shortlyai.com/logo.png',
-    alt: 'ShortlyAI',
-    emoji: '⏱️',
-    initials: 'S',
-    bgColor: '#000000',
-  },
-  'Aithor': {
-    url: 'https://aithor.com/logo.png',
-    alt: 'Aithor',
-    emoji: '🎓',
-    initials: 'A',
-    bgColor: '#0066ff',
-  },
-  'GravityWrite': {
-    url: 'https://gravitywrite.com/logo.png',
-    alt: 'GravityWrite',
-    emoji: '⚖️',
-    initials: 'G',
-    bgColor: '#000000',
-  },
-  'Buffer': {
-    url: 'https://buffer.com/logo.png',
-    alt: 'Buffer',
-    emoji: '📋',
-    initials: 'B',
-    bgColor: '#000000',
-  },
-  'Hootsuite': {
-    url: 'https://hootsuite.com/logo.png',
-    alt: 'Hootsuite',
-    emoji: '🦉',
-    initials: 'H',
-    bgColor: '#000000',
-  },
-  'Sprout Social': {
-    url: 'https://sproutsocial.com/logo.png',
-    alt: 'Sprout Social',
-    emoji: '🌱',
-    initials: 'S',
-    bgColor: '#000000',
-  },
-  'Later': {
-    url: 'https://later.com/logo.png',
-    alt: 'Later',
-    emoji: '🕐',
-    initials: 'L',
-    bgColor: '#000000',
-  },
-  'Planoly': {
-    url: 'https://planoly.com/logo.png',
-    alt: 'Planoly',
-    emoji: '📅',
-    initials: 'P',
-    bgColor: '#000000',
-  },
-  'Tailwind': {
-    url: 'https://www.tailwindapp.com/logo.png',
-    alt: 'Tailwind',
-    emoji: '🌬️',
-    initials: 'T',
-    bgColor: '#000000',
-  },
-  'CoSchedule': {
-    url: 'https://coschedule.com/logo.png',
-    alt: 'CoSchedule',
-    emoji: '📅',
-    initials: 'C',
-    bgColor: '#0066ff',
-  },
-  'Agorapulse': {
-    url: 'https://www.agorapulse.com/logo.png',
-    alt: 'Agorapulse',
-    emoji: '📢',
-    initials: 'A',
-    bgColor: '#0066ff',
-  },
-  'Sendible': {
-    url: 'https://www.sendible.com/logo.png',
-    alt: 'Sendible',
-    emoji: '📤',
-    initials: 'S',
-    bgColor: '#0066ff',
-  },
-  'Crowdfire': {
-    url: 'https://www.crowdfireapp.com/logo.png',
-    alt: 'Crowdfire',
-    emoji: '🔥',
-    initials: 'C',
-    bgColor: '#dc2626',
-  },
-  'BuzzSumo': {
-    url: 'https://buzzsumo.com/logo.png',
-    alt: 'BuzzSumo',
-    emoji: '📊',
-    initials: 'B',
-    bgColor: '#0066ff',
-  },
-  'Brandwatch': {
-    url: 'https://www.brandwatch.com/logo.png',
-    alt: 'Brandwatch',
-    emoji: '👁️',
-    initials: 'B',
-    bgColor: '#dc2626',
-  },
-  'Mention': {
-    url: 'https://www.mention.com/logo.png',
-    alt: 'Mention',
-    emoji: '📣',
-    initials: 'M',
-    bgColor: '#0066ff',
-  },
-  'Iconosquare': {
-    url: 'https://www.iconosquare.com/logo.png',
-    alt: 'Iconosquare',
-    emoji: '🔲',
-    initials: 'I',
-    bgColor: '#000000',
-  },
-  'NapoleonCat': {
-    url: 'https://napoleoncat.com/logo.png',
-    alt: 'NapoleonCat',
-    emoji: '🐱',
-    initials: 'N',
-    bgColor: '#0066ff',
-  },
-  'SocialBee': {
-    url: 'https://socialbee.io/logo.png',
-    alt: 'SocialBee',
-    emoji: '🐝',
-    initials: 'S',
-    bgColor: '#f59e0b',
-  },
-  'MeetEdgar': {
-    url: 'https://meetedgar.com/logo.png',
-    alt: 'MeetEdgar',
-    emoji: '🐧',
-    initials: 'E',
-    bgColor: '#0066ff',
-  },
-  'Lately': {
-    url: 'https://lately.ai/logo.png',
-    alt: 'Lately',
-    emoji: '🕐',
-    initials: 'L',
-    bgColor: '#000000',
-  },
-  'Twee': {
-    url: 'https://twee.com/logo.png',
-    alt: 'Twee',
-    emoji: '🐦',
-    initials: 'T',
-    bgColor: '#0066ff',
-  },
-  'PhantomBuster': {
-    url: 'https://phantombuster.com/logo.png',
-    alt: 'PhantomBuster',
-    emoji: '👻',
-    initials: 'P',
-    bgColor: '#000000',
-  },
 };
 
 // Logo 组件属性
 export interface LogoProps {
   name: string;
-  size?: number;
+  size?: number | 'small' | 'medium' | 'large';
   showName?: boolean;
   className?: string;
   style?: CSSProperties;
@@ -1595,6 +1327,13 @@ export const Logo: React.FC<LogoProps> = ({
   className = '',
   style = {},
 }) => {
+  // 将字符串 size 转换为像素值
+  const sizeInPx = typeof size === 'string' 
+    ? size === 'small' ? 24 
+      : size === 'medium' ? 48 
+      : size === 'large' ? 64 
+      : 32
+    : size;
   const [loadFailed, setLoadFailed] = useState(false);
   const [clearbitFailed, setClearbitFailed] = useState(false);
   const [googleFailed, setGoogleFailed] = useState(false);
@@ -1655,35 +1394,35 @@ export const Logo: React.FC<LogoProps> = ({
       >
         <div
           style={{
-            width: size,
-            height: size,
+            width: sizeInPx,
+            height: sizeInPx,
             borderRadius: '20%',
             backgroundColor: '#6b7280',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: Math.floor(size * 0.5),
+            fontSize: Math.floor(sizeInPx * 0.5),
             color: 'white',
             fontWeight: 'bold',
           }}
         >
           {name.charAt(0).toUpperCase()}
         </div>
-        {showName && <span style={{ fontSize: size * 0.4 }}>{name}</span>}
+        {showName && <span style={{ fontSize: sizeInPx * 0.4 }}>{name}</span>}
       </div>
     );
   }
 
   // 加载失败时的 fallback 样式
   const fallbackStyle: CSSProperties = {
-    width: size,
-    height: size,
+    width: sizeInPx,
+    height: sizeInPx,
     borderRadius: '20%',
     backgroundColor: getFallbackColor(),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: Math.floor(size * 0.5),
+    fontSize: Math.floor(sizeInPx * 0.5),
     color: 'white',
     fontWeight: 'bold',
   };
@@ -1698,8 +1437,8 @@ export const Logo: React.FC<LogoProps> = ({
         <img
           src={imageUrl}
           alt={config?.alt || name}
-          width={size}
-          height={size}
+          width={sizeInPx}
+          height={sizeInPx}
           style={{
             borderRadius: '20%',
             objectFit: 'cover',
@@ -1713,7 +1452,7 @@ export const Logo: React.FC<LogoProps> = ({
         </div>
       )}
       {showName && (
-        <span style={{ fontSize: size * 0.4, color: '#374151' }}>
+        <span style={{ fontSize: sizeInPx * 0.4, color: '#374151' }}>
           {config?.alt || name}
         </span>
       )}

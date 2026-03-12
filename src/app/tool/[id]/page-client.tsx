@@ -12,10 +12,6 @@ interface ToolPageClientProps {
 }
 
 export default function ToolPageClient({ tool, relatedTools: propRelatedTools }: ToolPageClientProps) {
-  // 从 URL 中提取域名
-  const domain = tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/^www\./, '');
-  const fallbackEmoji = tool.logo;
-
   // 如果没有传入相关工具，生成推荐
   const relatedTools = propRelatedTools || generateRelatedTools(tool, 5);
 
@@ -52,8 +48,7 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
             {/* Logo */}
             <div className="flex-shrink-0">
               <ToolLogo 
-                domain={domain} 
-                fallbackEmoji={fallbackEmoji}
+                name={tool.name} 
                 size="large"
                 className="shadow-lg shadow-blue-500/30"
               />
@@ -227,7 +222,6 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
               {relatedTools.length > 0 ? (
                 <div className="space-y-3">
                   {relatedTools.map((related) => {
-                    const relatedDomain = related.tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/^www\./, '');
                     return (
                       <Link
                         key={related.tool.id}
@@ -237,8 +231,7 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
                         <div className="flex items-start gap-3">
                           <div className="flex-shrink-0">
                             <ToolLogo 
-                              domain={relatedDomain} 
-                              fallbackEmoji={related.tool.logo || '🔗'}
+                              name={related.tool.name} 
                               size="small"
                             />
                           </div>

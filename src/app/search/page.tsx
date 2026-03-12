@@ -287,7 +287,6 @@ export default function SearchPage() {
             <StaggerContainer>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {results.map(({ tool, highlights }) => {
-                  const domain = tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/^www\./, '');
                   return (
                   <StaggerItem key={tool.id}>
                     <Link
@@ -299,8 +298,7 @@ export default function SearchPage() {
                           <div className="flex items-start gap-4 mb-4">
                             <div className="flex-shrink-0">
                               <ToolLogo 
-                                domain={domain} 
-                                fallbackEmoji={tool.logo}
+                                name={tool.name} 
                                 size="medium"
                                 className="shadow-lg shadow-blue-500/30"
                               />

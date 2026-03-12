@@ -210,7 +210,6 @@ export default function ToolsPage() {
                       <h3 className="text-sm font-semibold text-slate-900 mb-2">相似工具</h3>
                       <div className="space-y-2">
                         {relatedTools.map((related) => {
-                          const relatedDomain = related.tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '').replace(/^www\./, '');
                           return (
                           <Link
                             key={related.tool.id}
@@ -219,8 +218,7 @@ export default function ToolsPage() {
                           >
                             <div className="flex items-center gap-2">
                               <ToolLogo 
-                                domain={relatedDomain} 
-                                fallbackEmoji={related.tool.logo || '🔗'}
+                                name={related.tool.name} 
                                 size="small"
                               />
                               <span className="text-sm font-medium text-slate-700">{related.tool.name}</span>
