@@ -4,6 +4,7 @@ import Link from "next/link";
 import { EnhancedTool } from "@/data/index";
 import { generateRelatedTools } from "@/lib/related-tools";
 import ToolLogo from "@/components/Logo";
+import BrandLogo from "@/components/BrandLogo";
 
 interface ToolPageClientProps {
   tool: EnhancedTool;
@@ -24,11 +25,8 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
       <nav className="border-b border-slate-200 bg-white/80 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl">🚀</span>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                星图 StarMap AI
-              </span>
+            <Link href="/" className="hover:opacity-80 transition-opacity">
+              <BrandLogo size="small" withText={true} />
             </Link>
             <div className="flex items-center gap-6">
               <Link href="/tools" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">工具库</Link>

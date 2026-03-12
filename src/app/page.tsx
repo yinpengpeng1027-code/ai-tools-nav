@@ -18,12 +18,12 @@ import {
 
 // 模拟工具数据
 const FEATURED_TOOLS = [
-  { id: 1, name: "ChatGPT", description: "OpenAI 的智能对话 AI", category: "文本生成", logo: "🤖", url: "https://chatgpt.com", isVip: false },
-  { id: 2, name: "Midjourney", description: "AI 绘画工具", category: "图像设计", logo: "🎨", url: "https://midjourney.com", isVip: true },
-  { id: 3, name: "Notion AI", description: "智能笔记助手", category: "办公效率", logo: "📝", url: "https://notion.so", isVip: false },
-  { id: 4, name: "Runway", description: "AI 视频生成", category: "视频制作", logo: "🎬", url: "https://runwayml.com", isVip: true },
-  { id: 5, name: "ElevenLabs", description: "AI 语音合成", category: "音频处理", logo: "🎵", url: "https://elevenlabs.io", isVip: true },
-  { id: 6, name: "Jasper", description: "AI 营销文案", category: "文本生成", logo: "✍️", url: "https://jasper.ai", isVip: false },
+  { id: 1, name: "ChatGPT", description: "OpenAI 的智能对话 AI", category: "文本生成", logo: "🤖", url: "https://chatgpt.com" },
+  { id: 2, name: "Midjourney", description: "AI 绘画工具", category: "图像设计", logo: "🎨", url: "https://midjourney.com" },
+  { id: 3, name: "Notion AI", description: "智能笔记助手", category: "办公效率", logo: "📝", url: "https://notion.so" },
+  { id: 4, name: "Runway", description: "AI 视频生成", category: "视频制作", logo: "🎬", url: "https://runwayml.com" },
+  { id: 5, name: "ElevenLabs", description: "AI 语音合成", category: "音频处理", logo: "🎵", url: "https://elevenlabs.io" },
+  { id: 6, name: "Jasper", description: "AI 营销文案", category: "文本生成", logo: "✍️", url: "https://jasper.ai" },
 ];
 
 const CATEGORIES = [
@@ -60,7 +60,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <Link href="/" className="hover:opacity-80 transition-opacity">
-                <BrandLogo size="medium" withText={true} />
+                <BrandLogo size="small" withText={true} />
               </Link>
               <div className="flex items-center gap-6">
                 <Link href="/tools" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
@@ -98,14 +98,20 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="text-5xl sm:text-7xl font-bold mb-6">
+            <h1 className="text-5xl sm:text-7xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                发现最好的 AI 工具
+                星图 StarMap
               </span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.2}>
+            <p className="text-2xl sm:text-3xl font-medium text-slate-700 max-w-3xl mx-auto mb-6">
+              发现最好的 AI 工具
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.3}>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-10">
               国内最全面的 AI 工具发现与学习平台
               <br />
@@ -113,7 +119,7 @@ export default function Home() {
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.3}>
+          <FadeIn delay={0.4}>
             <div className="max-w-2xl mx-auto mb-12">
               <SearchBar
                 size="large"
@@ -125,7 +131,7 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.4}>
+          <FadeIn delay={0.5}>
             <div className="flex flex-wrap justify-center gap-4">
               <ClickButton className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl font-semibold text-lg shadow-lg shadow-blue-500/30 hover:opacity-90 transition-opacity">
                 🔔 抢先体验
@@ -401,11 +407,6 @@ export default function Home() {
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center gap-2 mb-1">
                                 <h3 className="font-semibold text-lg text-slate-900 truncate">{tool.name}</h3>
-                                {tool.isVip && (
-                                  <span className="px-2 py-0.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded text-xs font-medium">
-                                    VIP
-                                  </span>
-                                )}
                               </div>
                               <p className="text-slate-600 text-sm mb-2 line-clamp-2">{tool.description}</p>
                               <div className="flex items-center gap-2 text-xs text-slate-500">

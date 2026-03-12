@@ -13,14 +13,14 @@ interface BrandLogoProps {
  * 使用 SVG 绘制精美的星图图标，替换简单的 emoji
  */
 export default function BrandLogo({ 
-  size = 'medium', 
+  size = 'small', 
   className = '', 
   withText = true
 }: BrandLogoProps) {
   const sizeConfig = {
-    small: { icon: 40, text: 'text-xl', gap: 'gap-3' },
-    medium: { icon: 56, text: 'text-4xl', gap: 'gap-4' },
-    large: { icon: 72, text: 'text-5xl', gap: 'gap-5' },
+    small: { icon: 32, text: 'text-lg', gap: 'gap-2' },
+    medium: { icon: 40, text: 'text-xl', gap: 'gap-3' },
+    large: { icon: 56, text: 'text-3xl', gap: 'gap-4' },
   };
 
   const config = sizeConfig[size];

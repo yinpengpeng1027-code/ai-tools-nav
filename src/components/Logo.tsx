@@ -22,7 +22,7 @@ const LOCAL_LOGO_MAP: Record<string, string> = {
   "capcut.cn": "https://capcut.cn/favicon.ico",
   "meitu.com": "https://meitu.com/favicon.ico",
   "gaoding.com": "https://gaoding.com/favicon.ico",
-  " Jasper.ai": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Jasper_logo.svg/1200px-Jasper_logo.svg.png",
+  "jasper.ai": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Jasper_logo.svg/1200px-Jasper_logo.svg.png",
   "writesonic.com": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Writesonic_Logo.svg/1200px-Writesonic_Logo.svg.png",
   "rytr.me": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Rytr_logo.svg/1200px-Rytr_logo.svg.png",
   "runwayml.com": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Runway_logo.svg/1200px-Runway_logo.svg.png",
@@ -100,27 +100,27 @@ export default function ToolLogo({
       onClick={onClick}
       className={`
         ${sizeClasses[size]}
-        rounded-2xl 
-        bg-gradient-to-br 
-        from-blue-500 
-        to-purple-500 
+        bg-white
         flex 
         items-center 
         justify-center 
         overflow-hidden 
-        shadow-md
         cursor-pointer
         transition-all
-        hover:shadow-lg
         hover:scale-105
         ${className}
       `}
+      style={{
+        borderRadius: '12px',
+        width: size === 'small' ? '40px' : size === 'medium' ? '56px' : '96px',
+        height: size === 'small' ? '40px' : size === 'medium' ? '56px' : '96px',
+      }}
       role="img"
       aria-label={`${domain} logo`}
     >
       {/* Loading Skeleton */}
       {isLoading && !imageUrl && (
-        <div className="w-full h-full bg-slate-300 animate-pulse rounded-2xl" />
+        <div className="w-full h-full bg-slate-200 animate-pulse" style={{ borderRadius: '12px' }} />
       )}
 
       {/* Logo Image */}
@@ -128,7 +128,8 @@ export default function ToolLogo({
         <Image
           src={imageUrl}
           alt={`${domain} Logo`}
-          className="w-full h-full object-contain p-2"
+          className="w-full h-full object-cover"
+          style={{ borderRadius: '12px' }}
           width={100}
           height={100}
           onLoad={handleImageLoad}
@@ -140,7 +141,12 @@ export default function ToolLogo({
 
       {/* Fallback Emoji */}
       {(error || isLoading === false) && (!imageUrl || error) && (
-        <span className="text-white select-none text-2xl">{fallbackEmoji}</span>
+        <div 
+          className="w-full h-full flex items-center justify-center text-3xl bg-gradient-to-br from-blue-500 to-purple-500"
+          style={{ borderRadius: '12px' }}
+        >
+          <span className="select-none">{fallbackEmoji}</span>
+        </div>
       )}
     </div>
   );

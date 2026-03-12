@@ -142,7 +142,7 @@ export default function SearchPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <Link href="/" className="hover:opacity-80 transition-opacity">
-                <BrandLogo size="medium" withText={true} />
+                <BrandLogo size="small" withText={true} />
               </Link>
               <div className="flex items-center gap-6">
                 <Link href="/tools" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">工具库</Link>
@@ -314,11 +314,6 @@ export default function SearchPage() {
                                     tool.name
                                   )}
                                 </h3>
-                                {tool.isVip && (
-                                  <span className="px-2.5 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg text-xs font-bold">
-                                    VIP
-                                  </span>
-                                )}
                               </div>
                               <p className="text-slate-600 text-sm line-clamp-2">
                                 {highlights.description ? (
