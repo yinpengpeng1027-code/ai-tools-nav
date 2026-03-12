@@ -45,8 +45,8 @@ export interface EnhancedTool {
   logo: string;
   /** 官网地址 */
   url: string;
-  /** 是否需要付费 */
-  isVip: boolean;
+  /** 是否需要付费（已废弃，所有工具均免费） */
+  isVip?: boolean;
   /** 价格说明 */
   price: string;
   /** 标签 */

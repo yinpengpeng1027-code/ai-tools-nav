@@ -22,7 +22,6 @@ const LOCAL_LOGO_MAP: Record<string, string> = {
   "capcut.cn": "https://capcut.cn/favicon.ico",
   "meitu.com": "https://meitu.com/favicon.ico",
   "gaoding.com": "https://gaoding.com/favicon.ico",
-  "jasper.ai": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Jasper_logo.svg/1200px-Jasper_logo.svg.png",
   "writesonic.com": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Writesonic_Logo.svg/1200px-Writesonic_Logo.svg.png",
   "rytr.me": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Rytr_logo.svg/1200px-Rytr_logo.svg.png",
   "runwayml.com": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Runway_logo.svg/1200px-Runway_logo.svg.png",
