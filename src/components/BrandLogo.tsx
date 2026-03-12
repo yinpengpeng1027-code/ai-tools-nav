@@ -6,23 +6,21 @@ interface BrandLogoProps {
   size?: 'small' | 'medium' | 'large';
   className?: string;
   withText?: boolean;
-  textVariant?: 'full' | 'short';
 }
 
 /**
- * 星图 StarMap AI 品牌 Logo 组件
+ * 星图 StarMap 品牌 Logo 组件
  * 使用 SVG 绘制精美的星图图标，替换简单的 emoji
  */
 export default function BrandLogo({ 
   size = 'medium', 
   className = '', 
-  withText = true,
-  textVariant = 'full'
+  withText = true
 }: BrandLogoProps) {
   const sizeConfig = {
-    small: { icon: 32, text: 'text-lg', gap: 'gap-2' },
-    medium: { icon: 40, text: 'text-xl', gap: 'gap-3' },
-    large: { icon: 56, text: 'text-3xl', gap: 'gap-4' },
+    small: { icon: 40, text: 'text-xl', gap: 'gap-3' },
+    medium: { icon: 56, text: 'text-4xl', gap: 'gap-4' },
+    large: { icon: 72, text: 'text-5xl', gap: 'gap-5' },
   };
 
   const config = sizeConfig[size];
@@ -165,13 +163,8 @@ export default function BrandLogo({
       {withText && (
         <div className="flex flex-col">
           <span className={`${config.text} font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent leading-tight`}>
-            {textVariant === 'full' ? '星图 StarMap AI' : '星图 StarMap'}
+            星图 StarMap
           </span>
-          {textVariant === 'full' && (
-            <span className="text-xs text-slate-500 font-medium -mt-0.5">
-              发现最好的 AI 工具
-            </span>
-          )}
         </div>
       )}
     </motion.div>
