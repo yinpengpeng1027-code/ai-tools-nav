@@ -180,12 +180,11 @@ export default function OpenClawPage() {
 
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://docs.openclaw.ai/start/getting-started"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-semibold text-lg shadow-lg shadow-orange-500/30 hover:opacity-90 transition-opacity"
+              href="#deploy"
+              className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl font-semibold text-lg shadow-lg shadow-green-500/30 hover:opacity-90 transition-opacity inline-flex items-center gap-2"
             >
-              🚀 开始部署
+              <span>🚀</span>
+              <span>一键部署（付费）</span>
             </a>
             <a
               href="https://github.com/openclaw/openclaw"
@@ -193,7 +192,7 @@ export default function OpenClawPage() {
               rel="noopener noreferrer"
               className="px-8 py-4 bg-white border border-orange-200 text-orange-600 rounded-xl font-semibold text-lg hover:bg-orange-50 transition-colors shadow-md"
             >
-              ⭐ GitHub Star
+              ⭐ 免费自学
             </a>
           </div>
         </div>
@@ -367,6 +366,141 @@ export default function OpenClawPage() {
         </div>
       </section>
 
+      {/* One-Click Deploy Section */}
+      <section id="deploy" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm mb-6">
+              <span>💎</span>
+              <span>付费专业版</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">
+              一键部署工具
+            </h2>
+            <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+              不想折腾命令行？使用我们的一键部署工具，5 分钟完成所有配置
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+            {/* Free Version */}
+            <div className="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl">
+              <h3 className="text-2xl font-bold text-white mb-2">📖 免费自学</h3>
+              <div className="text-4xl font-bold text-white mb-6">¥0</div>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-3 text-slate-300">
+                  <span className="text-green-500">✓</span>
+                  官方文档教程
+                </li>
+                <li className="flex items-center gap-3 text-slate-300">
+                  <span className="text-green-500">✓</span>
+                  社区支持
+                </li>
+                <li className="flex items-center gap-3 text-slate-300">
+                  <span className="text-green-500">✓</span>
+                  GitHub 开源代码
+                </li>
+                <li className="flex items-center gap-3 text-slate-500">
+                  <span className="text-slate-600">✗</span>
+                  需要命令行基础
+                </li>
+                <li className="flex items-center gap-3 text-slate-500">
+                  <span className="text-slate-600">✗</span>
+                  手动配置环境
+                </li>
+              </ul>
+              <a
+                href="https://docs.openclaw.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full py-4 text-center border border-white/20 rounded-xl font-medium text-white hover:bg-white/10 transition-colors"
+              >
+                开始自学
+              </a>
+            </div>
+
+            {/* Pro Version */}
+            <div className="relative p-8 bg-gradient-to-br from-green-500/20 to-emerald-500/20 border-2 border-green-500/50 rounded-3xl backdrop-blur-xl">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full text-sm font-bold shadow-lg">
+                最受欢迎
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">🚀 一键部署</h3>
+              <div className="text-4xl font-bold text-white mb-2">
+                ¥99
+                <span className="text-lg text-slate-400 font-normal">/永久</span>
+              </div>
+              <p className="text-slate-400 text-sm mb-6">早鸟价 ¥199 → ¥99</p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-3 text-white">
+                  <span className="text-green-500">✓</span>
+                  Windows 一键安装程序 (.exe)
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <span className="text-green-500">✓</span>
+                  可视化配置界面
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <span className="text-green-500">✓</span>
+                  自动环境检测与修复
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <span className="text-green-500">✓</span>
+                  多通道配置向导（飞书/WhatsApp/Telegram）
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <span className="text-green-500">✓</span>
+                  一键启动/停止服务
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <span className="text-green-500">✓</span>
+                  开机自启动配置
+                </li>
+                <li className="flex items-center gap-3 text-white">
+                  <span className="text-green-500">✓</span>
+                  专业技术支持群
+                </li>
+              </ul>
+              <button
+                onClick={() => {
+                  alert('🦞 感谢购买！\n\n请扫码支付 ¥99，支付完成后自动下载部署工具。\n\n（此处集成支付接口）');
+                }}
+                className="block w-full py-4 text-center bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl font-bold text-lg hover:opacity-90 transition-opacity shadow-lg"
+              >
+                立即购买
+              </button>
+              <p className="text-center text-slate-400 text-xs mt-4">
+                🔒 安全支付 · 自动发货 · 永久使用
+              </p>
+            </div>
+          </div>
+
+          {/* Features */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl">
+              <div className="text-4xl mb-4">💻</div>
+              <h4 className="font-bold text-white mb-2">Windows 原生应用</h4>
+              <p className="text-slate-400 text-sm">
+                无需安装 Python、Node.js，双击即可运行，真正的零门槛
+              </p>
+            </div>
+            <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl">
+              <div className="text-4xl mb-4">🎨</div>
+              <h4 className="font-bold text-white mb-2">可视化界面</h4>
+              <p className="text-slate-400 text-sm">
+                图形化配置向导，每一步都有清晰提示，告别黑窗口
+              </p>
+            </div>
+            <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl">
+              <div className="text-4xl mb-4">🛎️</div>
+              <h4 className="font-bold text-white mb-2">技术支持</h4>
+              <p className="text-slate-400 text-sm">
+                专属技术支持群，遇到问题随时提问，快速解决
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -375,23 +509,23 @@ export default function OpenClawPage() {
               准备好开始了吗？
             </h2>
             <p className="text-orange-100 text-lg mb-8">
-              只需 5 分钟，完成首次部署，开启你的 AI 助理之旅
+              选择适合你的方式，开启 AI 助理之旅
             </p>
             <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="#deploy"
+                className="px-8 py-4 bg-white text-orange-600 rounded-xl font-semibold text-lg hover:bg-orange-50 transition-colors shadow-lg"
+              >
+                💎 购买一键部署
+              </a>
               <a
                 href="https://docs.openclaw.ai/start/getting-started"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-white text-orange-600 rounded-xl font-semibold text-lg hover:bg-orange-50 transition-colors shadow-lg"
-              >
-                📖 查看部署文档
-              </a>
-              <Link
-                href="/"
                 className="px-8 py-4 bg-orange-700 text-white rounded-xl font-semibold text-lg hover:bg-orange-600 transition-colors shadow-lg"
               >
-                ← 返回导航站
-              </Link>
+                📖 免费自学文档
+              </a>
             </div>
           </div>
         </div>

@@ -1,0 +1,8 @@
+# OpenClaw Deployer 依赖
+# Python 3.8+
+
+# GUI（Python 自带，无需安装）
+# tkinter
+
+# 打包工具
+pyinstaller>=6.0.0
