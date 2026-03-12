@@ -1319,7 +1319,41 @@ const getGoogleFaviconUrl = (domain: string): string => {
 /**
  * Logo 组件 - 自动处理加载失败，多级 fallback
  * 优先级：1. LOCAL_LOGO_MAP → 2. Clearbit API → 3. Google Favicon → 4. emoji/首字母 fallback
+ * 优化：添加 localStorage 缓存，减少重复请求
  */
+
+// 缓存 Logo 加载结果（工具名称 → {url, timestamp}）
+const LOGO_CACHE = new Map<string, { url: string; timestamp: number }>();
+const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 天缓存
+
+// 尝试从 localStorage 获取缓存
+const getCachedLogo = (name: string): string | null => {
+  if (typeof window === 'undefined') return null;
+  try {
+    const cached = localStorage.getItem(`logo-${name}`);
+    if (cached) {
+      const { url, timestamp } = JSON.parse(cached);
+      if (Date.now() - timestamp < CACHE_DURATION) {
+        return url;
+      }
+      localStorage.removeItem(`logo-${name}`);
+    }
+  } catch {
+    // 忽略缓存错误
+  }
+  return null;
+};
+
+// 缓存 Logo URL 到 localStorage
+const cacheLogo = (name: string, url: string) => {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.setItem(`logo-${name}`, JSON.stringify({ url, timestamp: Date.now() }));
+  } catch {
+    // 忽略缓存错误（可能是 quota exceeded）
+  }
+};
+
 export const Logo: React.FC<LogoProps> = ({
   name,
   size = 32,
@@ -1334,40 +1368,56 @@ export const Logo: React.FC<LogoProps> = ({
       : size === 'large' ? 64 
       : 32
     : size;
-  const [loadFailed, setLoadFailed] = useState(false);
-  const [clearbitFailed, setClearbitFailed] = useState(false);
-  const [googleFailed, setGoogleFailed] = useState(false);
+  
+  // 使用更简单的状态管理 - 只跟踪是否完全失败
+  const [showFallback, setShowFallback] = useState(false);
   
   const config = LOCAL_LOGO_MAP[name];
   const domain = extractDomainFromName(name);
   
-  // 计算当前应该显示的 URL
-  const getCurrentImageUrl = (): string | null => {
-    if (config && !loadFailed) {
-      return config.url;
+  // 优先使用缓存的 Logo URL
+  const cachedUrl = getCachedLogo(name);
+  
+  // 确定主 Logo URL（优先使用 LOCAL_LOGO_MAP）
+  const primaryUrl = config?.url || (domain ? getClearbitLogoUrl(domain) : null);
+  
+  // 如果有缓存，优先使用缓存
+  const initialUrl = cachedUrl || primaryUrl;
+  
+  // Fallback URL 列表
+  const fallbackUrls = React.useMemo(() => {
+    const urls: string[] = [];
+    if (config?.url && config.url !== initialUrl) urls.push(config.url);
+    if (domain) {
+      if (getClearbitLogoUrl(domain) !== initialUrl) urls.push(getClearbitLogoUrl(domain));
+      urls.push(getGoogleFaviconUrl(domain));
     }
-    if (domain && !clearbitFailed) {
-      return getClearbitLogoUrl(domain);
-    }
-    if (domain && !googleFailed) {
-      return getGoogleFaviconUrl(domain);
-    }
-    return null;
-  };
+    return urls;
+  }, [config, domain, initialUrl]);
+  
+  // 当前尝试的 URL 索引
+  const [urlIndex, setUrlIndex] = useState(0);
+  
+  // 当前显示的 URL
+  const imageUrl = showFallback ? null : (initialUrl && urlIndex === 0 ? initialUrl : fallbackUrls[urlIndex - 1] || null);
 
-  // 处理图片加载失败
+  // 处理图片加载失败 - 尝试下一个 fallback
   const handleImageError = () => {
-    if (config && !loadFailed) {
-      setLoadFailed(true);
-    } else if (domain && !clearbitFailed) {
-      setClearbitFailed(true);
-    } else if (domain && !googleFailed) {
-      setGoogleFailed(true);
+    if (urlIndex < fallbackUrls.length) {
+      // 尝试下一个 fallback URL
+      setUrlIndex(urlIndex + 1);
+    } else {
+      // 所有 URL 都失败了，显示 fallback
+      setShowFallback(true);
     }
   };
-
-  // 获取当前图片 URL
-  const imageUrl = getCurrentImageUrl();
+  
+  // 图片加载成功时缓存
+  const handleImageLoad = () => {
+    if (imageUrl) {
+      cacheLogo(name, imageUrl);
+    }
+  };
 
   // 计算 fallback 颜色
   const getFallbackColor = (): string => {
@@ -1444,6 +1494,8 @@ export const Logo: React.FC<LogoProps> = ({
             objectFit: 'cover',
           }}
           onError={handleImageError}
+          onLoad={handleImageLoad}
+          loading="lazy"
         />
       ) : (
         // Fallback: 显示 emoji 或首字母
