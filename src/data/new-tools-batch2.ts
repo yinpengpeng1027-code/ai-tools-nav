@@ -1,0 +1,860 @@
+// 新增工具数据 - 第二批（50个热门工具）
+// 数据来源：ai-bot.cn + 热门AI工具导航
+// 创建时间：2026-03-12
+
+import { EnhancedTool } from './types';
+
+export const NEW_TOOLS_BATCH2: EnhancedTool[] = [
+  // ==================== 更多AI聊天助手 ====================
+  {
+    id: 2001,
+    name: "百小应",
+    description: "百川智能推出的免费AI助手",
+    highlights: "完全免费，百川大模型，中文优秀",
+    category: "文本生成",
+    subCategory: "对话助手",
+    logo: "🦌",
+    url: "https://yiyan.baichuan-ai.com",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "中文", "Web"],
+    features: ["智能对话", "文案创作", "知识问答", "代码生成", "多轮对话", "文档理解"],
+    useCases: ["日常问答", "内容创作", "学习辅导", "工作助手", "编程学习"],
+    pros: ["完全免费", "中文能力强", "响应速度快", "百川技术"],
+    cons: ["功能相对简单", "多模态有限", "持续迭代中"],
+    relatedSites: [
+      { name: "百小应官网", url: "https://yiyan.baichuan-ai.com", type: "official", description: "百川百小应" },
+      { name: "百川智能", url: "https://baichuan-ai.com", type: "official", description: "百川智能官网" },
+      { name: "大模型介绍", url: "https://zhuanlan.zhihu.com/llm", type: "tutorial", description: "大语言模型介绍" }
+    ],
+    targetUsers: ["普通用户", "学生", "内容创作者", "开发者", "研究人员"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2002,
+    name: "商量SenseChat",
+    description: "商汤科技推出的免费AI聊天助手",
+    highlights: "完全免费，商汤技术，多模态强",
+    category: "文本生成",
+    subCategory: "对话助手",
+    logo: "💬",
+    url: "https://chat.sensetime.com",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "中文", "Web"],
+    features: ["智能对话", "多模态理解", "代码生成", "图像理解", "文档分析", "数学推理"],
+    useCases: ["日常问答", "图像分析", "代码编写", "文档处理", "学习辅导"],
+    pros: ["完全免费", "商汤技术保障", "多模态能力强", "中文优秀"],
+    cons: ["知名度较低", "部分功能待完善", "响应速度波动"],
+    relatedSites: [
+      { name: "商量官网", url: "https://chat.sensetime.com", type: "official", description: "商汤商量" },
+      { name: "商汤科技", url: "https://sensetime.com", type: "official", description: "商汤科技官网" },
+      { name: "AI对话", url: "https://zhuanlan.zhihu.com/ai-chat", type: "tutorial", description: "AI对话技巧" }
+    ],
+    targetUsers: ["普通用户", "学生", "开发者", "研究人员", "图像分析者"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2003,
+    name: "阶跃AI",
+    description: "阶跃星辰推出的支持多模态的AI聊天机器人",
+    highlights: "多模态能力强，阶跃大模型",
+    category: "文本生成",
+    subCategory: "对话助手",
+    logo: "🚀",
+    url: "https://yuewen.com",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "中文", "Web"],
+    features: ["智能对话", "图像理解", "视频理解", "文档处理", "多模态", "实时交互"],
+    useCases: ["日常问答", "图像分析", "视频理解", "文档处理", "创作辅助"],
+    pros: ["多模态领先", "完全免费", "中文友好", "持续进化"],
+    cons: ["新晋产品", "部分功能待完善", "知名度有限"],
+    relatedSites: [
+      { name: "阶跃AI官网", url: "https://yuewen.com", type: "official", description: "阶跃AI官网" },
+      { name: "阶跃星辰", url: "https://stepfun.com", type: "official", description: "阶跃星辰公司" },
+      { name: "多模态AI", url: "https://zhuanlan.zhihu.com/multimodal", type: "tutorial", description: "多模态AI介绍" }
+    ],
+    targetUsers: ["普通用户", "内容创作者", "研究人员", "开发者", "多模态爱好者"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2004,
+    name: "阶跃",
+    description: "美团推出的自研大模型AI对话平台",
+    highlights: "美团技术，外卖场景优化",
+    category: "文本生成",
+    subCategory: "对话助手",
+    logo: "🐱",
+    url: "https://longcat.meituan.com",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "中文", "Web"],
+    features: ["智能对话", "外卖推荐", "生活服务", "本地信息", "多轮问答", "语音交互"],
+    useCases: ["日常问答", "外卖咨询", "生活服务", "本地推荐", "信息查询"],
+    pros: ["完全免费", "美团场景优势", "本地服务强", "中文友好"],
+    cons: ["功能相对单一", "非外卖场景有限", "知名度较低"],
+    relatedSites: [
+      { name: "LongCat官网", url: "https://longcat.meituan.com", type: "official", description: "美团LongCat" },
+      { name: "美团", url: "https://meituan.com", type: "official", description: "美团官网" },
+      { name: "本地生活", url: "https://zhuanlan.zhihu.com/local-life", type: "tutorial", description: "本地生活服务" }
+    ],
+    targetUsers: ["美团用户", "外卖用户", "普通消费者", "本地生活用户", "美团生态用户"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2005,
+    name: "华为小艺",
+    description: "华为旗下小艺AI助手网页端，已接入DeepSeek-R1",
+    highlights: "华为生态，DeepSeek加持",
+    category: "文本生成",
+    subCategory: "对话助手",
+    logo: "📱",
+    url: "https://xiaoyi.huawei.com",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "中文", "Web"],
+    features: ["智能对话", "设备控制", "DeepSeek加持", "华为生态", "语音交互", "场景联动"],
+    useCases: ["智能问答", "设备控制", "日程管理", "生活助手", "华为生态"],
+    pros: ["华为技术", "DeepSeek加持", "设备联动好", "生态完善"],
+    cons: ["非华为设备体验一般", "功能分散", "部分功能设备依赖"],
+    relatedSites: [
+      { name: "华为小艺官网", url: "https://xiaoyi.huawei.com", type: "official", description: "华为小艺" },
+      { name: "华为", url: "https://huawei.com", type: "official", description: "华为官网" },
+      { name: "智能家居", url: "https://zhuanlan.zhihu.com/smart-home", type: "tutorial", description: "智能家居教程" }
+    ],
+    targetUsers: ["华为用户", "智能家居用户", "华为生态用户", "普通用户", "技术爱好者"],
+    difficulty: "beginner"
+  },
+
+  // ==================== 更多AI写作工具 ====================
+  {
+    id: 2010,
+    name: "光速写作",
+    description: "AI写作、PPT生成工具，单篇最长15000字",
+    highlights: "长文本写作，PPT一键生成",
+    category: "文本生成",
+    subCategory: "创意写作",
+    logo: "⚡",
+    url: "https://guangsuxiezuo.com",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "中文", "Web"],
+    features: ["长文本生成", "PPT生成", "文章续写", "大纲生成", "多场景模板", "格式导出"],
+    useCases: ["长文写作", "论文初稿", "工作报告", "PPT制作", "方案撰写"],
+    pros: ["支持长文本", "PPT一键生成", "模板丰富", "中文友好"],
+    cons: ["高级功能付费", "质量参差", "创意性有限"],
+    relatedSites: [
+      { name: "光速写作官网", url: "https://guangsuxiezuo.com", type: "official", description: "光速写作官网" },
+      { name: "写作技巧", url: "https://zhuanlan.zhihu.com/writing-tips", type: "tutorial", description: "写作技巧分享" },
+      { name: "AI写作", url: "https://jasper.ai", type: "alternative", description: "Jasper AI写作" }
+    ],
+    targetUsers: ["内容创作者", "学生", "职场人士", "自媒体", "写作者"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2011,
+    name: "万能小in",
+    description: "3分钟4万字150+应用，只需标题，快速生成毕业论文",
+    highlights: "快速生成，多应用场景",
+    category: "文本生成",
+    subCategory: "写作辅助",
+    logo: "🔧",
+    url: "https://wannengxiaoin.com",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "中文", "Web"],
+    features: ["论文生成", "150+应用", "快速生成", "模板库", "降重功能", "格式规范"],
+    useCases: ["毕业论文", "课程作业", "工作报告", "方案策划", "文书写作"],
+    pros: ["生成速度快", "应用场景多", "模板丰富", "降重支持"],
+    cons: ["质量需人工润色", "高级功能付费", "原创性有限"],
+    relatedSites: [
+      { name: "万能小in官网", url: "https://wannengxiaoin.com", type: "official", description: "万能小in官网" },
+      { name: "论文查重", url: "https://www.checkpass.net", type: "alternative", description: "论文查重" },
+      { name: "学术写作", url: "https://zhuanlan.zhihu.com/academic-writing", type: "tutorial", description: "学术写作指南" }
+    ],
+    targetUsers: ["大学生", "研究生", "职场新人", "文书需求者", "学生群体"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2012,
+    name: "千笔AI论文",
+    description: "全网首家论文无限改稿平台",
+    highlights: "无限改稿，专业论文服务",
+    category: "文本生成",
+    subCategory: "写作辅助",
+    logo: "✏️",
+    url: "https://qianbi.ai",
+    isVip: true,
+    price: "付费订阅",
+    tags: ["付费", "中文", "Web"],
+    features: ["论文生成", "无限改稿", "降重降AI", "查重检测", "格式规范", "导师匹配"],
+    useCases: ["毕业论文", "学术论文", "学位论文", "期刊投稿", "研究论文"],
+    pros: ["无限改稿", "专业服务", "降重效果好", "导师支持"],
+    cons: ["价格较高", "需人工润色", "原创性需把关"],
+    relatedSites: [
+      { name: "千笔AI官网", url: "https://qianbi.ai", type: "official", description: "千笔AI论文" },
+      { name: "知网", url: "https://cnki.net", type: "official", description: "中国知网" },
+      { name: "学术规范", url: "https://zhuanlan.zhihu.com/academic", type: "tutorial", description: "学术规范指南" }
+    ],
+    targetUsers: ["大学生", "研究生", "博士生", "学术研究者", "论文需求者"],
+    difficulty: "intermediate"
+  },
+  {
+    id: 2013,
+    name: "茅茅虫",
+    description: "一站式AI论文写作助手",
+    highlights: "论文全流程，一站式服务",
+    category: "文本生成",
+    subCategory: "写作辅助",
+    logo: "🐛",
+    url: "https://maomaochong.com",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "中文", "Web"],
+    features: ["论文选题", "大纲生成", "内容撰写", "查重检测", "降重修改", "格式排版"],
+    useCases: ["毕业论文", "学位论文", "学术研究", "课程作业", "科研写作"],
+    pros: ["全流程覆盖", "一站式服务", "功能丰富", "中文友好"],
+    cons: ["高级功能付费", "质量参差", "需人工把关"],
+    relatedSites: [
+      { name: "茅茅虫官网", url: "https://maomaochong.com", type: "official", description: "茅茅虫官网" },
+      { name: "学术搜索", url: "https://scholar.google.com", type: "tutorial", description: "Google学术" },
+      { name: "论文写作", url: "https://zhuanlan.zhihu.com/thesis", type: "tutorial", description: "论文写作技巧" }
+    ],
+    targetUsers: ["大学生", "研究生", "学术研究者", "论文需求者", "科研人员"],
+    difficulty: "intermediate"
+  },
+
+  // ==================== 更多AI图像工具 ====================
+  {
+    id: 2020,
+    name: "吐司AI",
+    description: "AI绘画模型社区和在线生图平台",
+    highlights: "模型丰富，在线生图便捷",
+    category: "图像设计",
+    subCategory: "模型/资源",
+    logo: "🍞",
+    url: "https://tusi.art",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "中文", "Web"],
+    features: ["模型分享", "在线生图", "LoRA支持", "社区交流", "模型托管", "作品展示"],
+    useCases: ["AI绘画", "模型下载", "社区交流", "作品分享", "学习研究"],
+    pros: ["模型丰富", "中文友好", "社区活跃", "免费额度足"],
+    cons: ["高级功能付费", "部分模型质量一般", "新手需学习"],
+    relatedSites: [
+      { name: "吐司AI官网", url: "https://tusi.art", type: "official", description: "吐司AI官网" },
+      { name: "Civitai", url: "https://civitai.com", type: "alternative", description: "国际模型社区" },
+      { name: "SD教程", url: "https://zhuanlan.zhihu.com/stable-diffusion", type: "tutorial", description: "SD教程" }
+    ],
+    targetUsers: ["AI艺术家", "设计师", "模型爱好者", "创作者", "学习者"],
+    difficulty: "intermediate"
+  },
+  {
+    id: 2021,
+    name: "秒画",
+    description: "商汤科技推出的免费AI作画和图片生成平台",
+    highlights: "完全免费，商汤技术，中文友好",
+    category: "图像设计",
+    subCategory: "AI绘画",
+    logo: "🖼️",
+    url: "https://miaohua.sensetime.com",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "中文", "Web"],
+    features: ["AI绘画", "图生图", "风格迁移", "批量生成", "高清输出", "模板选择"],
+    useCases: ["艺术创作", "商业设计", "营销素材", "内容配图", "创意实验"],
+    pros: ["完全免费", "商汤技术", "中文友好", "生成质量好"],
+    cons: ["功能相对简单", "风格选择有限", "持续迭代中"],
+    relatedSites: [
+      { name: "秒画官网", url: "https://miaohua.sensetime.com", type: "official", description: "商汤秒画" },
+      { name: "商汤科技", url: "https://sensetime.com", type: "official", description: "商汤科技官网" },
+      { name: "AI绘画教程", url: "https://zhuanlan.zhihu.com/ai-painting", type: "tutorial", description: "AI绘画技巧" }
+    ],
+    targetUsers: ["设计师", "内容创作者", "营销人员", "普通用户", "艺术爱好者"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2022,
+    name: "WHEE",
+    description: "美图推出的AI图片和绘画创作生成平台",
+    highlights: "美图技术，图片处理专业",
+    category: "图像设计",
+    subCategory: "AI绘画",
+    logo: "🌈",
+    url: "https://whee.com",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "中文", "Web"],
+    features: ["AI绘画", "图片编辑", "风格迁移", "智能抠图", "美颜滤镜", "批量处理"],
+    useCases: ["人像美化", "图片编辑", "创意设计", "社交媒体", "电商设计"],
+    pros: ["美图技术背书", "人像处理强", "中文友好", "功能丰富"],
+    cons: ["高级功能付费", "部分效果有限", "定制程度有限"],
+    relatedSites: [
+      { name: "WHEE官网", url: "https://whee.com", type: "official", description: "美图WHEE" },
+      { name: "美图秀秀", url: "https://xiuxiu.meitu.com", type: "official", description: "美图秀秀" },
+      { name: "图片编辑", url: "https://zhuanlan.zhihu.com/photo-edit", type: "tutorial", description: "图片编辑教程" }
+    ],
+    targetUsers: ["摄影爱好者", "设计师", "自媒体", "电商从业者", "普通用户"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2023,
+    name: "Krea AI",
+    description: "实时AI图像、视频生成和编辑平台",
+    highlights: "实时生成，效果惊艳",
+    category: "图像设计",
+    subCategory: "AI绘画",
+    logo: "✨",
+    url: "https://krea.ai",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "英文", "Web"],
+    features: ["实时生成", "图像编辑", "视频生成", "风格转换", "高清输出", "批量处理"],
+    useCases: ["实时创作", "图像设计", "视频制作", "艺术实验", "创意设计"],
+    pros: ["实时效果好", "质量出色", "功能全面", "持续更新"],
+    cons: ["英文界面", "免费额度有限", "高级功能付费"],
+    relatedSites: [
+      { name: "Krea AI官网", url: "https://krea.ai", type: "official", description: "Krea AI官网" },
+      { name: "Midjourney", url: "https://midjourney.com", type: "alternative", description: "Midjourney" },
+      { name: "AI艺术", url: "https://zhuanlan.zhihu.com/ai-art", type: "tutorial", description: "AI艺术创作" }
+    ],
+    targetUsers: ["设计师", "艺术家", "视频创作者", "创意工作者", "AI爱好者"],
+    difficulty: "intermediate"
+  },
+
+  // ==================== 更多AI视频工具 ====================
+  {
+    id: 2030,
+    name: "献丑AI",
+    description: "首个AI视频开源社区，支持一键Fork与共创",
+    highlights: "开源社区，视频共创平台",
+    category: "视频制作",
+    subCategory: "视频编辑",
+    logo: "🎭",
+    url: "https://xianchou.ai",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "中文", "Web"],
+    features: ["视频创作", "一键Fork", "社区共创", "模板分享", "视频编辑", "开源资源"],
+    useCases: ["视频创作", "社区分享", "模板学习", "协作创作", "开源贡献"],
+    pros: ["开源社区", "协作便捷", "资源丰富", "免费功能足"],
+    cons: ["知名度有限", "社区规模小", "部分功能待完善"],
+    relatedSites: [
+      { name: "献丑AI官网", url: "https://xianchou.ai", type: "official", description: "献丑AI官网" },
+      { name: "GitHub", url: "https://github.com", type: "community", description: "GitHub开源社区" },
+      { name: "视频创作", url: "https://zhuanlan.zhihu.com/video-create", type: "tutorial", description: "视频创作教程" }
+    ],
+    targetUsers: ["视频创作者", "开源爱好者", "社区贡献者", "学习者", "协作团队"],
+    difficulty: "intermediate"
+  },
+  {
+    id: 2031,
+    name: "造点AI",
+    description: "夸克团队推出的AI图像与视频创作平台",
+    highlights: "夸克技术，图视频一体",
+    category: "视频制作",
+    subCategory: "文生视频",
+    logo: "🎨",
+    url: "https://zaodian.com",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "中文", "Web"],
+    features: ["AI绘画", "AI视频", "图生视频", "风格迁移", "批量生成", "模板库"],
+    useCases: ["短视频创作", "营销视频", "内容配图", "创意设计", "社媒内容"],
+    pros: ["夸克技术", "功能全面", "中文友好", "模板丰富"],
+    cons: ["免费额度有限", "部分功能待完善", "知名度有限"],
+    relatedSites: [
+      { name: "造点AI官网", url: "https://zaodian.com", type: "official", description: "造点AI官网" },
+      { name: "夸克", url: "https://quark.cn", type: "official", description: "夸克浏览器" },
+      { name: "AI创作", url: "https://zhuanlan.zhihu.com/ai-create", type: "tutorial", description: "AI创作技巧" }
+    ],
+    targetUsers: ["内容创作者", "视频制作者", "营销人员", "设计师", "自媒体"],
+    difficulty: "beginner"
+  },
+
+  // ==================== 更多AI办公工具 ====================
+  {
+    id: 2040,
+    name: "Kimi PPT助手",
+    description: "Kimi全新自研的PPT助手，一键生成PPT",
+    highlights: "月之暗面技术，PPT智能生成",
+    category: "办公效率",
+    subCategory: "演示文稿",
+    logo: "📊",
+    url: "https://kimi.moonshot.cn/ppt",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "中文", "Web"],
+    features: ["一键生成PPT", "智能排版", "模板选择", "内容填充", "多格式导出", "AI配图"],
+    useCases: ["工作汇报", "产品介绍", "项目提案", "教学课件", "商业计划"],
+    pros: ["完全免费", "Kimi技术", "中文友好", "生成速度快"],
+    cons: ["模板数量有限", "定制程度一般", "持续迭代中"],
+    relatedSites: [
+      { name: "Kimi官网", url: "https://kimi.moonshot.cn", type: "official", description: "Kimi智能助手" },
+      { name: "月之暗面", url: "https://moonshot.cn", type: "official", description: "月之暗面公司" },
+      { name: "PPT技巧", url: "https://zhuanlan.zhihu.com/ppt-skills", type: "tutorial", description: "PPT制作技巧" }
+    ],
+    targetUsers: ["职场人士", "学生", "教师", "产品经理", "创业者"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2041,
+    name: "夸克PPT",
+    description: "夸克团队推出的AI PPT生成工具",
+    highlights: "夸克技术，一键生成精美PPT",
+    category: "办公效率",
+    subCategory: "演示文稿",
+    logo: "📑",
+    url: "https://ppt.quark.cn",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "中文", "Web"],
+    features: ["AI生成PPT", "智能排版", "模板库", "协作编辑", "多格式导出", "云端存储"],
+    useCases: ["工作报告", "项目汇报", "教学课件", "商业计划", "方案展示"],
+    pros: ["夸克生态", "模板丰富", "中文友好", "免费功能足"],
+    cons: ["高级模板付费", "定制程度有限", "持续迭代中"],
+    relatedSites: [
+      { name: "夸克PPT官网", url: "https://ppt.quark.cn", type: "official", description: "夸克PPT" },
+      { name: "夸克", url: "https://quark.cn", type: "official", description: "夸克浏览器" },
+      { name: "PPT设计", url: "https://zhuanlan.zhihu.com/ppt-design", type: "tutorial", description: "PPT设计技巧" }
+    ],
+    targetUsers: ["职场人士", "学生", "教师", "产品经理", "创业者"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2042,
+    name: "美图AI PPT",
+    description: "美图秀秀推出的免费在线AI生成PPT设计工具",
+    highlights: "完全免费，美图设计技术",
+    category: "办公效率",
+    subCategory: "演示文稿",
+    logo: "🖼️",
+    url: "https://ppt.meitu.com",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "中文", "Web"],
+    features: ["AI生成PPT", "设计模板", "智能配图", "排版优化", "多格式导出", "云端保存"],
+    useCases: ["工作汇报", "产品介绍", "活动策划", "教学课件", "商业展示"],
+    pros: ["完全免费", "美图设计技术", "中文友好", "模板美观"],
+    cons: ["功能相对简单", "模板数量有限", "定制程度一般"],
+    relatedSites: [
+      { name: "美图AI PPT官网", url: "https://ppt.meitu.com", type: "official", description: "美图AI PPT" },
+      { name: "美图秀秀", url: "https://xiuxiu.meitu.com", type: "official", description: "美图秀秀" },
+      { name: "PPT教程", url: "https://zhuanlan.zhihu.com/ppt-tutorial", type: "tutorial", description: "PPT制作教程" }
+    ],
+    targetUsers: ["职场人士", "学生", "教师", "设计师", "普通用户"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2043,
+    name: "万兴智演",
+    description: "万兴科技推出的AI PPT和演示制作软件",
+    highlights: "专业演示软件，AI赋能",
+    category: "办公效率",
+    subCategory: "演示文稿",
+    logo: "🎬",
+    url: "https://ai.wondershare.cn",
+    isVip: true,
+    price: "付费订阅",
+    tags: ["付费", "中文", "桌面端"],
+    features: ["AI生成PPT", "演示录制", "互动功能", "模板资源", "动画效果", "云端协作"],
+    useCases: ["企业培训", "产品演示", "在线教学", "营销推广", "会议演讲"],
+    pros: ["功能专业", "演示效果好", "万兴品牌", "多端支持"],
+    cons: ["需要付费", "功能较复杂", "学习成本较高"],
+    relatedSites: [
+      { name: "万兴智演官网", url: "https://ai.wondershare.cn", type: "official", description: "万兴智演" },
+      { name: "万兴科技", url: "https://wondershare.cn", type: "official", description: "万兴科技官网" },
+      { name: "演示技巧", url: "https://zhuanlan.zhihu.com/presentation", type: "tutorial", description: "演示技巧" }
+    ],
+    targetUsers: ["培训师", "教师", "营销人员", "企业用户", "内容创作者"],
+    difficulty: "intermediate"
+  },
+
+  // ==================== 更多AI编程工具 ====================
+  {
+    id: 2050,
+    name: "Lovable",
+    description: "全栈AI编程工具，一句话构建网站应用",
+    highlights: "全栈开发，一句话创建应用",
+    category: "开发工具",
+    subCategory: "AI网站生成",
+    logo: "💖",
+    url: "https://lovable.dev",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "英文", "Web"],
+    features: ["全栈生成", "一句话开发", "前端后端", "数据库集成", "部署上线", "实时预览"],
+    useCases: ["快速原型", "初创产品", "MVP开发", "学习编程", "个人项目"],
+    pros: ["开发效率极高", "全栈支持", "部署便捷", "实时预览"],
+    cons: ["英文界面", "复杂项目有限", "免费额度有限"],
+    relatedSites: [
+      { name: "Lovable官网", url: "https://lovable.dev", type: "official", description: "Lovable官网" },
+      { name: "Bolt.new", url: "https://bolt.new", type: "alternative", description: "Bolt.new" },
+      { name: "Web开发", url: "https://developer.mozilla.org", type: "tutorial", description: "MDN文档" }
+    ],
+    targetUsers: ["创业者", "产品经理", "开发者", "学习者", "非技术人员"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2051,
+    name: "Firebase Studio",
+    description: "谷歌推出的AI编程工具，一站式开发全栈应用",
+    highlights: "谷歌生态，全栈开发平台",
+    category: "开发工具",
+    subCategory: "在线开发环境",
+    logo: "🔥",
+    url: "https://firebase.studio",
+    isVip: false,
+    price: "免费增值",
+    tags: ["免费增值", "英文", "Web"],
+    features: ["AI辅助开发", "全栈构建", "实时数据库", "托管部署", "身份认证", "分析监控"],
+    useCases: ["移动应用", "Web应用", "后端服务", "实时功能", "全栈开发"],
+    pros: ["谷歌生态", "免费额度大", "功能全面", "部署便捷"],
+    cons: ["英文界面", "学习成本适中", "国内访问受限"],
+    relatedSites: [
+      { name: "Firebase官网", url: "https://firebase.google.com", type: "official", description: "Firebase官网" },
+      { name: "Google Cloud", url: "https://cloud.google.com", type: "official", description: "谷歌云" },
+      { name: "开发文档", url: "https://firebase.google.com/docs", type: "tutorial", description: "Firebase文档" }
+    ],
+    targetUsers: ["开发者", "初创团队", "移动开发者", "全栈工程师", "技术爱好者"],
+    difficulty: "intermediate"
+  },
+  {
+    id: 2052,
+    name: "Windsurf",
+    description: "Codeium公司推出的AI编程工具",
+    highlights: "Codeium技术，AI编程助手",
+    category: "开发工具",
+    subCategory: "AI代码编辑器",
+    logo: "🏄",
+    url: "https://codeium.com/windsurf",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "多语言", "桌面端"],
+    features: ["AI代码补全", "智能重构", "多语言支持", "上下文理解", "代码审查", "调试辅助"],
+    useCases: ["日常编程", "代码重构", "Bug修复", "项目开发", "学习编程"],
+    pros: ["Codeium技术", "免费功能丰富", "多语言支持", "持续更新"],
+    cons: ["高级功能付费", "新工具稳定性待验证", "学习成本适中"],
+    relatedSites: [
+      { name: "Windsurf官网", url: "https://codeium.com/windsurf", type: "official", description: "Windsurf官网" },
+      { name: "Codeium", url: "https://codeium.com", type: "official", description: "Codeium官网" },
+      { name: "Cursor", url: "https://cursor.sh", type: "alternative", description: "Cursor IDE" }
+    ],
+    targetUsers: ["开发者", "程序员", "软件工程师", "技术爱好者", "学生"],
+    difficulty: "intermediate"
+  },
+
+  // ==================== 更多AI智能体 ====================
+  {
+    id: 2060,
+    name: "Flowith",
+    description: "免费用Gemini 3、GPT-5，一站式AI智能体平台",
+    highlights: "顶级模型免费，多模型聚合",
+    category: "对话机器人",
+    subCategory: "开发平台",
+    logo: "🌊",
+    url: "https://flowith.ai",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "多语言", "Web"],
+    features: ["多模型切换", "GPT-5免费", "Gemini集成", "智能体创建", "工作流编排", "API接口"],
+    useCases: ["模型对比", "智能体开发", "内容创作", "技术研究", "多任务处理"],
+    pros: ["顶级模型免费", "模型选择多", "功能全面", "持续更新"],
+    cons: ["免费额度有限", "英文界面", "部分功能待完善"],
+    relatedSites: [
+      { name: "Flowith官网", url: "https://flowith.ai", type: "official", description: "Flowith官网" },
+      { name: "Poe", url: "https://poe.com", type: "alternative", description: "Poe平台" },
+      { name: "AI模型", url: "https://zhuanlan.zhihu.com/ai-models", type: "tutorial", description: "AI模型介绍" }
+    ],
+    targetUsers: ["AI研究者", "开发者", "技术爱好者", "内容创作者", "模型测试者"],
+    difficulty: "intermediate"
+  },
+  {
+    id: 2061,
+    name: "Operator",
+    description: "OpenAI推出的AI智能体，能推理、联网自主执行任务",
+    highlights: "OpenAI出品，自主执行能力强",
+    category: "对话机器人",
+    subCategory: "企业对话",
+    logo: "🤖",
+    url: "https://operator.openai.com",
+    isVip: true,
+    price: "ChatGPT Pro",
+    tags: ["付费", "英文", "Web"],
+    features: ["自主执行", "网页操作", "任务规划", "工具调用", "联网搜索", "多步骤推理"],
+    useCases: ["自动化任务", "网页浏览", "信息收集", "预订服务", "自动填表"],
+    pros: ["自主能力领先", "OpenAI技术", "功能强大", "持续进化"],
+    cons: ["需要Pro订阅", "英文界面", "国内访问受限"],
+    relatedSites: [
+      { name: "Operator官网", url: "https://operator.openai.com", type: "official", description: "OpenAI Operator" },
+      { name: "OpenAI", url: "https://openai.com", type: "official", description: "OpenAI官网" },
+      { name: "AI Agent", url: "https://zhuanlan.zhihu.com/ai-agent", type: "tutorial", description: "AI智能体介绍" }
+    ],
+    targetUsers: ["高级用户", "技术爱好者", "企业用户", "研究者", "自动化需求者"],
+    difficulty: "advanced"
+  },
+  {
+    id: 2062,
+    name: "OpenClaw",
+    description: "开源免费的个人AI助手",
+    highlights: "开源免费，本地部署，隐私安全",
+    category: "对话机器人",
+    subCategory: "AI陪伴",
+    logo: "🦞",
+    url: "https://openclaw.ai",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "开源", "桌面端"],
+    features: ["本地AI助手", "隐私保护", "多模型支持", "技能扩展", "工具集成", "自定义配置"],
+    useCases: ["个人助手", "隐私对话", "本地部署", "工具整合", "技能开发"],
+    pros: ["完全免费开源", "本地运行安全", "可定制性强", "社区活跃"],
+    cons: ["需要技术背景", "配置较复杂", "硬件要求高"],
+    relatedSites: [
+      { name: "OpenClaw官网", url: "https://openclaw.ai", type: "official", description: "OpenClaw官网" },
+      { name: "GitHub", url: "https://github.com/openclaw", type: "community", description: "GitHub仓库" },
+      { name: "本地AI", url: "https://zhuanlan.zhihu.com/local-ai", type: "tutorial", description: "本地AI部署" }
+    ],
+    targetUsers: ["技术爱好者", "隐私关注者", "开发者", "开源贡献者", "高级用户"],
+    difficulty: "advanced"
+  },
+
+  // ==================== 更多AI音频工具 ====================
+  {
+    id: 2070,
+    name: "讯飞听见",
+    description: "科大讯飞推出的在线AI语音转文字工具",
+    highlights: "语音转文字专家，准确率领先",
+    category: "音频处理",
+    subCategory: "音频分离/处理",
+    logo: "👂",
+    url: "https://iflyrec.com",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "中文", "Web"],
+    features: ["语音转文字", "会议记录", "字幕生成", "多语言支持", "实时转写", "批量处理"],
+    useCases: ["会议记录", "课堂笔记", "采访整理", "字幕制作", "语音档案"],
+    pros: ["识别准确率高", "中文效果出色", "功能全面", "讯飞技术"],
+    cons: ["高级功能付费", "免费时长有限", "部分方言支持有限"],
+    relatedSites: [
+      { name: "讯飞听见官网", url: "https://iflyrec.com", type: "official", description: "讯飞听见" },
+      { name: "科大讯飞", url: "https://xfyun.cn", type: "official", description: "科大讯飞" },
+      { name: "语音识别", url: "https://zhuanlan.zhihu.com/asr", type: "tutorial", description: "语音识别技术" }
+    ],
+    targetUsers: ["记者", "学生", "会议记录员", "内容创作者", "教育工作者"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2071,
+    name: "ElevenLabs",
+    description: "AI文本转语音，支持包含中文在内的29种语言",
+    highlights: "顶级TTS，声音自然逼真",
+    category: "音频处理",
+    subCategory: "AI语音合成",
+    logo: "🔊",
+    url: "https://elevenlabs.io",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "多语言", "Web"],
+    features: ["文本转语音", "声音克隆", "多语言支持", "情感调节", "API接口", "实时生成"],
+    useCases: ["视频配音", "有声书", "广告配音", "游戏语音", "多语言内容"],
+    pros: ["声音质量顶级", "多语言支持", "克隆效果好", "API完善"],
+    cons: ["免费额度有限", "高级功能付费", "中文语种较少"],
+    relatedSites: [
+      { name: "ElevenLabs官网", url: "https://elevenlabs.io", type: "official", description: "ElevenLabs官网" },
+      { name: "TTS对比", url: "https://zhuanlan.zhihu.com/tts-compare", type: "tutorial", description: "TTS工具对比" },
+      { name: "语音合成", url: "https://moyin.cn", type: "alternative", description: "魔音工坊" }
+    ],
+    targetUsers: ["视频创作者", "有声书作者", "广告从业者", "游戏开发者", "内容创作者"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2072,
+    name: "音疯",
+    description: "昆仑万维推出的AI音乐创作平台，一键生成原创歌曲",
+    highlights: "一键生成歌曲，原创音乐创作",
+    category: "音频处理",
+    subCategory: "AI音乐创作",
+    logo: "🎧",
+    url: "https://yinmei.com",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "中文", "Web"],
+    features: ["AI作曲", "歌词生成", "人声合成", "风格选择", "一键生成", "高清导出"],
+    useCases: ["原创歌曲", "背景音乐", "视频BGM", "音乐创作", "娱乐体验"],
+    pros: ["操作简单", "中文友好", "昆仑万维技术", "免费功能足"],
+    cons: ["音乐质量参差", "风格选择有限", "高级功能付费"],
+    relatedSites: [
+      { name: "音疯官网", url: "https://yinmei.com", type: "official", description: "音疯官网" },
+      { name: "昆仑万维", url: "https://kunlun.com", type: "official", description: "昆仑万维" },
+      { name: "AI音乐", url: "https://suno.ai", type: "alternative", description: "Suno AI音乐" }
+    ],
+    targetUsers: ["音乐爱好者", "内容创作者", "视频制作者", "自媒体", "音乐初学者"],
+    difficulty: "beginner"
+  },
+
+  // ==================== 更多AI搜索引擎 ====================
+  {
+    id: 2080,
+    name: "知乎直答",
+    description: "知乎推出的AI搜索引擎，直达问题答案",
+    highlights: "知乎知识库，精准问答",
+    category: "文本生成",
+    subCategory: "搜索问答",
+    logo: "📘",
+    url: "https://zhida.zhihu.com",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "中文", "Web"],
+    features: ["AI搜索", "知识问答", "知乎知识库", "深度解析", "相关推荐", "收藏整理"],
+    useCases: ["知识查询", "问题解答", "学习研究", "信息获取", "深度阅读"],
+    pros: ["知乎知识库", "答案专业", "完全免费", "中文优化"],
+    cons: ["数据源限于知乎", "部分问题覆盖有限", "功能相对简单"],
+    relatedSites: [
+      { name: "知乎直答官网", url: "https://zhida.zhihu.com", type: "official", description: "知乎直答" },
+      { name: "知乎", url: "https://zhihu.com", type: "official", description: "知乎官网" },
+      { name: "AI搜索", url: "https://perplexity.ai", type: "alternative", description: "Perplexity" }
+    ],
+    targetUsers: ["学习者", "研究者", "知乎用户", "知识工作者", "普通用户"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2081,
+    name: "纳米AI",
+    description: "360推出的新一代超级AI搜索工具",
+    highlights: "360技术，深度AI搜索",
+    category: "文本生成",
+    subCategory: "搜索问答",
+    logo: "🔬",
+    url: "https://namiai.com",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "中文", "Web"],
+    features: ["AI搜索", "深度问答", "多模态搜索", "智能推荐", "知识图谱", "实时信息"],
+    useCases: ["信息搜索", "问题解答", "知识获取", "研究调研", "学习辅助"],
+    pros: ["完全免费", "360技术", "中文友好", "搜索能力强"],
+    cons: ["知名度有限", "功能待完善", "部分场景有限"],
+    relatedSites: [
+      { name: "纳米AI官网", url: "https://namiai.com", type: "official", description: "纳米AI搜索" },
+      { name: "360", url: "https://360.cn", type: "official", description: "360官网" },
+      { name: "AI搜索", url: "https://zhuanlan.zhihu.com/ai-search", type: "tutorial", description: "AI搜索技巧" }
+    ],
+    targetUsers: ["普通用户", "学生", "研究者", "知识工作者", "360用户"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2082,
+    name: "Felo",
+    description: "免费AI智能搜索引擎，支持社交联网搜索和多语种问答结果",
+    highlights: "多语言搜索，社交联网",
+    category: "文本生成",
+    subCategory: "搜索问答",
+    logo: "🔍",
+    url: "https://felo.ai",
+    isVip: false,
+    price: "免费",
+    tags: ["免费", "多语言", "Web"],
+    features: ["AI搜索", "多语言支持", "社交联网", "深度问答", "实时信息", "智能推荐"],
+    useCases: ["多语言搜索", "国际信息获取", "社交搜索", "知识查询", "跨语言问答"],
+    pros: ["完全免费", "多语言支持好", "社交联网强", "界面简洁"],
+    cons: ["知名度有限", "中文效果一般", "部分功能待完善"],
+    relatedSites: [
+      { name: "Felo官网", url: "https://felo.ai", type: "official", description: "Felo AI搜索" },
+      { name: "Perplexity", url: "https://perplexity.ai", type: "alternative", description: "Perplexity" },
+      { name: "AI搜索", url: "https://zhuanlan.zhihu.com/ai-search", type: "tutorial", description: "AI搜索介绍" }
+    ],
+    targetUsers: ["国际用户", "多语言需求者", "研究者", "普通用户", "社交媒体用户"],
+    difficulty: "beginner"
+  },
+
+  // ==================== 更多AI设计工具 ====================
+  {
+    id: 2090,
+    name: "Figma AI",
+    description: "Figma推出的原生AI设计工具",
+    highlights: "Figma集成，设计AI助手",
+    category: "图像设计",
+    subCategory: "设计模板",
+    logo: "🎨",
+    url: "https://figma.com/ai",
+    isVip: true,
+    price: "Figma订阅",
+    tags: ["付费", "多语言", "Web"],
+    features: ["AI设计", "自动布局", "组件生成", "设计建议", "原型制作", "协作设计"],
+    useCases: ["UI设计", "产品设计", "界面原型", "设计系统", "团队协作"],
+    pros: ["Figma集成无缝", "设计效率高", "协作便捷", "专业工具"],
+    cons: ["需要订阅", "学习成本适中", "国内访问受限"],
+    relatedSites: [
+      { name: "Figma AI官网", url: "https://figma.com/ai", type: "official", description: "Figma AI" },
+      { name: "Figma", url: "https://figma.com", type: "official", description: "Figma官网" },
+      { name: "UI设计", url: "https://zhuanlan.zhihu.com/ui-design", type: "tutorial", description: "UI设计教程" }
+    ],
+    targetUsers: ["UI设计师", "产品设计师", "交互设计师", "设计团队", "前端开发者"],
+    difficulty: "intermediate"
+  },
+  {
+    id: 2091,
+    name: "创客贴AI",
+    description: "AI辅助的智能在线设计工具",
+    highlights: "在线设计，AI辅助创作",
+    category: "图像设计",
+    subCategory: "设计模板",
+    logo: "📐",
+    url: "https://chuangkit.com",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "中文", "Web"],
+    features: ["AI设计", "模板库", "智能抠图", "批量制作", "云端协作", "多格式导出"],
+    useCases: ["海报设计", "社媒素材", "电商设计", "营销物料", "名片制作"],
+    pros: ["模板丰富", "中文友好", "操作简单", "功能全面"],
+    cons: ["高级模板付费", "定制程度有限", "部分功能需学习"],
+    relatedSites: [
+      { name: "创客贴官网", url: "https://chuangkit.com", type: "official", description: "创客贴官网" },
+      { name: "Canva", url: "https://canva.com", type: "alternative", description: "Canva设计工具" },
+      { name: "设计教程", url: "https://zhuanlan.zhihu.com/design-tips", type: "tutorial", description: "设计技巧" }
+    ],
+    targetUsers: ["设计师", "营销人员", "电商运营", "自媒体", "普通用户"],
+    difficulty: "beginner"
+  },
+  {
+    id: 2092,
+    name: "Recraft AI",
+    description: "免费无限AI画板，生成高质量矢量艺术画、图标、3D图片和插画",
+    highlights: "矢量图生成，专业级输出",
+    category: "图像设计",
+    subCategory: "AI绘画",
+    logo: "🖌️",
+    url: "https://recraft.ai",
+    isVip: true,
+    price: "免费增值",
+    tags: ["免费增值", "英文", "Web"],
+    features: ["矢量图生成", "图标设计", "3D图像", "插画创作", "风格定制", "高清导出"],
+    useCases: ["品牌设计", "图标制作", "插画创作", "UI元素", "营销素材"],
+    pros: ["矢量图质量高", "免费功能足", "专业级输出", "风格多样"],
+    cons: ["英文界面", "部分功能付费", "学习成本适中"],
+    relatedSites: [
+      { name: "Recraft AI官网", url: "https://recraft.ai", type: "official", description: "Recraft AI" },
+      { name: "Midjourney", url: "https://midjourney.com", type: "alternative", description: "Midjourney" },
+      { name: "矢量设计", url: "https://zhuanlan.zhihu.com/vector-design", type: "tutorial", description: "矢量设计教程" }
+    ],
+    targetUsers: ["设计师", "品牌设计师", "插画师", "UI设计师", "创意工作者"],
+    difficulty: "intermediate"
+  }
+];
+
+// 统计
+export const NEW_TOOLS_STATS = {
+  batch1: 50,
+  batch2: 50,
+  total: 100,
+  byCategory: {
+    "文本生成": 25,
+    "图像设计": 15,
+    "视频制作": 5,
+    "音频处理": 8,
+    "办公效率": 10,
+    "开发工具": 10,
+    "对话机器人": 15,
+    "其他": 12
+  }
+};

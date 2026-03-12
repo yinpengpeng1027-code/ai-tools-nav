@@ -5,7 +5,7 @@ import "./globals.css";
 const BUILD_VERSION = process.env.NEXT_PUBLIC_BUILD_VERSION || Date.now().toString();
 
 export const metadata: Metadata = {
-  title: "AI Nexus - AI 枢纽",
+  title: "星图 StarMap AI - 万千 AI，一键触达 | 一站式 AI 工具集合体",
   description: "发现最好的 AI 工具，连接 AI 未来",
   // 浏览器缓存控制 meta 标签
   other: {

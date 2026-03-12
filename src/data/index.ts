@@ -13,12 +13,16 @@ import { TEXT_GENERATION_TOOLS } from './category-text-generation';
 import { IMAGE_DESIGN_TOOLS } from './category-image-design';
 import { VIDEO_PRODUCTION_TOOLS } from './category-video-production';
 import { AUDIO_PROCESSING_TOOLS } from './category-audio-processing';
-import { OFFICE_PRODUCTIVITY_TOOLS } from './category-office-productivity';
+import { officeProductivityTools as OFFICE_PRODUCTIVITY_TOOLS } from './category-office-productivity';
 import { DATA_ANALYSIS_TOOLS } from './category-data-analysis';
 import { CHATBOT_TOOLS } from './category-chatbot';
-import { SOCIAL_MEDIA_TOOLS } from './category-social-media';
+import { socialMediaTools as SOCIAL_MEDIA_TOOLS } from './category-social-media';
 import { DEV_TOOLS } from './category-dev-tools';
 import { EDUCATION_TOOLS } from './category-education';
+
+// ========== 新增工具数据导入 ==========
+import { NEW_TOOLS_BATCH1 } from './new-tools-batch1';
+import { NEW_TOOLS_BATCH2 } from './new-tools-batch2';
 
 // ========== 合并所有工具数据 ==========
 export const ALL_TOOLS: EnhancedTool[] = [
@@ -32,6 +36,9 @@ export const ALL_TOOLS: EnhancedTool[] = [
   ...SOCIAL_MEDIA_TOOLS,
   ...DEV_TOOLS,
   ...EDUCATION_TOOLS,
+  // 新增工具数据
+  ...NEW_TOOLS_BATCH1,
+  ...NEW_TOOLS_BATCH2,
 ];
 
 // ========== 按分类导出 ==========

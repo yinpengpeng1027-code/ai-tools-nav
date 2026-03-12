@@ -27,7 +27,7 @@ export default function ToolPageClient({ tool, relatedTools: propRelatedTools }:
             <Link href="/" className="flex items-center gap-2">
               <span className="text-2xl">🚀</span>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                AI Nexus
+                星图 StarMap AI
               </span>
             </Link>
             <div className="flex items-center gap-6">

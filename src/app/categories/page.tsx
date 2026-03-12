@@ -98,7 +98,7 @@ export default function CategoriesPage() {
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <span className="text-2xl">🚀</span>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                AI Nexus
+                星图 StarMap AI
               </span>
             </Link>
             <div className="flex items-center gap-6">
@@ -133,7 +133,7 @@ export default function CategoriesPage() {
             </span>
           </h1>
           <p className="text-slate-600 text-center text-lg font-medium">
-            AI Nexus - 10 大专业分类，覆盖所有 AI 应用场景
+            星图 StarMap AI - 万千 AI，一键触达 | 一站式 AI 工具集合体
           </p>
 
           {/* Search Filter */}
@@ -170,10 +170,10 @@ export default function CategoriesPage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <span className="text-2xl">🚀</span>
-              <span className="font-bold text-slate-900">AI Nexus</span>
+              <span className="font-bold text-slate-900">星图 StarMap AI</span>
             </Link>
             <div className="text-slate-500 text-sm font-medium">
-              © 2026 AI Nexus - AI 枢纽 · 保留所有权利
+              © 2026 星图 StarMap AI - 万千 AI，一键触达 | 一站式 AI 工具集合体 · 保留所有权利
             </div>
             <div className="flex gap-6 text-sm text-slate-600 font-medium">
               <Link href="/about" className="hover:text-slate-900 transition-colors">关于我们</Link>

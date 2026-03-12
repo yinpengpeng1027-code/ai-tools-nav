@@ -135,7 +135,7 @@ export default function SearchPage() {
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <span className="text-2xl">🚀</span>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                AI Nexus
+                星图 StarMap AI
               </span>
             </Link>
             <div className="flex items-center gap-6">
@@ -156,7 +156,7 @@ export default function SearchPage() {
                 搜索 AI 工具
               </span>
             </h1>
-            <p className="text-slate-600 text-lg">AI Nexus - 连接 AI 未来，发现最好用的 AI 工具</p>
+            <p className="text-slate-600 text-lg">星图 StarMap AI - 万千 AI，一键触达 | 一站式 AI 工具集合体</p>
           </div>
 
           {/* Main Search Bar */}
