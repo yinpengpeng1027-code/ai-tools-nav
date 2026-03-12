@@ -16,14 +16,14 @@ import {
   ShineEffect
 } from "@/components/animations";
 
-// 模拟工具数据
+// 首页精选工具 - 使用真实工具数据（ID 必须与数据文件一致）
 const FEATURED_TOOLS = [
   { id: 1, name: "ChatGPT", description: "OpenAI 的智能对话 AI", category: "文本生成", logo: "🤖", url: "https://chatgpt.com" },
-  { id: 2, name: "Midjourney", description: "AI 绘画工具", category: "图像设计", logo: "🎨", url: "https://midjourney.com" },
-  { id: 3, name: "Notion AI", description: "智能笔记助手", category: "办公效率", logo: "📝", url: "https://notion.so" },
-  { id: 4, name: "Runway", description: "AI 视频生成", category: "视频制作", logo: "🎬", url: "https://runwayml.com" },
-  { id: 5, name: "ElevenLabs", description: "AI 语音合成", category: "音频处理", logo: "🎵", url: "https://elevenlabs.io" },
-  { id: 6, name: "Jasper", description: "AI 营销文案", category: "文本生成", logo: "✍️", url: "https://jasper.ai" },
+  { id: 101, name: "Midjourney", description: "AI 绘画工具", category: "图像设计", logo: "⛵", url: "https://midjourney.com" },
+  { id: 401, name: "Notion AI", description: "智能笔记助手", category: "办公效率", logo: "📝", url: "https://notion.so" },
+  { id: 201, name: "Runway", description: "AI 视频生成", category: "视频制作", logo: "🎬", url: "https://runwayml.com" },
+  { id: 301, name: "ElevenLabs", description: "AI 语音合成", category: "音频处理", logo: "🔊", url: "https://elevenlabs.io" },
+  { id: 1001, name: "Jasper", description: "AI 营销文案", category: "文本生成", logo: "✍️", url: "https://jasper.ai" },
 ];
 
 const CATEGORIES = [
